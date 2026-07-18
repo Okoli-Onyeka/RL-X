@@ -57,6 +57,6 @@ def get_config(environment_name):
     config.missing_value = 0.0
     config.add_goal_arrow = False
     config.timestep = 0.005
-    config.episode_length_in_seconds = 20
+    config.episode_length_in_seconds = 200
 
     return config

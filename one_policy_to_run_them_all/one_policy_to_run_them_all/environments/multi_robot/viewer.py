@@ -14,7 +14,7 @@ class MujocoViewer:
         self.last_x, self.last_y = 0, 0
         self.frames = 0
         self.loop_count = 0
-        self.target_render_time = 1 / 60.
+        self.target_render_time = 1 / 30.
         self.time_per_render = self.target_render_time
         self.run_speed_factor = 1.0
         self.paused = False
