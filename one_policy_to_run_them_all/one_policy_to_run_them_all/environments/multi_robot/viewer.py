@@ -2,6 +2,7 @@ import glfw
 import mujoco
 import time
 from itertools import cycle
+from pathlib import Path
 
 
 class MujocoViewer:
@@ -42,8 +43,8 @@ class MujocoViewer:
         mujoco.mjv_defaultFreeCamera(model, self.camera)
         self.all_camera_modes = ("static", "follow")
         self.camera_mode_iter = cycle(self.all_camera_modes)
-        self.camera_mode = next(self.camera_mode_iter)
-        self.camera_mode_target = self.camera_mode
+        self.camera_mode = None
+        self.camera_mode_target = "follow"
         self.set_camera()
 
         framebuffer_width, framebuffer_height = glfw.get_framebuffer_size(self.window)
@@ -143,6 +144,15 @@ class MujocoViewer:
     def create_overlay(self):
         topleft = mujoco.mjtGridPos.mjGRID_TOPLEFT
         bottomright = mujoco.mjtGridPos.mjGRID_BOTTOMRIGHT
+        topcenter = mujoco.mjtGridPos.mjGRID_TOP
+
+        BASE = Path.cwd().parent
+        path = BASE / "sentence_transformer" / "sentence_command.txt"
+
+        with open(path, "r") as f:
+            text_command = f.readline().strip()
+
+        self.overlay[topcenter] = [text_command, ""]
 
         self.overlay[bottomright] = ["Framerate:", str(int(1/self.time_per_render * self.run_speed_factor))]
         self.overlay[topleft] = ["", ""]
@@ -158,20 +168,27 @@ class MujocoViewer:
         self.overlay[topleft][1] += "[S]lower, [F]aster"
 
     def set_camera(self):
+        if self.camera_mode_target == "follow" and self.camera_mode != "follow":
+                self.camera.fixedcamid = -1
+                self.camera.type = mujoco.mjtCamera.mjCAMERA_TRACKING
+
+                try:
+                    self.camera.trackbodyid = self.model.body("trunk").id
+                except KeyError:
+                    self.camera.trackbodyid = 1
+                
+                self.camera.distance = 4.0
+                self.camera.elevation = -20.0
+                self.camera.azimuth = 90.0
+
         if self.camera_mode_target == "static" and self.camera_mode != "static":
-                self.camera.fixedcamid = 0
+                self.camera.fixedcamid = -1
                 self.camera.type = mujoco.mjtCamera.mjCAMERA_FREE
                 self.camera.trackbodyid = -1
                 self.camera.distance = 15.0
                 self.camera.elevation = -45.0
                 self.camera.azimuth = 90.0
-        if self.camera_mode_target == "follow" and self.camera_mode != "follow":
-                self.camera.fixedcamid = -1
-                self.camera.type = mujoco.mjtCamera.mjCAMERA_TRACKING
-                self.camera.trackbodyid = 0
-                self.camera.distance = 3.5
-                self.camera.elevation = 0.0
-                self.camera.azimuth = 90.0
+                self.camera.lookat[:] = [0.0, 0.0, 0.8]
         self.camera_mode = self.camera_mode_target
 
     def load_new_model(self, model):

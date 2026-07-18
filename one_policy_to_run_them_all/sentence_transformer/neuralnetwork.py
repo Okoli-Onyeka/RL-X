@@ -67,7 +67,7 @@ class NeuralNetwork():
 
         print("Test Loss:", loss.item())
 
-    def saveModel(model: NeuralNetwork, name):
+    def saveModel(model, name):
         torch.save(model.model.state_dict(), name)
         
     def loadModel(input_size, output_size, filename):

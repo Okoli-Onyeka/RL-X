@@ -9,9 +9,7 @@ def get_config(environment_name):
     config.nr_envs = 1
     config.nr_eval_envs = 0
     config.train_robot_types = (
-        "unitree_a1", "unitree_go1", "unitree_go2", "anymal_b", "anymal_c", "barkour_v0", "barkour_vb", "badger", "bittle",
-        "unitree_h1", "unitree_g1", "talos", "robotis_op3", "nao_v5", "cassie",
-        "hexapod"
+        "unitree_h1",
     )
     config.eval_robot_types = ()
 

@@ -7,6 +7,6 @@ python experiment.py \
     --runner.mode=test \
     --environment.mode=test \
     --environment.add_goal_arrow=True \
-    --environment.nr_envs=16 \
+    --environment.nr_envs=1 \
     --environment.multi_render=True \
     --environment.render=False
