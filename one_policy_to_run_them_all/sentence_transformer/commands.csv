@@ -1,0 +1,125 @@
+text,x,y,yaw,command_class
+move forward,1,0,0,forward
+go forward,1,0,0,forward
+walk forward,1,0,0,forward
+move ahead,1,0,0,forward
+go straight,1,0,0,forward
+continue forward,1,0,0,forward
+advance,1,0,0,forward
+head forward,1,0,0,forward
+proceed ahead,1,0,0,forward
+move onward,1,0,0,forward
+
+move backward,-1,0,0,backward
+go backward,-1,0,0,backward
+walk back,-1,0,0,backward
+reverse,-1,0,0,backward
+move in reverse,-1,0,0,backward
+step backward,-1,0,0,backward
+go back,-1,0,0,backward
+retreat,-1,0,0,backward
+back up,-1,0,0,backward
+move back,-1,0,0,backward
+
+strafe left,0,-1,0,strafe_left
+move left,0,-1,0,strafe_left
+shift left,0,-1,0,strafe_left
+slide left,0,-1,0,strafe_left
+step to the left,0,-1,0,strafe_left
+go sideways left,0,-1,0,strafe_left
+move laterally left,0,-1,0,strafe_left
+sidestep left,0,-1,0,strafe_left
+go to the left without turning,0,-1,0,strafe_left
+translate left,0,-1,0,strafe_left
+
+strafe right,0,1,0,strafe_right
+move right,0,1,0,strafe_right
+shift right,0,1,0,strafe_right
+slide right,0,1,0,strafe_right
+step to the right,0,1,0,strafe_right
+go sideways right,0,1,0,strafe_right
+move laterally right,0,1,0,strafe_right
+sidestep right,0,1,0,strafe_right
+go to the right without turning,0,1,0,strafe_right
+translate right,0,1,0,strafe_right
+
+turn left,0,0,-1,turn_left
+rotate left,0,0,-1,turn_left
+face left,0,0,-1,turn_left
+spin left,0,0,-1,turn_left
+yaw left,0,0,-1,turn_left
+change heading left,0,0,-1,turn_left
+look left,0,0,-1,turn_left
+pivot left,0,0,-1,turn_left
+rotate anticlockwise,0,0,-1,turn_left
+turn to the left,0,0,-1,turn_left
+
+turn right,0,0,1,turn_right
+rotate right,0,0,1,turn_right
+face right,0,0,1,turn_right
+spin right,0,0,1,turn_right
+yaw right,0,0,1,turn_right
+change heading right,0,0,1,turn_right
+look right,0,0,1,turn_right
+pivot right,0,0,1,turn_right
+rotate clockwise,0,0,1,turn_right
+turn to the right,0,0,1,turn_right
+
+move forward slowly,0.4,0,0,forward_slow
+go forward slowly,0.4,0,0,forward_slow
+advance a little,0.4,0,0,forward_slow
+move gently forward,0.4,0,0,forward_slow
+creep forward,0.4,0,0,forward_slow
+
+move forward quickly,1,0,0,forward_fast
+go forward fast,1,0,0,forward_fast
+advance quickly,1,0,0,forward_fast
+move ahead fast,1,0,0,forward_fast
+go straight quickly,1,0,0,forward_fast
+
+turn left slightly,0,0,-0.4,turn_left_slight
+rotate a little left,0,0,-0.4,turn_left_slight
+make a small left turn,0,0,-0.4,turn_left_slight
+adjust left,0,0,-0.4,turn_left_slight
+yaw slightly left,0,0,-0.4,turn_left_slight
+
+turn right slightly,0,0,0.4,turn_right_slight
+rotate a little right,0,0,0.4,turn_right_slight
+make a small right turn,0,0,0.4,turn_right_slight
+adjust right,0,0,0.4,turn_right_slight
+yaw slightly right,0,0,0.4,turn_right_slight
+
+move forward and turn left,0.7,0,-0.5,forward_turn_left
+go forward while turning left,0.7,0,-0.5,forward_turn_left
+curve left while moving forward,0.7,0,-0.5,forward_turn_left
+walk ahead and rotate left,0.7,0,-0.5,forward_turn_left
+move in a left arc,0.7,0,-0.5,forward_turn_left
+
+move forward and turn right,0.7,0,0.5,forward_turn_right
+go forward while turning right,0.7,0,0.5,forward_turn_right
+curve right while moving forward,0.7,0,0.5,forward_turn_right
+walk ahead and rotate right,0.7,0,0.5,forward_turn_right
+move in a right arc,0.7,0,0.5,forward_turn_right
+
+move diagonally forward left,0.7,-0.5,0,diagonal_forward_left
+go forward-left,0.7,-0.5,0,diagonal_forward_left
+move ahead to the left,0.7,-0.5,0,diagonal_forward_left
+travel diagonally left,0.7,-0.5,0,diagonal_forward_left
+advance while shifting left,0.7,-0.5,0,diagonal_forward_left
+
+move diagonally forward right,0.7,0.5,0,diagonal_forward_right
+go forward-right,0.7,0.5,0,diagonal_forward_right
+move ahead to the right,0.7,0.5,0,diagonal_forward_right
+travel diagonally right,0.7,0.5,0,diagonal_forward_right
+advance while shifting right,0.7,0.5,0,diagonal_forward_right
+
+stop,0,0,0,stop
+halt,0,0,0,stop
+stand still,0,0,0,stop
+do not move,0,0,0,stop
+stay in place,0,0,0,stop
+remain still,0,0,0,stop
+pause movement,0,0,0,stop
+freeze,0,0,0,stop
+hold position,0,0,0,stop
+stop moving,0,0,0,stop

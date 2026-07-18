@@ -1,0 +1,817 @@
+Text,robot,x1,y1,yaw1,x2,y2,yaw2,x3,y3,yaw3,x4,y4,yaw4,x5,y5,yaw5,x6,y6,yaw6,dt
+move forward,UnitreeH1,0.55,0,0,0.75,0,0,0.9,0,0,0.9,0,0,0.8,0,0,0.65,0,0,0.6
+walk forward,UnitreeH1,0.6,0,0,0.8,0,0,0.95,0,0,0.95,0,0,0.85,0,0,0.7,0,0,0.6
+go straight ahead,UnitreeH1,0.5,0,0,0.7,0,0,0.85,0,0,0.95,0,0,0.85,0,0,0.65,0,0,0.65
+move ahead quickly,UnitreeH1,0.7,0,0,0.9,0,0,1,0,0,1,0,0,0.9,0,0,0.75,0,0,0.5
+walk ahead steadily,UnitreeH1,0.55,0,0,0.65,0,0,0.75,0,0,0.75,0,0,0.7,0,0,0.6,0,0,0.7
+advance forward,UnitreeH1,0.6,0,0,0.75,0,0,0.9,0,0,0.9,0,0,0.8,0,0,0.65,0,0,0.6
+move forward slowly,UnitreeH1,0.3,0,0,0.4,0,0,0.5,0,0,0.5,0,0,0.45,0,0,0.35,0,0,0.7
+walk forward fast,UnitreeH1,0.75,0,0,0.95,0,0,1,0,0,1,0,0,0.95,0,0,0.8,0,0,0.5
+continue moving forward,UnitreeH1,0.55,0,0,0.7,0,0,0.8,0,0,0.85,0,0,0.8,0,0,0.7,0,0,0.65
+head straight forward,UnitreeH1,0.5,0,0,0.7,0,0,0.85,0,0,0.9,0,0,0.8,0,0,0.6,0,0,0.65
+move backward,UnitreeH1,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.9,0,0,-0.8,0,0,-0.65,0,0,0.6
+walk backward,UnitreeH1,-0.6,0,0,-0.8,0,0,-0.95,0,0,-0.95,0,0,-0.85,0,0,-0.7,0,0,0.6
+go straight back,UnitreeH1,-0.5,0,0,-0.7,0,0,-0.85,0,0,-0.95,0,0,-0.85,0,0,-0.65,0,0,0.65
+move backward quickly,UnitreeH1,-0.7,0,0,-0.9,0,0,-1,0,0,-1,0,0,-0.9,0,0,-0.75,0,0,0.5
+walk backward steadily,UnitreeH1,-0.55,0,0,-0.65,0,0,-0.75,0,0,-0.75,0,0,-0.7,0,0,-0.6,0,0,0.7
+reverse,UnitreeH1,-0.6,0,0,-0.75,0,0,-0.9,0,0,-0.9,0,0,-0.8,0,0,-0.65,0,0,0.6
+move backward slowly,UnitreeH1,-0.3,0,0,-0.4,0,0,-0.5,0,0,-0.5,0,0,-0.45,0,0,-0.35,0,0,0.7
+walk backward fast,UnitreeH1,-0.75,0,0,-0.95,0,0,-1,0,0,-1,0,0,-0.95,0,0,-0.8,0,0,0.5
+continue moving backward,UnitreeH1,-0.55,0,0,-0.7,0,0,-0.8,0,0,-0.85,0,0,-0.8,0,0,-0.7,0,0,0.65
+head straight backward,UnitreeH1,-0.5,0,0,-0.7,0,0,-0.85,0,0,-0.9,0,0,-0.8,0,0,-0.6,0,0,0.65
+move right,UnitreeH1,0,0.35,0,0,0.55,0,0,0.7,0,0,0.75,0,0,0.65,0,0,0.5,0,0.65
+strafe right,UnitreeH1,0,0.3,0,0,0.5,0,0,0.65,0,0,0.7,0,0,0.6,0,0,0.45,0,0.65
+step sideways to the right,UnitreeH1,0,0.25,0,0,0.45,0,0,0.6,0,0,0.65,0,0,0.55,0,0,0.4,0,0.7
+move quickly to the right,UnitreeH1,0,0.45,0,0,0.65,0,0,0.8,0,0,0.85,0,0,0.75,0,0,0.55,0,0.55
+shift right slowly,UnitreeH1,0,0.2,0,0,0.3,0,0,0.4,0,0,0.45,0,0,0.4,0,0,0.3,0,0.7
+continue moving right,UnitreeH1,0,0.3,0,0,0.5,0,0,0.65,0,0,0.7,0,0,0.6,0,0,0.45,0,0.65
+slide to the right,UnitreeH1,0,0.3,0,0,0.45,0,0,0.6,0,0,0.65,0,0,0.55,0,0,0.4,0,0.7
+move sideways right,UnitreeH1,0,0.35,0,0,0.55,0,0,0.7,0,0,0.7,0,0,0.6,0,0,0.45,0,0.65
+take a quick step right,UnitreeH1,0,0.45,0,0,0.65,0,0,0.8,0,0,0.8,0,0,0.7,0,0,0.5,0,0.55
+head toward the right,UnitreeH1,0,0.3,0,0,0.5,0,0,0.65,0,0,0.7,0,0,0.6,0,0,0.45,0,0.65
+move left,UnitreeH1,0,-0.35,0,0,-0.55,0,0,-0.7,0,0,-0.75,0,0,-0.65,0,0,-0.5,0,0.65
+strafe left,UnitreeH1,0,-0.3,0,0,-0.5,0,0,-0.65,0,0,-0.7,0,0,-0.6,0,0,-0.45,0,0.65
+step sideways to the left,UnitreeH1,0,-0.25,0,0,-0.45,0,0,-0.6,0,0,-0.65,0,0,-0.55,0,0,-0.4,0,0.7
+move quickly to the left,UnitreeH1,0,-0.45,0,0,-0.65,0,0,-0.8,0,0,-0.85,0,0,-0.75,0,0,-0.55,0,0.55
+shift left slowly,UnitreeH1,0,-0.2,0,0,-0.3,0,0,-0.4,0,0,-0.45,0,0,-0.4,0,0,-0.3,0,0.7
+continue moving left,UnitreeH1,0,-0.3,0,0,-0.5,0,0,-0.65,0,0,-0.7,0,0,-0.6,0,0,-0.45,0,0.65
+slide to the left,UnitreeH1,0,-0.3,0,0,-0.45,0,0,-0.6,0,0,-0.65,0,0,-0.55,0,0,-0.4,0,0.7
+move sideways left,UnitreeH1,0,-0.35,0,0,-0.55,0,0,-0.7,0,0,-0.7,0,0,-0.6,0,0,-0.45,0,0.65
+take a quick step left,UnitreeH1,0,-0.45,0,0,-0.65,0,0,-0.8,0,0,-0.8,0,0,-0.7,0,0,-0.5,0,0.55
+head toward the left,UnitreeH1,0,-0.3,0,0,-0.5,0,0,-0.65,0,0,-0.7,0,0,-0.6,0,0,-0.45,0,0.65
+turn right,UnitreeH1,0,0,0.45,0,0,0.65,0,0,0.85,0,0,1,0,0,0.9,0,0,0.7,0.55
+rotate right,UnitreeH1,0,0,0.5,0,0,0.7,0,0,0.9,0,0,1,0,0,0.9,0,0,0.75,0.55
+turn clockwise,UnitreeH1,0,0,0.45,0,0,0.65,0,0,0.85,0,0,0.95,0,0,0.85,0,0,0.65,0.6
+turn right quickly,UnitreeH1,0,0,0.65,0,0,0.85,0,0,1,0,0,1,0,0,0.95,0,0,0.8,0.5
+turn right slowly,UnitreeH1,0,0,0.25,0,0,0.35,0,0,0.45,0,0,0.5,0,0,0.45,0,0,0.35,0.7
+keep turning right,UnitreeH1,0,0,0.45,0,0,0.65,0,0,0.8,0,0,0.9,0,0,0.85,0,0,0.7,0.6
+spin to the right,UnitreeH1,0,0,0.6,0,0,0.8,0,0,1,0,0,1,0,0,0.95,0,0,0.75,0.5
+pivot right,UnitreeH1,0,0,0.4,0,0,0.6,0,0,0.8,0,0,0.9,0,0,0.8,0,0,0.65,0.6
+rotate clockwise quickly,UnitreeH1,0,0,0.65,0,0,0.85,0,0,1,0,0,1,0,0,0.9,0,0,0.75,0.5
+make a right turn,UnitreeH1,0,0,0.4,0,0,0.6,0,0,0.8,0,0,0.9,0,0,0.8,0,0,0.65,0.6
+turn left,UnitreeH1,0,0,-0.45,0,0,-0.65,0,0,-0.85,0,0,-1,0,0,-0.9,0,0,-0.7,0.55
+rotate left,UnitreeH1,0,0,-0.5,0,0,-0.7,0,0,-0.9,0,0,-1,0,0,-0.9,0,0,-0.75,0.55
+turn counterclockwise,UnitreeH1,0,0,-0.45,0,0,-0.65,0,0,-0.85,0,0,-0.95,0,0,-0.85,0,0,-0.65,0.6
+turn left quickly,UnitreeH1,0,0,-0.65,0,0,-0.85,0,0,-1,0,0,-1,0,0,-0.95,0,0,-0.8,0.5
+turn left slowly,UnitreeH1,0,0,-0.25,0,0,-0.35,0,0,-0.45,0,0,-0.5,0,0,-0.45,0,0,-0.35,0.7
+keep turning left,UnitreeH1,0,0,-0.45,0,0,-0.65,0,0,-0.8,0,0,-0.9,0,0,-0.85,0,0,-0.7,0.6
+spin to the left,UnitreeH1,0,0,-0.6,0,0,-0.8,0,0,-1,0,0,-1,0,0,-0.95,0,0,-0.75,0.5
+pivot left,UnitreeH1,0,0,-0.4,0,0,-0.6,0,0,-0.8,0,0,-0.9,0,0,-0.8,0,0,-0.65,0.6
+rotate counterclockwise quickly,UnitreeH1,0,0,-0.65,0,0,-0.85,0,0,-1,0,0,-1,0,0,-0.9,0,0,-0.75,0.5
+make a left turn,UnitreeH1,0,0,-0.4,0,0,-0.6,0,0,-0.8,0,0,-0.9,0,0,-0.8,0,0,-0.65,0.6
+move forward then backward,UnitreeH1,0.6,0,0,0.8,0,0,0.55,0,0,0.15,0,0,-0.35,0,0,-0.65,0,0,0.65
+walk ahead then reverse,UnitreeH1,0.55,0,0,0.75,0,0,0.5,0,0,0.1,0,0,-0.3,0,0,-0.6,0,0,0.65
+move backward then forward,UnitreeH1,-0.6,0,0,-0.8,0,0,-0.55,0,0,-0.15,0,0,0.35,0,0,0.65,0,0,0.65
+reverse then move ahead,UnitreeH1,-0.55,0,0,-0.75,0,0,-0.5,0,0,-0.1,0,0,0.3,0,0,0.6,0,0,0.65
+move forward and turn right,UnitreeH1,0.45,0,0.2,0.6,0,0.35,0.7,0,0.5,0.75,0,0.65,0.7,0,0.75,0.6,0,0.65,0.6
+move forward while turning right,UnitreeH1,0.4,0,0.25,0.55,0,0.4,0.7,0,0.55,0.75,0,0.7,0.7,0,0.8,0.6,0,0.7,0.6
+walk ahead and curve right,UnitreeH1,0.4,0,0.2,0.55,0,0.3,0.65,0,0.45,0.7,0,0.55,0.65,0,0.65,0.55,0,0.6,0.65
+move forward and turn left,UnitreeH1,0.45,0,-0.2,0.6,0,-0.35,0.7,0,-0.5,0.75,0,-0.65,0.7,0,-0.75,0.6,0,-0.65,0.6
+move forward while turning left,UnitreeH1,0.4,0,-0.25,0.55,0,-0.4,0.7,0,-0.55,0.75,0,-0.7,0.7,0,-0.8,0.6,0,-0.7,0.6
+walk ahead and curve left,UnitreeH1,0.4,0,-0.2,0.55,0,-0.3,0.65,0,-0.45,0.7,0,-0.55,0.65,0,-0.65,0.55,0,-0.6,0.65
+move backward while turning right,UnitreeH1,-0.4,0,0.25,-0.55,0,0.4,-0.7,0,0.55,-0.75,0,0.7,-0.7,0,0.8,-0.6,0,0.7,0.6
+reverse and curve right,UnitreeH1,-0.4,0,0.2,-0.55,0,0.3,-0.65,0,0.45,-0.7,0,0.55,-0.65,0,0.65,-0.55,0,0.6,0.65
+move backward while turning left,UnitreeH1,-0.35,0,-0.2,-0.5,0,-0.3,-0.6,0,-0.4,-0.65,0,-0.5,-0.6,0,-0.55,-0.5,0,-0.5,0.65
+reverse and curve left,UnitreeH1,-0.35,0,-0.2,-0.45,0,-0.3,-0.55,0,-0.4,-0.6,0,-0.5,-0.55,0,-0.55,-0.45,0,-0.5,0.7
+move forward turn right then move backward,UnitreeH1,0.55,0,0.25,0.7,0,0.4,0.5,0,0.35,0.1,0,0.2,-0.25,0,0.1,-0.55,0,0,0.7
+move forward turn left then move backward,UnitreeH1,0.45,0,-0.2,0.6,0,-0.3,0.4,0,-0.25,0.1,0,-0.1,-0.15,0,0,-0.4,0,0,0.7
+move backward turn right then move forward,UnitreeH1,-0.55,0,0.25,-0.7,0,0.4,-0.5,0,0.35,-0.1,0,0.2,0.25,0,0.1,0.55,0,0,0.7
+move backward turn left then move forward,UnitreeH1,-0.45,0,-0.2,-0.6,0,-0.3,-0.4,0,-0.25,-0.1,0,-0.1,0.15,0,0,0.4,0,0,0.7
+move forward then turn right,UnitreeH1,0.55,0,0,0.75,0,0,0.75,0,0,0.45,0,0.25,0.2,0,0.55,0,0,0.8,0.65
+move forward then turn left,UnitreeH1,0.55,0,0,0.75,0,0,0.75,0,0,0.45,0,-0.25,0.2,0,-0.55,0,0,-0.8,0.65
+move backward then turn right,UnitreeH1,-0.55,0,0,-0.75,0,0,-0.75,0,0,-0.45,0,0.25,-0.2,0,0.55,0,0,0.8,0.65
+move backward then turn left,UnitreeH1,-0.55,0,0,-0.75,0,0,-0.75,0,0,-0.45,0,-0.25,-0.2,0,-0.55,0,0,-0.8,0.65
+move right then turn right,UnitreeH1,0,0.45,0,0,0.65,0,0,0.65,0,0,0.35,0.25,0,0.15,0.55,0,0,0.8,0.65
+move left then turn left,UnitreeH1,0,-0.45,0,0,-0.65,0,0,-0.65,0,0,-0.35,0.25,0,-0.15,-0.55,0,0,-0.8,0.65
+move right then move forward,UnitreeH1,0,0.4,0,0,0.6,0,0,0.55,0,0.25,0.25,0,0.5,0.55,0,0.7,0.65,0,0.65
+move left then move forward,UnitreeH1,0,-0.4,0,0,-0.6,0,0,-0.55,0,0.25,-0.25,0,0.5,-0.55,0,0.7,-0.65,0,0.65
+move right then move backward,UnitreeH1,0,0.4,0,0,0.6,0,0,0.55,0,-0.25,0.25,0,-0.5,0.55,0,-0.7,0.65,0,0.65
+move left then move backward,UnitreeH1,0,-0.4,0,0,-0.6,0,0,-0.55,0,-0.25,-0.25,0,-0.5,-0.55,0,-0.7,-0.65,0,0.65
+move in a forward zigzag,UnitreeH1,0.55,0.25,0,0.65,-0.25,0,0.75,0.3,0,0.75,-0.3,0,0.65,0.25,0,0.55,-0.25,0,0.55
+zigzag forward quickly,UnitreeH1,0.7,0.35,0,0.85,-0.35,0,0.95,0.4,0,0.95,-0.4,0,0.85,0.35,0,0.7,-0.35,0,0.5
+move in a backward zigzag,UnitreeH1,-0.55,0.25,0,-0.65,-0.25,0,-0.75,0.3,0,-0.75,-0.3,0,-0.65,0.25,0,-0.55,-0.25,0,0.55
+zigzag backward slowly,UnitreeH1,-0.35,0.2,0,-0.45,-0.2,0,-0.5,0.25,0,-0.5,-0.25,0,-0.45,0.2,0,-0.35,-0.2,0,0.7
+move in a clockwise circle,UnitreeH1,0.45,0,0.4,0.55,0,0.5,0.65,0,0.6,0.65,0,0.6,0.55,0,0.5,0.45,0,0.4,0.6
+move in a counterclockwise circle,UnitreeH1,0.45,0,-0.4,0.55,0,-0.5,0.65,0,-0.6,0.65,0,-0.6,0.55,0,-0.5,0.45,0,-0.4,0.6
+make a wide right arc,UnitreeH1,0.65,0,0.2,0.75,0,0.25,0.8,0,0.3,0.8,0,0.3,0.75,0,0.25,0.65,0,0.2,0.65
+make a sharp right arc,UnitreeH1,0.35,0,0.55,0.45,0,0.7,0.5,0,0.85,0.5,0,0.85,0.45,0,0.7,0.35,0,0.55,0.55
+make a wide left arc,UnitreeH1,0.65,0,-0.2,0.75,0,-0.25,0.8,0,-0.3,0.8,0,-0.3,0.75,0,-0.25,0.65,0,-0.2,0.65
+make a sharp left arc,UnitreeH1,0.35,0,-0.55,0.45,0,-0.7,0.5,0,-0.85,0.5,0,-0.85,0.45,0,-0.7,0.35,0,-0.55,0.55
+move diagonally forward right,UnitreeH1,0.4,0.3,0,0.55,0.4,0,0.7,0.5,0,0.75,0.55,0,0.7,0.5,0,0.55,0.4,0,0.65
+move diagonally forward left,UnitreeH1,0.4,-0.3,0,0.55,-0.4,0,0.7,-0.5,0,0.75,-0.55,0,0.7,-0.5,0,0.55,-0.4,0,0.65
+move diagonally backward right,UnitreeH1,-0.4,0.3,0,-0.55,0.4,0,-0.7,0.5,0,-0.75,0.55,0,-0.7,0.5,0,-0.55,0.4,0,0.65
+move diagonally backward left,UnitreeH1,-0.4,-0.3,0,-0.55,-0.4,0,-0.7,-0.5,0,-0.75,-0.55,0,-0.7,-0.5,0,-0.55,-0.4,0,0.65
+turn right then move forward,UnitreeH1,0,0,0.45,0,0,0.7,0,0,0.7,0.2,0,0.45,0.45,0,0.2,0.7,0,0,0.65
+turn left then move forward,UnitreeH1,0,0,-0.45,0,0,-0.7,0,0,-0.7,0.2,0,-0.45,0.45,0,-0.2,0.7,0,0,0.65
+turn right then move backward,UnitreeH1,0,0,0.45,0,0,0.7,0,0,0.7,-0.2,0,0.45,-0.45,0,0.2,-0.7,0,0,0.65
+turn left then move backward,UnitreeH1,0,0,-0.45,0,0,-0.7,0,0,-0.7,-0.2,0,-0.45,-0.45,0,-0.2,-0.7,0,0,0.65
+move forward then stop,UnitreeH1,0.6,0,0,0.8,0,0,0.8,0,0,0.5,0,0,0.2,0,0,0,0,0,0.6
+move backward then stop,UnitreeH1,-0.6,0,0,-0.8,0,0,-0.8,0,0,-0.5,0,0,-0.2,0,0,0,0,0,0.6
+move right then stop,UnitreeH1,0,0.4,0,0,0.6,0,0,0.65,0,0,0.4,0,0,0.15,0,0,0,0,0.65
+move left then stop,UnitreeH1,0,-0.4,0,0,-0.6,0,0,-0.65,0,0,-0.4,0,0,-0.15,0,0,0,0,0.65
+turn right then stop,UnitreeH1,0,0,0.5,0,0,0.75,0,0,0.85,0,0,0.55,0,0,0.2,0,0,0,0.6
+turn left then stop,UnitreeH1,0,0,-0.5,0,0,-0.75,0,0,-0.85,0,0,-0.55,0,0,-0.2,0,0,0,0.6
+move forward right then turn left,UnitreeH1,0.45,0.3,0,0.6,0.4,0,0.65,0.35,-0.15,0.55,0.2,-0.35,0.35,0,-0.6,0.1,0,-0.75,0.65
+move forward left then turn right,UnitreeH1,0.45,-0.3,0,0.6,-0.4,0,0.65,-0.35,0.15,0.55,-0.2,0.35,0.35,0,0.6,0.1,0,0.75,0.65
+turn right move forward then turn left,UnitreeH1,0,0,0.5,0.2,0,0.4,0.5,0,0.2,0.65,0,0,0.5,0,-0.25,0.2,0,-0.55,0.65
+turn left move forward then turn right,UnitreeH1,0,0,-0.5,0.2,0,-0.4,0.5,0,-0.2,0.65,0,0,0.5,0,0.25,0.2,0,0.55,0.65
+move forward strafe right then turn right,UnitreeH1,0.55,0,0,0.7,0,0,0.45,0.3,0,0.2,0.55,0,0,0.35,0.35,0,0,0.7,0.65
+move forward strafe left then turn left,UnitreeH1,0.55,0,0,0.7,0,0,0.45,-0.3,0,0.2,-0.55,0,0,-0.35,-0.35,0,0,-0.7,0.65
+move right turn left then move forward,UnitreeH1,0,0.45,0,0,0.6,0,0,0.35,-0.25,0.15,0.1,-0.5,0.4,0,-0.25,0.65,0,0,0.65
+move left turn right then move forward,UnitreeH1,0,-0.45,0,0,-0.6,0,0,-0.35,0.25,0.15,-0.1,0.5,0.4,0,0.25,0.65,0,0,0.65
+walk forward fast then slow down,UnitreeH1,0.95,0,0,1,0,0,0.85,0,0,0.65,0,0,0.45,0,0,0.3,0,0,0.55
+walk backward fast then slow down,UnitreeH1,-0.95,0,0,-1,0,0,-0.85,0,0,-0.65,0,0,-0.45,0,0,-0.3,0,0,0.55
+turn right fast then slow down,UnitreeH1,0,0,0.95,0,0,1,0,0,0.85,0,0,0.65,0,0,0.45,0,0,0.3,0.55
+turn left fast then slow down,UnitreeH1,0,0,-0.95,0,0,-1,0,0,-0.85,0,0,-0.65,0,0,-0.45,0,0,-0.3,0.55
+accelerate forward,UnitreeH1,0.2,0,0,0.35,0,0,0.5,0,0,0.65,0,0,0.8,0,0,0.95,0,0,0.55
+accelerate backward,UnitreeH1,-0.2,0,0,-0.35,0,0,-0.5,0,0,-0.65,0,0,-0.8,0,0,-0.95,0,0,0.55
+accelerate into a right turn,UnitreeH1,0.2,0,0.15,0.3,0,0.25,0.4,0,0.4,0.5,0,0.55,0.6,0,0.7,0.7,0,0.85,0.55
+accelerate into a left turn,UnitreeH1,0.2,0,-0.15,0.3,0,-0.25,0.4,0,-0.4,0.5,0,-0.55,0.6,0,-0.7,0.7,0,-0.85,0.55
+make a quick right left zigzag,UnitreeH1,0,0.55,0,0,-0.55,0,0,0.65,0,0,-0.65,0,0,0.55,0,0,-0.55,0,0.5
+make a quick left right zigzag,UnitreeH1,0,-0.55,0,0,0.55,0,0,-0.65,0,0,0.65,0,0,-0.55,0,0,0.55,0,0.5
+turn right while moving sideways right,UnitreeH1,0,0.3,0.35,0,0.4,0.5,0,0.5,0.65,0,0.55,0.75,0,0.5,0.7,0,0.4,0.55,0.6
+turn left while moving sideways left,UnitreeH1,0,-0.3,-0.35,0,-0.4,-0.5,0,-0.5,-0.65,0,-0.55,-0.75,0,-0.5,-0.7,0,-0.4,-0.55,0.6
+move sideways right then sideways left,UnitreeH1,0,0.45,0,0,0.65,0,0,0.35,0,0,-0.2,0,0,-0.5,0,0,-0.65,0,0.65
+move sideways left then sideways right,UnitreeH1,0,-0.45,0,0,-0.65,0,0,-0.35,0,0,0.2,0,0,0.5,0,0,0.65,0,0.65
+move forward turn right and stop,UnitreeH1,0.5,0,0.2,0.65,0,0.35,0.65,0,0.5,0.45,0,0.55,0.2,0,0.3,0,0,0,0.65
+move forward turn left and stop,UnitreeH1,0.5,0,-0.2,0.65,0,-0.35,0.65,0,-0.5,0.45,0,-0.55,0.2,0,-0.3,0,0,0,0.65
+move forward,UnitreeGo1,0.55,0,0,0.75,0,0,0.9,0,0,0.9,0,0,0.8,0,0,0.65,0,0,0.5
+walk forward,UnitreeGo1,0.6,0,0,0.8,0,0,0.95,0,0,0.95,0,0,0.85,0,0,0.7,0,0,0.5
+go straight ahead,UnitreeGo1,0.5,0,0,0.7,0,0,0.85,0,0,0.95,0,0,0.85,0,0,0.65,0,0,0.55
+move ahead quickly,UnitreeGo1,0.75,0,0,0.95,0,0,1,0,0,1,0,0,0.95,0,0,0.8,0,0,0.4
+walk ahead steadily,UnitreeGo1,0.55,0,0,0.7,0,0,0.8,0,0,0.8,0,0,0.75,0,0,0.65,0,0,0.6
+advance forward,UnitreeGo1,0.6,0,0,0.8,0,0,0.95,0,0,0.95,0,0,0.85,0,0,0.7,0,0,0.5
+move forward slowly,UnitreeGo1,0.25,0,0,0.35,0,0,0.45,0,0,0.5,0,0,0.45,0,0,0.35,0,0,0.65
+walk forward fast,UnitreeGo1,0.8,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0.85,0,0,0.4
+continue moving forward,UnitreeGo1,0.6,0,0,0.75,0,0,0.85,0,0,0.9,0,0,0.85,0,0,0.75,0,0,0.5
+head straight forward,UnitreeGo1,0.55,0,0,0.75,0,0,0.9,0,0,0.95,0,0,0.85,0,0,0.7,0,0,0.5
+move backward,UnitreeGo1,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.9,0,0,-0.8,0,0,-0.65,0,0,0.5
+walk backward,UnitreeGo1,-0.6,0,0,-0.8,0,0,-0.95,0,0,-0.95,0,0,-0.85,0,0,-0.7,0,0,0.5
+go straight back,UnitreeGo1,-0.5,0,0,-0.7,0,0,-0.85,0,0,-0.95,0,0,-0.85,0,0,-0.65,0,0,0.55
+move backward quickly,UnitreeGo1,-0.75,0,0,-0.95,0,0,-1,0,0,-1,0,0,-0.95,0,0,-0.8,0,0,0.4
+walk backward steadily,UnitreeGo1,-0.55,0,0,-0.7,0,0,-0.8,0,0,-0.8,0,0,-0.75,0,0,-0.65,0,0,0.6
+reverse,UnitreeGo1,-0.6,0,0,-0.8,0,0,-0.95,0,0,-0.95,0,0,-0.85,0,0,-0.7,0,0,0.5
+move backward slowly,UnitreeGo1,-0.25,0,0,-0.35,0,0,-0.45,0,0,-0.5,0,0,-0.45,0,0,-0.35,0,0,0.65
+walk backward fast,UnitreeGo1,-0.8,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-0.85,0,0,0.4
+continue moving backward,UnitreeGo1,-0.6,0,0,-0.75,0,0,-0.85,0,0,-0.9,0,0,-0.85,0,0,-0.75,0,0,0.5
+head straight backward,UnitreeGo1,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.95,0,0,-0.85,0,0,-0.7,0,0,0.5
+move right,UnitreeGo1,0,0.5,0,0,0.7,0,0,0.85,0,0,0.9,0,0,0.85,0,0,0.7,0,0.5
+strafe right,UnitreeGo1,0,0.55,0,0,0.75,0,0,0.9,0,0,0.95,0,0,0.9,0,0,0.75,0,0.5
+step sideways to the right,UnitreeGo1,0,0.45,0,0,0.65,0,0,0.8,0,0,0.85,0,0,0.8,0,0,0.65,0,0.55
+move quickly to the right,UnitreeGo1,0,0.7,0,0,0.9,0,0,1,0,0,1,0,0,0.95,0,0,0.8,0,0.4
+shift right slowly,UnitreeGo1,0,0.25,0,0,0.35,0,0,0.45,0,0,0.5,0,0,0.45,0,0,0.35,0,0.65
+continue moving right,UnitreeGo1,0,0.55,0,0,0.75,0,0,0.9,0,0,0.95,0,0,0.9,0,0,0.75,0,0.5
+slide to the right,UnitreeGo1,0,0.5,0,0,0.7,0,0,0.85,0,0,0.9,0,0,0.85,0,0,0.7,0,0.5
+move sideways right,UnitreeGo1,0,0.55,0,0,0.75,0,0,0.9,0,0,0.95,0,0,0.9,0,0,0.75,0,0.5
+take a quick step right,UnitreeGo1,0,0.7,0,0,0.9,0,0,1,0,0,1,0,0,0.95,0,0,0.8,0,0.4
+head toward the right,UnitreeGo1,0,0.5,0,0,0.7,0,0,0.85,0,0,0.9,0,0,0.85,0,0,0.7,0,0.5
+move left,UnitreeGo1,0,-0.5,0,0,-0.7,0,0,-0.85,0,0,-0.9,0,0,-0.85,0,0,-0.7,0,0.5
+strafe left,UnitreeGo1,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.95,0,0,-0.9,0,0,-0.75,0,0.5
+step sideways to the left,UnitreeGo1,0,-0.45,0,0,-0.65,0,0,-0.8,0,0,-0.85,0,0,-0.8,0,0,-0.65,0,0.55
+move quickly to the left,UnitreeGo1,0,-0.7,0,0,-0.9,0,0,-1,0,0,-1,0,0,-0.95,0,0,-0.8,0,0.4
+shift left slowly,UnitreeGo1,0,-0.25,0,0,-0.35,0,0,-0.45,0,0,-0.5,0,0,-0.45,0,0,-0.35,0,0.65
+continue moving left,UnitreeGo1,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.95,0,0,-0.9,0,0,-0.75,0,0.5
+slide to the left,UnitreeGo1,0,-0.5,0,0,-0.7,0,0,-0.85,0,0,-0.9,0,0,-0.85,0,0,-0.7,0,0.5
+move sideways left,UnitreeGo1,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.95,0,0,-0.9,0,0,-0.75,0,0.5
+take a quick step left,UnitreeGo1,0,-0.7,0,0,-0.9,0,0,-1,0,0,-1,0,0,-0.95,0,0,-0.8,0,0.4
+head toward the left,UnitreeGo1,0,-0.5,0,0,-0.7,0,0,-0.85,0,0,-0.9,0,0,-0.85,0,0,-0.7,0,0.5
+turn right,UnitreeGo1,0,0,0.55,0,0,0.75,0,0,0.9,0,0,1,0,0,0.95,0,0,0.8,0.45
+rotate right,UnitreeGo1,0,0,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,0.95,0,0,0.8,0.45
+turn clockwise,UnitreeGo1,0,0,0.55,0,0,0.75,0,0,0.9,0,0,0.95,0,0,0.9,0,0,0.75,0.5
+turn right quickly,UnitreeGo1,0,0,0.75,0,0,0.95,0,0,1,0,0,1,0,0,1,0,0,0.9,0.4
+turn right slowly,UnitreeGo1,0,0,0.25,0,0,0.35,0,0,0.45,0,0,0.5,0,0,0.45,0,0,0.35,0.65
+keep turning right,UnitreeGo1,0,0,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,0.95,0,0,0.8,0.45
+spin to the right,UnitreeGo1,0,0,0.75,0,0,0.95,0,0,1,0,0,1,0,0,1,0,0,0.9,0.4
+pivot right,UnitreeGo1,0,0,0.5,0,0,0.7,0,0,0.85,0,0,0.95,0,0,0.9,0,0,0.75,0.5
+rotate clockwise quickly,UnitreeGo1,0,0,0.75,0,0,0.95,0,0,1,0,0,1,0,0,1,0,0,0.9,0.4
+make a right turn,UnitreeGo1,0,0,0.55,0,0,0.75,0,0,0.9,0,0,1,0,0,0.95,0,0,0.8,0.45
+turn left,UnitreeGo1,0,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-1,0,0,-0.95,0,0,-0.8,0.45
+rotate left,UnitreeGo1,0,0,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-0.95,0,0,-0.8,0.45
+turn counterclockwise,UnitreeGo1,0,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.95,0,0,-0.9,0,0,-0.75,0.5
+turn left quickly,UnitreeGo1,0,0,-0.75,0,0,-0.95,0,0,-1,0,0,-1,0,0,-1,0,0,-0.9,0.4
+turn left slowly,UnitreeGo1,0,0,-0.25,0,0,-0.35,0,0,-0.45,0,0,-0.5,0,0,-0.45,0,0,-0.35,0.65
+keep turning left,UnitreeGo1,0,0,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-0.95,0,0,-0.8,0.45
+spin to the left,UnitreeGo1,0,0,-0.75,0,0,-0.95,0,0,-1,0,0,-1,0,0,-1,0,0,-0.9,0.4
+pivot left,UnitreeGo1,0,0,-0.5,0,0,-0.7,0,0,-0.85,0,0,-0.95,0,0,-0.9,0,0,-0.75,0.5
+rotate counterclockwise quickly,UnitreeGo1,0,0,-0.75,0,0,-0.95,0,0,-1,0,0,-1,0,0,-1,0,0,-0.9,0.4
+make a left turn,UnitreeGo1,0,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-1,0,0,-0.95,0,0,-0.8,0.45
+move forward then backward,UnitreeGo1,0.75,0,0,0.95,0,0,0.65,0,0,-0.35,0,0,-0.75,0,0,-0.95,0,0,0.5
+walk ahead then reverse,UnitreeGo1,0.65,0,0,0.9,0,0,0.55,0,0,-0.3,0,0,-0.7,0,0,-0.9,0,0,0.5
+move backward then forward,UnitreeGo1,-0.75,0,0,-0.95,0,0,-0.65,0,0,0.35,0,0,0.75,0,0,0.95,0,0,0.5
+reverse then move ahead,UnitreeGo1,-0.65,0,0,-0.9,0,0,-0.55,0,0,0.3,0,0,0.7,0,0,0.9,0,0,0.5
+move forward and turn right,UnitreeGo1,0.5,0,0.3,0.7,0,0.45,0.85,0,0.6,0.9,0,0.75,0.85,0,0.85,0.7,0,0.75,0.45
+move forward while turning right,UnitreeGo1,0.5,0,0.35,0.7,0,0.5,0.85,0,0.65,0.95,0,0.8,0.9,0,0.9,0.75,0,0.8,0.45
+walk ahead and curve right,UnitreeGo1,0.45,0,0.25,0.65,0,0.4,0.8,0,0.55,0.85,0,0.65,0.8,0,0.7,0.65,0,0.6,0.5
+move forward and turn left,UnitreeGo1,0.5,0,-0.3,0.7,0,-0.45,0.85,0,-0.6,0.9,0,-0.75,0.85,0,-0.85,0.7,0,-0.75,0.45
+move forward while turning left,UnitreeGo1,0.5,0,-0.35,0.7,0,-0.5,0.85,0,-0.65,0.95,0,-0.8,0.9,0,-0.9,0.75,0,-0.8,0.45
+walk ahead and curve left,UnitreeGo1,0.45,0,-0.25,0.65,0,-0.4,0.8,0,-0.55,0.85,0,-0.65,0.8,0,-0.7,0.65,0,-0.6,0.5
+move backward while turning right,UnitreeGo1,-0.5,0,0.35,-0.7,0,0.5,-0.85,0,0.65,-0.95,0,0.8,-0.9,0,0.9,-0.75,0,0.8,0.45
+reverse and curve right,UnitreeGo1,-0.45,0,0.25,-0.65,0,0.4,-0.8,0,0.55,-0.85,0,0.65,-0.8,0,0.7,-0.65,0,0.6,0.5
+move backward while turning left,UnitreeGo1,-0.5,0,-0.35,-0.7,0,-0.5,-0.85,0,-0.65,-0.95,0,-0.8,-0.9,0,-0.9,-0.75,0,-0.8,0.45
+reverse and curve left,UnitreeGo1,-0.45,0,-0.25,-0.65,0,-0.4,-0.8,0,-0.55,-0.85,0,-0.65,-0.8,0,-0.7,-0.65,0,-0.6,0.5
+move forward turn right then move backward,UnitreeGo1,0.7,0,0.35,0.9,0,0.55,0.6,0,0.45,-0.35,0,0.3,-0.7,0,0.15,-0.9,0,0,0.5
+move forward turn left then move backward,UnitreeGo1,0.7,0,-0.35,0.9,0,-0.55,0.6,0,-0.45,-0.35,0,-0.3,-0.7,0,-0.15,-0.9,0,0,0.5
+move backward turn right then move forward,UnitreeGo1,-0.7,0,0.35,-0.9,0,0.55,-0.6,0,0.45,0.35,0,0.3,0.7,0,0.15,0.9,0,0,0.5
+move backward turn left then move forward,UnitreeGo1,-0.7,0,-0.35,-0.9,0,-0.55,-0.6,0,-0.45,0.35,0,-0.3,0.7,0,-0.15,0.9,0,0,0.5
+move forward then turn right,UnitreeGo1,0.65,0,0,0.9,0,0,0.9,0,0,0.45,0,0.35,0.15,0,0.7,0,0,0.95,0.5
+move forward then turn left,UnitreeGo1,0.65,0,0,0.9,0,0,0.9,0,0,0.45,0,-0.35,0.15,0,-0.7,0,0,-0.95,0.5
+move backward then turn right,UnitreeGo1,-0.65,0,0,-0.9,0,0,-0.9,0,0,-0.45,0,0.35,-0.15,0,0.7,0,0,0.95,0.5
+move backward then turn left,UnitreeGo1,-0.65,0,0,-0.9,0,0,-0.9,0,0,-0.45,0,-0.35,-0.15,0,-0.7,0,0,-0.95,0.5
+move right then turn right,UnitreeGo1,0,0.6,0,0,0.85,0,0,0.85,0,0,0.45,0.35,0,0.15,0.7,0,0,0.95,0.5
+move left then turn left,UnitreeGo1,0,-0.6,0,0,-0.85,0,0,-0.85,0,0,-0.45,-0.35,0,-0.15,-0.7,0,0,-0.95,0.5
+move right then move forward,UnitreeGo1,0,0.6,0,0,0.85,0,0,0.75,0,0.35,0.3,0,0.7,0.65,0,0.9,0.5,0,0.5
+move left then move forward,UnitreeGo1,0,-0.6,0,0,-0.85,0,0,-0.75,0,0.35,-0.3,0,0.7,-0.65,0,0.9,0,0,0.5
+move right then move backward,UnitreeGo1,0,0.6,0,0,0.85,0,0,0.75,0,-0.35,0.3,0,-0.7,-0.65,0,-0.9,0,0,0.5
+move left then move backward,UnitreeGo1,0,-0.6,0,0,-0.85,0,0,-0.75,0,-0.35,-0.3,0,-0.7,0.65,0,-0.9,0,0,0.5
+move in a forward zigzag,UnitreeGo1,0.65,0.35,0,0.8,-0.35,0,0.95,0.45,0,0.95,-0.45,0,0.8,0.35,0,0.65,-0.35,0,0.45
+zigzag forward quickly,UnitreeGo1,0.8,0.5,0,1,-0.5,0,1,0.6,0,1,-0.6,0,1,0.5,0,0.8,-0.5,0,0.4
+move in a backward zigzag,UnitreeGo1,-0.65,0.35,0,-0.8,-0.35,0,-0.95,0.45,0,-0.95,-0.45,0,-0.8,0.35,0,-0.65,-0.35,0,0.45
+zigzag backward slowly,UnitreeGo1,-0.35,0.25,0,-0.45,-0.25,0,-0.55,0.3,0,-0.55,-0.3,0,-0.45,0.25,0,-0.35,-0.25,0,0.65
+move in a clockwise circle,UnitreeGo1,0.55,0,0.5,0.7,0,0.65,0.85,0,0.8,0.85,0,0.8,0.7,0,0.65,0.55,0,0.5,0.45
+move in a counterclockwise circle,UnitreeGo1,0.55,0,-0.5,0.7,0,-0.65,0.85,0,-0.8,0.85,0,-0.8,0.7,0,-0.65,0.55,0,-0.5,0.45
+make a wide right arc,UnitreeGo1,0.7,0,0.25,0.85,0,0.3,0.95,0,0.35,0.95,0,0.35,0.85,0,0.3,0.7,0,0.25,0.5
+make a sharp right arc,UnitreeGo1,0.4,0,0.65,0.5,0,0.8,0.6,0,0.95,0.6,0,0.95,0.5,0,0.8,0.4,0,0.65,0.45
+make a wide left arc,UnitreeGo1,0.7,0,-0.25,0.85,0,-0.3,0.95,0,-0.35,0.95,0,-0.35,0.85,0,-0.3,0.7,0,-0.25,0.5
+make a sharp left arc,UnitreeGo1,0.4,0,-0.65,0.5,0,-0.8,0.6,0,-0.95,0.6,0,-0.95,0.5,0,-0.8,0.4,0,-0.65,0.45
+move diagonally forward right,UnitreeGo1,0.5,0.4,0,0.7,0.55,0,0.85,0.7,0,0.95,0.75,0,0.85,0.7,0,0.7,0.55,0,0.5
+move diagonally forward left,UnitreeGo1,0.5,-0.4,0,0.7,-0.55,0,0.85,-0.7,0,0.95,-0.75,0,0.85,-0.7,0,0.7,-0.55,0,0.5
+move diagonally backward right,UnitreeGo1,-0.5,0.4,0,-0.7,0.55,0,-0.85,0.7,0,-0.95,0.75,0,-0.85,0.7,0,-0.7,0.55,0,0.5
+move diagonally backward left,UnitreeGo1,-0.5,-0.4,0,-0.7,-0.55,0,-0.85,-0.7,0,-0.95,-0.75,0,-0.85,-0.7,0,-0.7,-0.55,0,0.5
+turn right then move forward,UnitreeGo1,0,0,0.6,0,0,0.9,0,0,0.9,0.3,0,0.55,0.65,0,0.25,0.9,0,0,0.5
+turn left then move forward,UnitreeGo1,0,0,-0.6,0,0,-0.9,0,0,-0.9,0.3,0,-0.55,0.65,0,-0.25,0.9,0,0,0.5
+turn right then move backward,UnitreeGo1,0,0,0.6,0,0,0.9,0,0,0.9,-0.3,0,0.55,-0.65,0,0.25,-0.9,0,0,0.5
+turn left then move backward,UnitreeGo1,0,0,-0.6,0,0,-0.9,0,0,-0.9,-0.3,0,-0.55,-0.65,0,-0.25,-0.9,0,0,0.5
+move forward then stop,UnitreeGo1,0.7,0,0,0.95,0,0,0.95,0,0,0.6,0,0,0.25,0,0,0,0,0,0.45
+move backward then stop,UnitreeGo1,-0.7,0,0,-0.95,0,0,-0.95,0,0,-0.6,0,0,-0.25,0,0,0,0,0,0.45
+move right then stop,UnitreeGo1,0,0.65,0,0,0.9,0,0,0.95,0,0,0.6,0,0,0.25,0,0,0,0,0.45
+move left then stop,UnitreeGo1,0,-0.65,0,0,-0.9,0,0,-0.95,0,0,-0.6,0,0,-0.25,0,0,0,0,0.45
+turn right then stop,UnitreeGo1,0,0,0.7,0,0,0.95,0,0,1,0,0,0.65,0,0,0.25,0,0,0,0.45
+turn left then stop,UnitreeGo1,0,0,-0.7,0,0,-0.95,0,0,-1,0,0,-0.65,0,0,-0.25,0,0,0,0.45
+move forward right then turn left,UnitreeGo1,0.55,0.4,0,0.75,0.55,0,0.85,0.5,-0.2,0.7,0.3,-0.45,0.45,0,-0.75,0.15,0,-0.95,0.5
+move forward left then turn right,UnitreeGo1,0.55,-0.4,0,0.75,-0.55,0,0.85,-0.5,0.2,0.7,-0.3,0.45,0.45,0,0.75,0.15,0,0.95,0.5
+turn right move forward then turn left,UnitreeGo1,0,0,0.65,0.3,0,0.5,0.65,0,0.25,0.9,0,0,0.65,0,-0.35,0.3,0,-0.75,0.5
+turn left move forward then turn right,UnitreeGo1,0,0,-0.65,0.3,0,-0.5,0.65,0,-0.25,0.9,0,0,0.65,0,0.35,0.3,0,0.75,0.5
+move forward strafe right then turn right,UnitreeGo1,0.65,0,0,0.9,0,0,0.55,0.45,0,0.3,0.75,0,0,0.45,0.45,0,0,0.9,0.5
+move forward strafe left then turn left,UnitreeGo1,0.65,0,0,0.9,0,0,0.55,-0.45,0,0.3,-0.75,0,0,-0.45,-0.45,0,0,-0.9,0.5
+move right turn left then move forward,UnitreeGo1,0,0.6,0,0,0.85,0,0,0.45,-0.35,0.2,0.15,-0.7,0.55,0,-0.35,0.9,0,0,0.5
+move left turn right then move forward,UnitreeGo1,0,-0.6,0,0,-0.85,0,0,-0.45,0.35,0.2,-0.15,0.7,0.55,0,0.35,0.9,0,0,0.5
+walk forward fast then slow down,UnitreeGo1,1,0,0,1,0,0,0.95,0,0,0.75,0,0,0.5,0,0,0.3,0,0,0.4
+walk backward fast then slow down,UnitreeGo1,-1,0,0,-1,0,0,-0.95,0,0,-0.75,0,0,-0.5,0,0,-0.3,0,0,0.4
+turn right fast then slow down,UnitreeGo1,0,0,1,0,0,1,0,0,0.95,0,0,0.75,0,0,0.5,0,0,0.3,0.4
+turn left fast then slow down,UnitreeGo1,0,0,-1,0,0,-1,0,0,-0.95,0,0,-0.75,0,0,-0.5,0,0,-0.3,0.4
+accelerate forward,UnitreeGo1,0.25,0,0,0.4,0,0,0.6,0,0,0.75,0,0,0.9,0,0,1,0,0,0.45
+accelerate backward,UnitreeGo1,-0.25,0,0,-0.4,0,0,-0.6,0,0,-0.75,0,0,-0.9,0,0,-1,0,0,0.45
+accelerate into a right turn,UnitreeGo1,0.25,0,0.2,0.4,0,0.35,0.55,0,0.5,0.7,0,0.65,0.85,0,0.8,1,0,0.95,0.45
+accelerate into a left turn,UnitreeGo1,0.25,0,-0.2,0.4,0,-0.35,0.55,0,-0.5,0.7,0,-0.65,0.85,0,-0.8,1,0,-0.95,0.45
+make a quick right left zigzag,UnitreeGo1,0,0.7,0,0,-0.7,0,0,0.85,0,0,-0.85,0,0,0.75,0,0,-0.75,0,0.4
+make a quick left right zigzag,UnitreeGo1,0,-0.7,0,0,0.7,0,0,-0.85,0,0,0.85,0,0,-0.75,0,0,0.75,0,0.4
+turn right while moving sideways right,UnitreeGo1,0,0.45,0.45,0,0.6,0.6,0,0.75,0.75,0,0.85,0.9,0,0.8,0.85,0,0.65,0.7,0.45
+turn left while moving sideways left,UnitreeGo1,0,-0.45,-0.45,0,-0.6,-0.6,0,-0.75,-0.75,0,-0.85,-0.9,0,-0.8,-0.85,0,-0.65,-0.7,0.45
+move sideways right then sideways left,UnitreeGo1,0,0.65,0,0,0.9,0,0,0.55,0,0,-0.35,0,0,-0.75,0,0,-0.95,0,0.5
+move sideways left then sideways right,UnitreeGo1,0,-0.65,0,0,-0.9,0,0,-0.55,0,0,0.35,0,0,0.75,0,0,0.95,0,0.5
+move forward turn right and stop,UnitreeGo1,0.6,0,0.3,0.8,0,0.5,0.85,0,0.7,0.6,0,0.7,0.25,0,0.35,0,0,0,0.5
+move forward turn left and stop,UnitreeGo1,0.6,0,-0.3,0.8,0,-0.5,0.85,0,-0.7,0.6,0,-0.7,0.25,0,-0.35,0,0,0,0.5
+move forward,UnitreeGo2,0.6,0,0,0.8,0,0,0.95,0,0,0.95,0,0,0.85,0,0,0.7,0,0,0.45
+walk forward,UnitreeGo2,0.65,0,0,0.85,0,0,1,0,0,1,0,0,0.9,0,0,0.75,0,0,0.45
+go straight ahead,UnitreeGo2,0.55,0,0,0.75,0,0,0.9,0,0,1,0,0,0.9,0,0,0.7,0,0,0.5
+move ahead quickly,UnitreeGo2,0.8,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0.85,0,0,0.4
+walk ahead steadily,UnitreeGo2,0.6,0,0,0.75,0,0,0.85,0,0,0.85,0,0,0.8,0,0,0.7,0,0,0.55
+advance forward,UnitreeGo2,0.6,0,0,0.8,0,0,0.95,0,0,0.95,0,0,0.85,0,0,0.7,0,0,0.5
+move forward slowly,UnitreeGo2,0.3,0,0,0.4,0,0,0.5,0,0,0.55,0,0,0.5,0,0,0.4,0,0,0.6
+walk forward fast,UnitreeGo2,0.85,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0.9,0,0,0.4
+continue moving forward,UnitreeGo2,0.65,0,0,0.8,0,0,0.9,0,0,0.95,0,0,0.9,0,0,0.8,0,0,0.45
+head straight forward,UnitreeGo2,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,0.9,0,0,0.75,0,0,0.45
+move backward,UnitreeGo2,-0.6,0,0,-0.8,0,0,-0.95,0,0,-0.95,0,0,-0.85,0,0,-0.7,0,0,0.45
+walk backward,UnitreeGo2,-0.65,0,0,-0.85,0,0,-1,0,0,-1,0,0,-0.9,0,0,-0.75,0,0,0.45
+go straight back,UnitreeGo2,-0.55,0,0,-0.75,0,0,-0.9,0,0,-1,0,0,-0.9,0,0,-0.7,0,0,0.5
+move backward quickly,UnitreeGo2,-0.8,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-0.85,0,0,0.4
+walk backward steadily,UnitreeGo2,-0.6,0,0,-0.75,0,0,-0.85,0,0,-0.85,0,0,-0.8,0,0,-0.7,0,0,0.55
+reverse,UnitreeGo2,-0.6,0,0,-0.8,0,0,-0.95,0,0,-0.95,0,0,-0.85,0,0,-0.7,0,0,0.5
+move backward slowly,UnitreeGo2,-0.3,0,0,-0.4,0,0,-0.5,0,0,-0.55,0,0,-0.5,0,0,-0.4,0,0,0.6
+walk backward fast,UnitreeGo2,-0.85,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-0.9,0,0,0.4
+continue moving backward,UnitreeGo2,-0.65,0,0,-0.8,0,0,-0.9,0,0,-0.95,0,0,-0.9,0,0,-0.8,0,0,0.45
+head straight backward,UnitreeGo2,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-0.9,0,0,-0.75,0,0,0.45
+move right,UnitreeGo2,0,0.55,0,0,0.75,0,0,0.9,0,0,0.95,0,0,0.9,0,0,0.75,0,0.45
+strafe right,UnitreeGo2,0,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,0.95,0,0,0.8,0,0.45
+step sideways to the right,UnitreeGo2,0,0.5,0,0,0.7,0,0,0.85,0,0,0.9,0,0,0.85,0,0,0.7,0,0.5
+move quickly to the right,UnitreeGo2,0,0.75,0,0,0.95,0,0,1,0,0,1,0,0,1,0,0,0.85,0,0.4
+shift right slowly,UnitreeGo2,0,0.3,0,0,0.4,0,0,0.5,0,0,0.55,0,0,0.5,0,0,0.4,0,0.6
+continue moving right,UnitreeGo2,0,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,0.95,0,0,0.8,0,0.45
+slide to the right,UnitreeGo2,0,0.55,0,0,0.75,0,0,0.9,0,0,0.95,0,0,0.9,0,0,0.75,0,0.45
+move sideways right,UnitreeGo2,0,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,0.95,0,0,0.8,0,0.45
+take a quick step right,UnitreeGo2,0,0.75,0,0,0.95,0,0,1,0,0,1,0,0,1,0,0,0.85,0,0.4
+head toward the right,UnitreeGo2,0,0.55,0,0,0.75,0,0,0.9,0,0,0.95,0,0,0.9,0,0,0.75,0,0.45
+move left,UnitreeGo2,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.95,0,0,-0.9,0,0,-0.75,0,0.45
+strafe left,UnitreeGo2,0,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-0.95,0,0,-0.8,0,0.45
+step sideways to the left,UnitreeGo2,0,-0.5,0,0,-0.7,0,0,-0.85,0,0,-0.9,0,0,-0.85,0,0,-0.7,0,0.5
+move quickly to the left,UnitreeGo2,0,-0.75,0,0,-0.95,0,0,-1,0,0,-1,0,0,-1,0,0,-0.85,0,0.4
+shift left slowly,UnitreeGo2,0,-0.3,0,0,-0.4,0,0,-0.5,0,0,-0.55,0,0,-0.5,0,0,-0.4,0,0.6
+continue moving left,UnitreeGo2,0,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-0.95,0,0,-0.8,0,0.45
+slide to the left,UnitreeGo2,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.95,0,0,-0.9,0,0,-0.75,0,0.45
+move sideways left,UnitreeGo2,0,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-0.95,0,0,-0.8,0,0.45
+take a quick step left,UnitreeGo2,0,-0.75,0,0,-0.95,0,0,-1,0,0,-1,0,0,-1,0,0,-0.85,0,0.4
+head toward the left,UnitreeGo2,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-0.95,0,0,-0.9,0,0,-0.75,0,0.45
+turn right,UnitreeGo2,0,0,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,1,0,0,0.85,0.4
+rotate right,UnitreeGo2,0,0,0.65,0,0,0.85,0,0,1,0,0,1,0,0,1,0,0,0.85,0.4
+turn clockwise,UnitreeGo2,0,0,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,0.95,0,0,0.8,0.45
+turn right quickly,UnitreeGo2,0,0,0.8,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0.95,0.4
+turn right slowly,UnitreeGo2,0,0,0.3,0,0,0.4,0,0,0.5,0,0,0.55,0,0,0.5,0,0,0.4,0.6
+keep turning right,UnitreeGo2,0,0,0.65,0,0,0.85,0,0,1,0,0,1,0,0,1,0,0,0.85,0.4
+spin to the right,UnitreeGo2,0,0,0.8,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0.95,0.4
+pivot right,UnitreeGo2,0,0,0.55,0,0,0.75,0,0,0.9,0,0,1,0,0,0.95,0,0,0.8,0.45
+rotate clockwise quickly,UnitreeGo2,0,0,0.8,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0.95,0.4
+make a right turn,UnitreeGo2,0,0,0.6,0,0,0.8,0,0,0.95,0,0,1,0,0,1,0,0,0.85,0.4
+turn left,UnitreeGo2,0,0,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-1,0,0,-0.85,0.4
+rotate left,UnitreeGo2,0,0,-0.65,0,0,-0.85,0,0,-1,0,0,-1,0,0,-1,0,0,-0.85,0.4
+turn counterclockwise,UnitreeGo2,0,0,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-0.95,0,0,-0.8,0.45
+turn left quickly,UnitreeGo2,0,0,-0.8,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-0.95,0.4
+turn left slowly,UnitreeGo2,0,0,-0.3,0,0,-0.4,0,0,-0.5,0,0,-0.55,0,0,-0.5,0,0,-0.4,0.6
+keep turning left,UnitreeGo2,0,0,-0.65,0,0,-0.85,0,0,-1,0,0,-1,0,0,-1,0,0,-0.85,0.4
+spin to the left,UnitreeGo2,0,0,-0.8,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-0.95,0.4
+pivot left,UnitreeGo2,0,0,-0.55,0,0,-0.75,0,0,-0.9,0,0,-1,0,0,-0.95,0,0,-0.8,0.45
+rotate counterclockwise quickly,UnitreeGo2,0,0,-0.8,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-0.95,0.4
+make a left turn,UnitreeGo2,0,0,-0.6,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,-1,0,0,-0.85,0.4
+move forward then backward,UnitreeGo2,0.8,0,0,1,0,0,0.7,0,0,-0.4,0,0,-0.8,0,0,-1,0,0,0.45
+walk ahead then reverse,UnitreeGo2,0.7,0,0,0.95,0,0,0.6,0,0,-0.35,0,0,-0.75,0,0,-0.95,0,0,0.45
+move backward then forward,UnitreeGo2,-0.8,0,0,-1,0,0,-0.7,0,0,0.4,0,0,0.8,0,0,1,0,0,0.45
+reverse then move ahead,UnitreeGo2,-0.7,0,0,-0.95,0,0,-0.6,0,0,0.35,0,0,0.75,0,0,0.95,0,0,0.45
+move forward and turn right,UnitreeGo2,0.55,0,0.35,0.75,0,0.5,0.9,0,0.65,0.95,0,0.8,0.9,0,0.9,0.75,0,0.8,0.4
+move forward while turning right,UnitreeGo2,0.55,0,0.4,0.75,0,0.55,0.9,0,0.7,1,0,0.85,0.95,0,0.95,0.8,0,0.85,0.4
+walk ahead and curve right,UnitreeGo2,0.5,0,0.3,0.7,0,0.45,0.85,0,0.6,0.9,0,0.7,0.85,0,0.75,0.7,0,0.65,0.45
+move forward and turn left,UnitreeGo2,0.55,0,-0.35,0.75,0,-0.5,0.9,0,-0.65,0.95,0,-0.8,0.9,0,-0.9,0.75,0,-0.8,0.4
+move forward while turning left,UnitreeGo2,0.55,0,-0.4,0.75,0,-0.55,0.9,0,-0.7,1,0,-0.85,0.95,0,-0.95,0.8,0,-0.85,0.4
+walk ahead and curve left,UnitreeGo2,0.5,0,-0.3,0.7,0,-0.45,0.85,0,-0.6,0.9,0,-0.7,0.85,0,-0.75,0.7,0,-0.65,0.45
+move backward while turning right,UnitreeGo2,-0.55,0,0.4,-0.75,0,0.55,-0.9,0,0.7,-1,0,0.85,-0.95,0,0.95,-0.8,0,0.85,0.4
+reverse and curve right,UnitreeGo2,-0.5,0,0.3,-0.7,0,0.45,-0.85,0,0.6,-0.9,0,0.7,-0.85,0,0.75,-0.7,0,0.65,0.45
+move backward while turning left,UnitreeGo2,-0.55,0,-0.4,-0.75,0,-0.55,-0.9,0,-0.7,-1,0,-0.85,-0.95,0,-0.95,-0.8,0,-0.85,0.4
+reverse and curve left,UnitreeGo2,-0.5,0,-0.3,-0.7,0,-0.45,-0.85,0,-0.6,-0.9,0,-0.7,-0.85,0,-0.75,-0.7,0,-0.65,0.45
+move forward turn right then move backward,UnitreeGo2,0.75,0,0.4,0.95,0,0.6,0.65,0,0.5,-0.4,0,0.35,-0.75,0,0.2,-0.95,0,0,0.45
+move forward turn left then move backward,UnitreeGo2,0.75,0,-0.4,0.95,0,-0.6,0.65,0,-0.5,-0.4,0,-0.35,-0.75,0,-0.2,-0.95,0,0,0.45
+move backward turn right then move forward,UnitreeGo2,-0.75,0,0.4,-0.95,0,0.6,-0.65,0,0.5,0.4,0,0.35,0.75,0,0.2,0.95,0,0,0.45
+move backward turn left then move forward,UnitreeGo2,-0.75,0,-0.4,-0.95,0,-0.6,-0.65,0,-0.5,0.4,0,-0.35,0.75,0,-0.2,0.95,0,0,0.45
+move forward then turn right,UnitreeGo2,0.7,0,0,0.95,0,0,0.95,0,0,0.5,0,0.4,0.2,0,0.75,0,0,1,0.45
+move forward then turn left,UnitreeGo2,0.7,0,0,0.95,0,0,0.95,0,0,0.5,0,-0.4,0.2,0,-0.75,0,0,-1,0.45
+move backward then turn right,UnitreeGo2,-0.7,0,0,-0.95,0,0,-0.95,0,0,-0.5,0,0.4,-0.2,0,0.75,0,0,1,0.45
+move backward then turn left,UnitreeGo2,-0.7,0,0,-0.95,0,0,-0.95,0,0,-0.5,0,-0.4,-0.2,0,-0.75,0,0,-1,0.45
+move right then turn right,UnitreeGo2,0,0.65,0,0,0.9,0,0,0.9,0,0,0.5,0.4,0,0.2,0.75,0,0,1,0.45
+move left then turn left,UnitreeGo2,0,-0.65,0,0,-0.9,0,0,-0.9,0,0,-0.5,-0.4,0,-0.2,-0.75,0,0,-1,0.45
+move right then move forward,UnitreeGo2,0,0.65,0,0,0.9,0,0,0.8,0,0.4,0.35,0,0.75,0.7,0,0.95,0.95,0,0.45
+move left then move forward,UnitreeGo2,0,-0.65,0,0,-0.9,0,0,-0.8,0,0.4,-0.35,0,0.75,-0.7,0,0.95,0,0,0.45
+move right then move backward,UnitreeGo2,0,0.65,0,0,0.9,0,0,0.8,0,-0.4,0.35,0,-0.75,-0.7,0,-0.95,0,0,0.45
+move left then move backward,UnitreeGo2,0,-0.65,0,0,-0.9,0,0,-0.8,0,-0.4,-0.35,0,-0.75,0.7,0,-0.95,0,0,0.45
+move in a forward zigzag,UnitreeGo2,0.7,0.4,0,0.85,-0.4,0,1,0.5,0,1,-0.5,0,0.85,0.4,0,0.7,-0.4,0,0.4
+zigzag forward quickly,UnitreeGo2,0.85,0.55,0,1,-0.55,0,1,0.65,0,1,-0.65,0,1,0.55,0,0.85,-0.55,0,0.4
+move in a backward zigzag,UnitreeGo2,-0.7,0.4,0,-0.85,-0.4,0,-1,0.5,0,-1,-0.5,0,-0.85,0.4,0,-0.7,-0.4,0,0.4
+zigzag backward slowly,UnitreeGo2,-0.4,0.3,0,-0.5,-0.3,0,-0.6,0.35,0,-0.6,-0.35,0,-0.5,0.3,0,-0.4,-0.3,0,0.6
+move in a clockwise circle,UnitreeGo2,0.6,0,0.55,0.75,0,0.7,0.9,0,0.85,0.9,0,0.85,0.75,0,0.7,0.6,0,0.55,0.4
+move in a counterclockwise circle,UnitreeGo2,0.6,0,-0.55,0.75,0,-0.7,0.9,0,-0.85,0.9,0,-0.85,0.75,0,-0.7,0.6,0,-0.55,0.4
+make a wide right arc,UnitreeGo2,0.75,0,0.3,0.9,0,0.35,1,0,0.4,1,0,0.4,0.9,0,0.35,0.75,0,0.3,0.45
+make a sharp right arc,UnitreeGo2,0.45,0,0.7,0.55,0,0.85,0.65,0,1,0.65,0,1,0.55,0,0.85,0.45,0,0.7,0.4
+make a wide left arc,UnitreeGo2,0.75,0,-0.3,0.9,0,-0.35,1,0,-0.4,1,0,-0.4,0.9,0,-0.35,0.75,0,-0.3,0.45
+make a sharp left arc,UnitreeGo2,0.45,0,-0.7,0.55,0,-0.85,0.65,0,-1,0.65,0,-1,0.55,0,-0.85,0.45,0,-0.7,0.4
+move diagonally forward right,UnitreeGo2,0.55,0.45,0,0.75,0.6,0,0.9,0.75,0,1,0.8,0,0.9,0.75,0,0.75,0.6,0,0.45
+move diagonally forward left,UnitreeGo2,0.55,-0.45,0,0.75,-0.6,0,0.9,-0.75,0,1,-0.8,0,0.9,-0.75,0,0.75,-0.6,0,0.45
+move diagonally backward right,UnitreeGo2,-0.55,0.45,0,-0.75,0.6,0,-0.9,0.75,0,-1,0.8,0,-0.9,0.75,0,-0.75,0.6,0,0.45
+move diagonally backward left,UnitreeGo2,-0.55,-0.45,0,-0.75,-0.6,0,-0.9,-0.75,0,-1,-0.8,0,-0.9,-0.75,0,-0.75,-0.6,0,0.45
+turn right then move forward,UnitreeGo2,0,0,0.65,0,0,0.95,0,0,0.95,0.35,0,0.6,0.7,0,0.3,0.95,0,0,0.45
+turn left then move forward,UnitreeGo2,0,0,-0.65,0,0,-0.95,0,0,-0.95,0.35,0,-0.6,0.7,0,-0.3,0.95,0,0,0.45
+turn right then move backward,UnitreeGo2,0,0,0.65,0,0,0.95,0,0,0.95,-0.35,0,0.6,-0.7,0,0.3,-0.95,0,0,0.45
+turn left then move backward,UnitreeGo2,0,0,-0.65,0,0,-0.95,0,0,-0.95,-0.35,0,-0.6,-0.7,0,-0.3,-0.95,0,0,0.45
+move forward then stop,UnitreeGo2,0.75,0,0,1,0,0,1,0,0,0.65,0,0,0.3,0,0,0,0,0,0.4
+move backward then stop,UnitreeGo2,-0.75,0,0,-1,0,0,-1,0,0,-0.65,0,0,-0.3,0,0,0,0,0,0.4
+move right then stop,UnitreeGo2,0,0.7,0,0,0.95,0,0,1,0,0,0.65,0,0,0.3,0,0,0,0,0.4
+move left then stop,UnitreeGo2,0,-0.7,0,0,-0.95,0,0,-1,0,0,-0.65,0,0,-0.3,0,0,0,0,0.4
+turn right then stop,UnitreeGo2,0,0,0.75,0,0,1,0,0,1,0,0,0.7,0,0,0.3,0,0,0,0.4
+turn left then stop,UnitreeGo2,0,0,-0.75,0,0,-1,0,0,-1,0,0,-0.7,0,0,-0.3,0,0,0,0.4
+move forward right then turn left,UnitreeGo2,0.6,0.45,0,0.8,0.6,0,0.9,0.55,-0.25,0.75,0.35,-0.5,0.5,0,-0.8,0.2,0,-1,0.45
+move forward left then turn right,UnitreeGo2,0.6,-0.45,0,0.8,-0.6,0,0.9,-0.55,0.25,0.75,-0.35,0.5,0.5,0,0.8,0.2,0,1,0.45
+turn right move forward then turn left,UnitreeGo2,0,0,0.7,0.35,0,0.55,0.7,0,0.3,0.95,0,0,0.7,0,-0.4,0.35,0,-0.8,0.45
+turn left move forward then turn right,UnitreeGo2,0,0,-0.7,0.35,0,-0.55,0.7,0,-0.3,0.95,0,0,0.7,0,0.4,0.35,0,0.8,0.45
+move forward strafe right then turn right,UnitreeGo2,0.7,0,0,0.95,0,0,0.6,0.5,0,0.35,0.8,0,0,0.5,0.5,0,0,0.95,0.45
+move forward strafe left then turn left,UnitreeGo2,0.7,0,0,0.95,0,0,0.6,-0.5,0,0.35,-0.8,0,0,-0.5,-0.5,0,0,-0.95,0.45
+move right turn left then move forward,UnitreeGo2,0,0.65,0,0,0.9,0,0,0.5,-0.4,0.25,0.2,-0.75,0.6,0,-0.4,0.95,0,0,0.45
+move left turn right then move forward,UnitreeGo2,0,-0.65,0,0,-0.9,0,0,-0.5,0.4,0.25,-0.2,0.75,0.6,0,0.4,0.95,0,0,0.45
+walk forward fast then slow down,UnitreeGo2,1,0,0,1,0,0,1,0,0,0.8,0,0,0.55,0,0,0.35,0,0,0.4
+walk backward fast then slow down,UnitreeGo2,-1,0,0,-1,0,0,-1,0,0,-0.8,0,0,-0.55,0,0,-0.35,0,0,0.4
+turn right fast then slow down,UnitreeGo2,0,0,1,0,0,1,0,0,1,0,0,0.8,0,0,0.55,0,0,0.35,0.4
+turn left fast then slow down,UnitreeGo2,0,0,-1,0,0,-1,0,0,-1,0,0,-0.8,0,0,-0.55,0,0,-0.35,0.4
+accelerate forward,UnitreeGo2,0.3,0,0,0.45,0,0,0.65,0,0,0.8,0,0,0.95,0,0,1,0,0,0.4
+accelerate backward,UnitreeGo2,-0.3,0,0,-0.45,0,0,-0.65,0,0,-0.8,0,0,-0.95,0,0,-1,0,0,0.4
+accelerate into a right turn,UnitreeGo2,0.3,0,0.25,0.45,0,0.4,0.6,0,0.55,0.75,0,0.7,0.9,0,0.85,1,0,1,0.4
+accelerate into a left turn,UnitreeGo2,0.3,0,-0.25,0.45,0,-0.4,0.6,0,-0.55,0.75,0,-0.7,0.9,0,-0.85,1,0,-1,0.4
+make a quick right left zigzag,UnitreeGo2,0,0.75,0,0,-0.75,0,0,0.9,0,0,-0.9,0,0,0.8,0,0,-0.8,0,0.4
+make a quick left right zigzag,UnitreeGo2,0,-0.75,0,0,0.75,0,0,-0.9,0,0,0.9,0,0,-0.8,0,0,0.8,0,0.4
+turn right while moving sideways right,UnitreeGo2,0,0.5,0.5,0,0.65,0.65,0,0.8,0.8,0,0.9,0.95,0,0.85,0.9,0,0.7,0.75,0.4
+turn left while moving sideways left,UnitreeGo2,0,-0.5,-0.5,0,-0.65,-0.65,0,-0.8,-0.8,0,-0.9,-0.95,0,-0.85,-0.9,0,-0.7,-0.75,0.4
+move sideways right then sideways left,UnitreeGo2,0,0.7,0,0,0.95,0,0,0.6,0,0,-0.4,0,0,-0.8,0,0,-1,0,0.45
+move sideways left then sideways right,UnitreeGo2,0,-0.7,0,0,-0.95,0,0,-0.6,0,0,0.4,0,0,0.8,0,0,1,0,0.45
+move forward turn right and stop,UnitreeGo2,0.65,0,0.35,0.85,0,0.55,0.9,0,0.75,0.65,0,0.75,0.3,0,0.4,0,0,0,0.45
+move forward turn left and stop,UnitreeGo2,0.65,0,-0.35,0.85,0,-0.55,0.9,0,-0.75,0.65,0,-0.75,0.3,0,-0.4,0,0,0,0.45
+move forward,Cassie,0.05,0,0,0.12,0,0,0.2,0,0,0.26,0,0,0.24,0,0,0.18,0,0,0.9
+walk forward,Cassie,0.04,0,0,0.1,0,0,0.18,0,0,0.25,0,0,0.23,0,0,0.16,0,0,0.95
+go straight ahead,Cassie,0.04,0,0,0.11,0,0,0.19,0,0,0.24,0,0,0.22,0,0,0.15,0,0,1
+move ahead quickly,Cassie,0.08,0,0,0.16,0,0,0.25,0,0,0.32,0,0,0.28,0,0,0.2,0,0,0.85
+walk ahead steadily,Cassie,0.04,0,0,0.09,0,0,0.15,0,0,0.2,0,0,0.18,0,0,0.13,0,0,1.1
+advance forward,Cassie,0.05,0,0,0.12,0,0,0.19,0,0,0.25,0,0,0.23,0,0,0.17,0,0,0.95
+move forward slowly,Cassie,0.03,0,0,0.07,0,0,0.11,0,0,0.15,0,0,0.14,0,0,0.1,0,0,1.2
+walk forward fast,Cassie,0.08,0,0,0.17,0,0,0.26,0,0,0.33,0,0,0.29,0,0,0.2,0,0,0.85
+continue moving forward,Cassie,0.04,0,0,0.1,0,0,0.17,0,0,0.23,0,0,0.21,0,0,0.16,0,0,1
+head straight forward,Cassie,0.04,0,0,0.1,0,0,0.18,0,0,0.24,0,0,0.22,0,0,0.15,0,0,1
+move backward,Cassie,-0.04,0,0,-0.1,0,0,-0.17,0,0,-0.23,0,0,-0.21,0,0,-0.15,0,0,1
+walk backward,Cassie,-0.04,0,0,-0.11,0,0,-0.18,0,0,-0.24,0,0,-0.22,0,0,-0.16,0,0,1
+go straight back,Cassie,-0.04,0,0,-0.1,0,0,-0.16,0,0,-0.22,0,0,-0.2,0,0,-0.14,0,0,1.05
+move backward quickly,Cassie,-0.07,0,0,-0.15,0,0,-0.24,0,0,-0.3,0,0,-0.27,0,0,-0.19,0,0,0.9
+walk backward steadily,Cassie,-0.03,0,0,-0.08,0,0,-0.14,0,0,-0.19,0,0,-0.17,0,0,-0.12,0,0,1.15
+reverse,Cassie,-0.04,0,0,-0.11,0,0,-0.18,0,0,-0.24,0,0,-0.22,0,0,-0.16,0,0,1
+move backward slowly,Cassie,-0.03,0,0,-0.06,0,0,-0.1,0,0,-0.14,0,0,-0.13,0,0,-0.09,0,0,1.2
+walk backward fast,Cassie,-0.07,0,0,-0.16,0,0,-0.25,0,0,-0.31,0,0,-0.27,0,0,-0.19,0,0,0.9
+continue moving backward,Cassie,-0.04,0,0,-0.09,0,0,-0.16,0,0,-0.22,0,0,-0.2,0,0,-0.15,0,0,1.05
+head straight backward,Cassie,-0.04,0,0,-0.1,0,0,-0.17,0,0,-0.23,0,0,-0.21,0,0,-0.15,0,0,1.05
+move right,Cassie,0,0.03,0,0,0.07,0,0,0.12,0,0,0.16,0,0,0.14,0,0,0.09,0,1.2
+strafe right,Cassie,0,0.03,0,0,0.08,0,0,0.13,0,0,0.17,0,0,0.14,0,0,0.09,0,1.2
+step sideways to the right,Cassie,0,0.02,0,0,0.06,0,0,0.1,0,0,0.14,0,0,0.12,0,0,0.08,0,1.25
+move quickly to the right,Cassie,0,0.05,0,0,0.11,0,0,0.18,0,0,0.24,0,0,0.2,0,0,0.13,0,1.05
+shift right slowly,Cassie,0,0.02,0,0,0.05,0,0,0.08,0,0,0.11,0,0,0.1,0,0,0.07,0,1.3
+continue moving right,Cassie,0,0.03,0,0,0.07,0,0,0.12,0,0,0.16,0,0,0.14,0,0,0.09,0,1.2
+slide to the right,Cassie,0,0.03,0,0,0.07,0,0,0.11,0,0,0.15,0,0,0.13,0,0,0.08,0,1.25
+move sideways right,Cassie,0,0.03,0,0,0.08,0,0,0.13,0,0,0.17,0,0,0.14,0,0,0.09,0,1.2
+take a quick step right,Cassie,0,0.05,0,0,0.11,0,0,0.18,0,0,0.23,0,0,0.19,0,0,0.12,0,1.05
+head toward the right,Cassie,0,0.03,0,0,0.07,0,0,0.12,0,0,0.16,0,0,0.14,0,0,0.09,0,1.2
+move left,Cassie,0,-0.03,0,0,-0.07,0,0,-0.12,0,0,-0.16,0,0,-0.14,0,0,-0.09,0,1.2
+strafe left,Cassie,0,-0.03,0,0,-0.08,0,0,-0.13,0,0,-0.17,0,0,-0.14,0,0,-0.09,0,1.2
+step sideways to the left,Cassie,0,-0.02,0,0,-0.06,0,0,-0.1,0,0,-0.14,0,0,-0.12,0,0,-0.08,0,1.25
+move quickly to the left,Cassie,0,-0.05,0,0,-0.11,0,0,-0.18,0,0,-0.24,0,0,-0.2,0,0,-0.13,0,1.05
+shift left slowly,Cassie,0,-0.02,0,0,-0.05,0,0,-0.08,0,0,-0.11,0,0,-0.1,0,0,-0.07,0,1.3
+continue moving left,Cassie,0,-0.03,0,0,-0.07,0,0,-0.12,0,0,-0.16,0,0,-0.14,0,0,-0.09,0,1.2
+slide to the left,Cassie,0,-0.03,0,0,-0.07,0,0,-0.11,0,0,-0.15,0,0,-0.13,0,0,-0.08,0,1.25
+move sideways left,Cassie,0,-0.03,0,0,-0.08,0,0,-0.13,0,0,-0.17,0,0,-0.14,0,0,-0.09,0,1.2
+take a quick step left,Cassie,0,-0.05,0,0,-0.11,0,0,-0.18,0,0,-0.23,0,0,-0.19,0,0,-0.12,0,1.05
+head toward the left,Cassie,0,-0.03,0,0,-0.07,0,0,-0.12,0,0,-0.16,0,0,-0.14,0,0,-0.09,0,1.2
+turn right,Cassie,0,0,0.03,0,0,0.08,0,0,0.13,0,0,0.18,0,0,0.15,0,0,0.1,1.15
+rotate right,Cassie,0,0,0.04,0,0,0.09,0,0,0.14,0,0,0.19,0,0,0.16,0,0,0.1,1.15
+turn clockwise,Cassie,0,0,0.03,0,0,0.08,0,0,0.13,0,0,0.17,0,0,0.15,0,0,0.09,1.2
+turn right quickly,Cassie,0,0,0.06,0,0,0.13,0,0,0.2,0,0,0.27,0,0,0.22,0,0,0.14,1
+turn right slowly,Cassie,0,0,0.02,0,0,0.05,0,0,0.08,0,0,0.11,0,0,0.1,0,0,0.07,1.3
+keep turning right,Cassie,0,0,0.04,0,0,0.09,0,0,0.15,0,0,0.2,0,0,0.17,0,0,0.11,1.15
+spin to the right,Cassie,0,0,0.06,0,0,0.13,0,0,0.21,0,0,0.28,0,0,0.23,0,0,0.15,1
+pivot right,Cassie,0,0,0.03,0,0,0.08,0,0,0.13,0,0,0.18,0,0,0.15,0,0,0.1,1.2
+rotate clockwise quickly,Cassie,0,0,0.06,0,0,0.13,0,0,0.2,0,0,0.27,0,0,0.22,0,0,0.14,1
+make a right turn,Cassie,0,0,0.04,0,0,0.09,0,0,0.14,0,0,0.19,0,0,0.16,0,0,0.1,1.15
+turn left,Cassie,0,0,-0.03,0,0,-0.08,0,0,-0.13,0,0,-0.18,0,0,-0.15,0,0,-0.1,1.15
+rotate left,Cassie,0,0,-0.04,0,0,-0.09,0,0,-0.14,0,0,-0.19,0,0,-0.16,0,0,-0.1,1.15
+turn counterclockwise,Cassie,0,0,-0.03,0,0,-0.08,0,0,-0.13,0,0,-0.17,0,0,-0.15,0,0,-0.09,1.2
+turn left quickly,Cassie,0,0,-0.06,0,0,-0.13,0,0,-0.2,0,0,-0.27,0,0,-0.22,0,0,-0.14,1
+turn left slowly,Cassie,0,0,-0.02,0,0,-0.05,0,0,-0.08,0,0,-0.11,0,0,-0.1,0,0,-0.07,1.3
+keep turning left,Cassie,0,0,-0.04,0,0,-0.09,0,0,-0.15,0,0,-0.2,0,0,-0.17,0,0,-0.11,1.15
+spin to the left,Cassie,0,0,-0.06,0,0,-0.13,0,0,-0.21,0,0,-0.28,0,0,-0.23,0,0,-0.15,1
+pivot left,Cassie,0,0,-0.03,0,0,-0.08,0,0,-0.13,0,0,-0.18,0,0,-0.15,0,0,-0.1,1.2
+rotate counterclockwise quickly,Cassie,0,0,-0.06,0,0,-0.13,0,0,-0.2,0,0,-0.27,0,0,-0.22,0,0,-0.14,1
+make a left turn,Cassie,0,0,-0.04,0,0,-0.09,0,0,-0.14,0,0,-0.19,0,0,-0.16,0,0,-0.1,1.15
+move forward then backward,Cassie,0.05,0,0,0.12,0,0,0.18,0,0,0.08,0,0,-0.06,0,0,-0.14,0,0,1.25
+walk ahead then reverse,Cassie,0.04,0,0,0.1,0,0,0.16,0,0,0.07,0,0,-0.05,0,0,-0.12,0,0,1.3
+move backward then forward,Cassie,-0.05,0,0,-0.12,0,0,-0.18,0,0,-0.08,0,0,0.06,0,0,0.14,0,0,1.25
+reverse then move ahead,Cassie,-0.04,0,0,-0.1,0,0,-0.16,0,0,-0.07,0,0,0.05,0,0,0.12,0,0,1.3
+move forward and turn right,Cassie,0.04,0,0.02,0.09,0,0.05,0.14,0,0.08,0.18,0,0.11,0.16,0,0.09,0.11,0,0.06,1.2
+move forward while turning right,Cassie,0.04,0,0.03,0.09,0,0.06,0.15,0,0.09,0.19,0,0.12,0.16,0,0.1,0.11,0,0.07,1.15
+walk ahead and curve right,Cassie,0.04,0,0.02,0.08,0,0.04,0.13,0,0.07,0.17,0,0.09,0.15,0,0.08,0.1,0,0.05,1.25
+move forward and turn left,Cassie,0.04,0,-0.02,0.09,0,-0.05,0.14,0,-0.08,0.18,0,-0.11,0.16,0,-0.09,0.11,0,-0.06,1.2
+move forward while turning left,Cassie,0.04,0,-0.03,0.09,0,-0.06,0.15,0,-0.09,0.19,0,-0.12,0.16,0,-0.1,0.11,0,-0.07,1.15
+walk ahead and curve left,Cassie,0.04,0,-0.02,0.08,0,-0.04,0.13,0,-0.07,0.17,0,-0.09,0.15,0,-0.08,0.1,0,-0.05,1.25
+move backward while turning right,Cassie,-0.04,0,0.03,-0.09,0,0.06,-0.15,0,0.09,-0.19,0,0.12,-0.16,0,0.1,-0.11,0,0.07,1.2
+reverse and curve right,Cassie,-0.04,0,0.02,-0.08,0,0.04,-0.13,0,0.07,-0.17,0,0.09,-0.15,0,0.08,-0.1,0,0.05,1.25
+move backward while turning left,Cassie,-0.04,0,-0.03,-0.09,0,-0.06,-0.15,0,-0.09,-0.19,0,-0.12,-0.16,0,-0.1,-0.11,0,-0.07,1.2
+reverse and curve left,Cassie,-0.04,0,-0.02,-0.08,0,-0.04,-0.13,0,-0.07,-0.17,0,-0.09,-0.15,0,-0.08,-0.1,0,-0.05,1.25
+move forward turn right then move backward,Cassie,0.05,0,0.02,0.1,0,0.04,0.14,0,0.04,0.05,0,0.02,-0.05,0,0.01,-0.12,0,0,1.3
+move forward turn left then move backward,Cassie,0.05,0,-0.02,0.1,0,-0.04,0.14,0,-0.04,0.05,0,-0.02,-0.05,0,-0.01,-0.12,0,0,1.3
+move backward turn right then move forward,Cassie,-0.05,0,0.02,-0.1,0,0.04,-0.14,0,0.04,-0.05,0,0.02,0.05,0,0.01,0.12,0,0,1.3
+move backward turn left then move forward,Cassie,-0.05,0,-0.02,-0.1,0,-0.04,-0.14,0,-0.04,-0.05,0,-0.02,0.05,0,-0.01,0.12,0,0,1.3
+move forward then turn right,Cassie,0.05,0,0,0.12,0,0,0.17,0,0,0.1,0,0.04,0.04,0,0.09,0,0,0.14,1.2
+move forward then turn left,Cassie,0.05,0,0,0.12,0,0,0.17,0,0,0.1,0,-0.04,0.04,0,-0.09,0,0,-0.14,1.2
+move backward then turn right,Cassie,-0.05,0,0,-0.12,0,0,-0.17,0,0,-0.1,0,0.04,-0.04,0,0.09,0,0,0.14,1.2
+move backward then turn left,Cassie,-0.05,0,0,-0.12,0,0,-0.17,0,0,-0.1,0,-0.04,-0.04,0,-0.09,0,0,-0.14,1.2
+move right then turn right,Cassie,0,0.04,0,0,0.09,0,0,0.13,0,0,0.08,0.03,0,0.03,0.08,0,0,0.13,1.25
+move left then turn left,Cassie,0,-0.04,0,0,-0.09,0,0,-0.13,0,0,-0.08,-0.03,0,-0.03,-0.08,0,0,-0.13,1.25
+move right then move forward,Cassie,0,0.04,0,0,0.09,0,0,0.12,0,0.04,0.07,0,0.1,0.05,0,0.16,0.03,0,1.25
+move left then move forward,Cassie,0,-0.04,0,0,-0.09,0,0,-0.12,0,0.04,-0.07,0,0.1,-0.05,0,0.16,-0.03,0,1.25
+move right then move backward,Cassie,0,0.04,0,0,0.09,0,0,0.12,0,-0.04,0.07,0,-0.1,0.05,0,-0.16,0.03,0,1.25
+move left then move backward,Cassie,0,-0.04,0,0,-0.09,0,0,-0.12,0,-0.04,-0.07,0,-0.1,-0.05,0,-0.16,-0.03,0,1.25
+move in a forward zigzag,Cassie,0.05,0.03,0,0.1,-0.03,0,0.15,0.04,0,0.18,-0.04,0,0.14,0.03,0,0.1,-0.03,0,1.2
+zigzag forward quickly,Cassie,0.08,0.05,0,0.16,-0.05,0,0.24,0.07,0,0.28,-0.07,0,0.22,0.05,0,0.14,-0.05,0,1
+move in a backward zigzag,Cassie,-0.05,0.03,0,-0.1,-0.03,0,-0.15,0.04,0,-0.18,-0.04,0,-0.14,0.03,0,-0.1,-0.03,0,1.2
+zigzag backward slowly,Cassie,-0.03,0.02,0,-0.07,-0.02,0,-0.11,0.03,0,-0.14,-0.03,0,-0.11,0.02,0,-0.07,-0.02,0,1.35
+move in a clockwise circle,Cassie,0.04,0,0.03,0.09,0,0.06,0.14,0,0.09,0.18,0,0.12,0.15,0,0.1,0.1,0,0.07,1.2
+move in a counterclockwise circle,Cassie,0.04,0,-0.03,0.09,0,-0.06,0.14,0,-0.09,0.18,0,-0.12,0.15,0,-0.1,0.1,0,-0.07,1.2
+make a wide right arc,Cassie,0.06,0,0.02,0.13,0,0.04,0.2,0,0.06,0.25,0,0.08,0.22,0,0.07,0.16,0,0.05,1.1
+make a sharp right arc,Cassie,0.03,0,0.06,0.07,0,0.12,0.11,0,0.18,0.15,0,0.24,0.13,0,0.2,0.08,0,0.13,1.05
+make a wide left arc,Cassie,0.06,0,-0.02,0.13,0,-0.04,0.2,0,-0.06,0.25,0,-0.08,0.22,0,-0.07,0.16,0,-0.05,1.1
+make a sharp left arc,Cassie,0.03,0,-0.06,0.07,0,-0.12,0.11,0,-0.18,0.15,0,-0.24,0.13,0,-0.2,0.08,0,-0.13,1.05
+move diagonally forward right,Cassie,0.04,0.03,0,0.09,0.06,0,0.15,0.09,0,0.2,0.12,0,0.17,0.1,0,0.12,0.07,0,1.2
+move diagonally forward left,Cassie,0.04,-0.03,0,0.09,-0.06,0,0.15,-0.09,0,0.2,-0.12,0,0.17,-0.1,0,0.12,-0.07,0,1.2
+move diagonally backward right,Cassie,-0.04,0.03,0,-0.09,0.06,0,-0.15,0.09,0,-0.2,0.12,0,-0.17,0.1,0,-0.12,0.07,0,1.2
+move diagonally backward left,Cassie,-0.04,-0.03,0,-0.09,-0.06,0,-0.15,-0.09,0,-0.2,-0.12,0,-0.17,-0.1,0,-0.12,-0.07,0,1.2
+turn right then move forward,Cassie,0,0,0.04,0,0,0.09,0,0,0.13,0.04,0,0.08,0.1,0,0.04,0.16,0,0,1.25
+turn left then move forward,Cassie,0,0,-0.04,0,0,-0.09,0,0,-0.13,0.04,0,-0.08,0.1,0,-0.04,0.16,0,0,1.25
+turn right then move backward,Cassie,0,0,0.04,0,0,0.09,0,0,0.13,-0.04,0,0.08,-0.1,0,0.04,-0.16,0,0,1.25
+turn left then move backward,Cassie,0,0,-0.04,0,0,-0.09,0,0,-0.13,-0.04,0,-0.08,-0.1,0,-0.04,-0.16,0,0,1.25
+move forward then stop,Cassie,0.05,0,0,0.12,0,0,0.18,0,0,0.12,0,0,0.06,0,0,0,0,0,1.1
+move backward then stop,Cassie,-0.05,0,0,-0.12,0,0,-0.18,0,0,-0.12,0,0,-0.06,0,0,0,0,0,1.1
+move right then stop,Cassie,0,0.04,0,0,0.09,0,0,0.14,0,0,0.09,0,0,0.04,0,0,0,0,1.2
+move left then stop,Cassie,0,-0.04,0,0,-0.09,0,0,-0.14,0,0,-0.09,0,0,-0.04,0,0,0,0,1.2
+turn right then stop,Cassie,0,0,0.04,0,0,0.1,0,0,0.15,0,0,0.1,0,0,0.04,0,0,0,1.2
+turn left then stop,Cassie,0,0,-0.04,0,0,-0.1,0,0,-0.15,0,0,-0.1,0,0,-0.04,0,0,0,1.2
+move forward right then turn left,Cassie,0.04,0.03,0,0.09,0.06,0,0.13,0.05,-0.02,0.11,0.03,-0.05,0.06,0,-0.09,0.02,0,-0.13,1.25
+move forward left then turn right,Cassie,0.04,-0.03,0,0.09,-0.06,0,0.13,-0.05,0.02,0.11,-0.03,0.05,0.06,0,0.09,0.02,0,0.13,1.25
+turn right move forward then turn left,Cassie,0,0,0.05,0.04,0,0.04,0.1,0,0.02,0.15,0,0,0.1,0,-0.03,0.04,0,-0.08,1.3
+turn left move forward then turn right,Cassie,0,0,-0.05,0.04,0,-0.04,0.1,0,-0.02,0.15,0,0,0.1,0,0.03,0.04,0,0.08,1.3
+move forward strafe right then turn right,Cassie,0.05,0,0,0.12,0,0,0.09,0.04,0,0.05,0.08,0,0,0.05,0.04,0,0,0.09,1.3
+move forward strafe left then turn left,Cassie,0.05,0,0,0.12,0,0,0.09,-0.04,0,0.05,-0.08,0,0,-0.05,-0.04,0,0,-0.09,1.3
+move right turn left then move forward,Cassie,0,0.04,0,0,0.09,0,0,0.06,-0.03,0.03,0.02,-0.07,0.08,0,-0.04,0.14,0,0,1.3
+move left turn right then move forward,Cassie,0,-0.04,0,0,-0.09,0,0,-0.06,0.03,0.03,-0.02,0.07,0.08,0,0.04,0.14,0,0,1.3
+walk forward fast then slow down,Cassie,0.1,0,0,0.2,0,0,0.3,0,0,0.24,0,0,0.15,0,0,0.07,0,0,0.95
+walk backward fast then slow down,Cassie,-0.1,0,0,-0.2,0,0,-0.3,0,0,-0.24,0,0,-0.15,0,0,-0.07,0,0,0.95
+turn right fast then slow down,Cassie,0,0,0.09,0,0,0.18,0,0,0.28,0,0,0.22,0,0,0.13,0,0,0.06,1
+turn left fast then slow down,Cassie,0,0,-0.09,0,0,-0.18,0,0,-0.28,0,0,-0.22,0,0,-0.13,0,0,-0.06,1
+accelerate forward,Cassie,0.03,0,0,0.07,0,0,0.12,0,0,0.18,0,0,0.23,0,0,0.28,0,0,1
+accelerate backward,Cassie,-0.03,0,0,-0.07,0,0,-0.12,0,0,-0.18,0,0,-0.23,0,0,-0.28,0,0,1
+accelerate into a right turn,Cassie,0.03,0,0.02,0.07,0,0.04,0.11,0,0.06,0.15,0,0.08,0.19,0,0.1,0.23,0,0.12,1.1
+accelerate into a left turn,Cassie,0.03,0,-0.02,0.07,0,-0.04,0.11,0,-0.06,0.15,0,-0.08,0.19,0,-0.1,0.23,0,-0.12,1.1
+make a quick right left zigzag,Cassie,0,0.06,0,0,-0.06,0,0,0.1,0,0,-0.1,0,0,0.07,0,0,-0.07,0,1.2
+make a quick left right zigzag,Cassie,0,-0.06,0,0,0.06,0,0,-0.1,0,0,0.1,0,0,-0.07,0,0,0.07,0,1.2
+turn right while moving sideways right,Cassie,0,0.03,0.03,0,0.06,0.06,0,0.1,0.09,0,0.13,0.12,0,0.1,0.1,0,0.07,0.07,1.25
+turn left while moving sideways left,Cassie,0,-0.03,-0.03,0,-0.06,-0.06,0,-0.1,-0.09,0,-0.13,-0.12,0,-0.1,-0.1,0,-0.07,-0.07,1.25
+move sideways right then sideways left,Cassie,0,0.04,0,0,0.09,0,0,0.12,0,0,-0.04,0,0,-0.09,0,0,-0.13,0,1.35
+move sideways left then sideways right,Cassie,0,-0.04,0,0,-0.09,0,0,-0.12,0,0,0.04,0,0,0.09,0,0,0.13,0,1.35
+move forward turn right and stop,Cassie,0.04,0,0.02,0.1,0,0.05,0.14,0,0.08,0.1,0,0.07,0.05,0,0.03,0,0,0,1.25
+move forward turn left and stop,Cassie,0.04,0,-0.02,0.1,0,-0.05,0.14,0,-0.08,0.1,0,-0.07,0.05,0,-0.03,0,0,0,1.25
+move forward,AnymalB,0.15,0,0,0.35,0,0,0.55,0,0,0.7,0,0,0.65,0,0,0.5,0,0,0.7
+walk forward,AnymalB,0.18,0,0,0.38,0,0,0.58,0,0,0.75,0,0,0.68,0,0,0.52,0,0,0.7
+go straight ahead,AnymalB,0.14,0,0,0.32,0,0,0.5,0,0,0.65,0,0,0.6,0,0,0.45,0,0,0.75
+move ahead quickly,AnymalB,0.25,0,0,0.5,0,0,0.75,0,0,0.9,0,0,0.8,0,0,0.6,0,0,0.65
+walk ahead steadily,AnymalB,0.12,0,0,0.28,0,0,0.45,0,0,0.58,0,0,0.54,0,0,0.4,0,0,0.8
+advance forward,AnymalB,0.15,0,0,0.35,0,0,0.55,0,0,0.7,0,0,0.65,0,0,0.5,0,0,0.7
+move forward slowly,AnymalB,0.08,0,0,0.18,0,0,0.3,0,0,0.4,0,0,0.36,0,0,0.25,0,0,0.85
+walk forward fast,AnymalB,0.28,0,0,0.55,0,0,0.78,0,0,0.92,0,0,0.82,0,0,0.62,0,0,0.65
+continue moving forward,AnymalB,0.14,0,0,0.32,0,0,0.52,0,0,0.68,0,0,0.62,0,0,0.48,0,0,0.75
+head straight forward,AnymalB,0.13,0,0,0.31,0,0,0.5,0,0,0.66,0,0,0.6,0,0,0.45,0,0,0.75
+move backward,AnymalB,-0.08,0,0,-0.18,0,0,-0.28,0,0,-0.36,0,0,-0.32,0,0,-0.22,0,0,0.85
+walk backward,AnymalB,-0.08,0,0,-0.17,0,0,-0.27,0,0,-0.34,0,0,-0.31,0,0,-0.21,0,0,0.9
+go straight back,AnymalB,-0.07,0,0,-0.16,0,0,-0.25,0,0,-0.32,0,0,-0.29,0,0,-0.2,0,0,0.9
+move backward quickly,AnymalB,-0.12,0,0,-0.25,0,0,-0.38,0,0,-0.5,0,0,-0.42,0,0,-0.28,0,0,0.85
+walk backward steadily,AnymalB,-0.06,0,0,-0.14,0,0,-0.22,0,0,-0.3,0,0,-0.27,0,0,-0.18,0,0,0.95
+reverse,AnymalB,-0.08,0,0,-0.18,0,0,-0.28,0,0,-0.36,0,0,-0.32,0,0,-0.22,0,0,0.9
+move backward slowly,AnymalB,-0.04,0,0,-0.1,0,0,-0.16,0,0,-0.22,0,0,-0.2,0,0,-0.14,0,0,1
+walk backward fast,AnymalB,-0.12,0,0,-0.26,0,0,-0.4,0,0,-0.52,0,0,-0.44,0,0,-0.3,0,0,0.85
+continue moving backward,AnymalB,-0.07,0,0,-0.16,0,0,-0.26,0,0,-0.34,0,0,-0.3,0,0,-0.21,0,0,0.9
+head straight backward,AnymalB,-0.07,0,0,-0.15,0,0,-0.24,0,0,-0.32,0,0,-0.29,0,0,-0.2,0,0,0.9
+move right,AnymalB,0,0.12,0,0,0.28,0,0,0.42,0,0,0.55,0,0,0.5,0,0,0.35,0,0.8
+strafe right,AnymalB,0,0.13,0,0,0.3,0,0,0.45,0,0,0.58,0,0,0.52,0,0,0.36,0,0.8
+step sideways to the right,AnymalB,0,0.1,0,0,0.24,0,0,0.38,0,0,0.5,0,0,0.45,0,0,0.32,0,0.85
+move quickly to the right,AnymalB,0,0.18,0,0,0.38,0,0,0.58,0,0,0.72,0,0,0.62,0,0,0.42,0,0.75
+shift right slowly,AnymalB,0,0.06,0,0,0.15,0,0,0.25,0,0,0.34,0,0,0.3,0,0,0.22,0,0.95
+continue moving right,AnymalB,0,0.12,0,0,0.28,0,0,0.42,0,0,0.55,0,0,0.5,0,0,0.35,0,0.8
+slide to the right,AnymalB,0,0.1,0,0,0.25,0,0,0.4,0,0,0.52,0,0,0.47,0,0,0.33,0,0.85
+move sideways right,AnymalB,0,0.13,0,0,0.3,0,0,0.45,0,0,0.58,0,0,0.52,0,0,0.36,0,0.8
+take a quick step right,AnymalB,0,0.17,0,0,0.36,0,0,0.55,0,0,0.68,0,0,0.58,0,0,0.4,0,0.75
+head toward the right,AnymalB,0,0.11,0,0,0.26,0,0,0.4,0,0,0.52,0,0,0.47,0,0,0.34,0,0.85
+move left,AnymalB,0,-0.12,0,0,-0.28,0,0,-0.42,0,0,-0.55,0,0,-0.5,0,0,-0.35,0,0.8
+strafe left,AnymalB,0,-0.13,0,0,-0.3,0,0,-0.45,0,0,-0.58,0,0,-0.52,0,0,-0.36,0,0.8
+step sideways to the left,AnymalB,0,-0.1,0,0,-0.24,0,0,-0.38,0,0,-0.5,0,0,-0.45,0,0,-0.32,0,0.85
+move quickly to the left,AnymalB,0,-0.18,0,0,-0.38,0,0,-0.58,0,0,-0.72,0,0,-0.62,0,0,-0.42,0,0.75
+shift left slowly,AnymalB,0,-0.06,0,0,-0.15,0,0,-0.25,0,0,-0.34,0,0,-0.3,0,0,-0.22,0,0.95
+continue moving left,AnymalB,0,-0.12,0,0,-0.28,0,0,-0.42,0,0,-0.55,0,0,-0.5,0,0,-0.35,0,0.8
+slide to the left,AnymalB,0,-0.1,0,0,-0.25,0,0,-0.4,0,0,-0.52,0,0,-0.47,0,0,-0.33,0,0.85
+move sideways left,AnymalB,0,-0.13,0,0,-0.3,0,0,-0.45,0,0,-0.58,0,0,-0.52,0,0,-0.36,0,0.8
+take a quick step left,AnymalB,0,-0.17,0,0,-0.36,0,0,-0.55,0,0,-0.68,0,0,-0.58,0,0,-0.4,0,0.75
+head toward the left,AnymalB,0,-0.11,0,0,-0.26,0,0,-0.4,0,0,-0.52,0,0,-0.47,0,0,-0.34,0,0.85
+turn right,AnymalB,0,0,0.15,0,0,0.35,0,0,0.55,0,0,0.75,0,0,0.65,0,0,0.45,0.75
+rotate right,AnymalB,0,0,0.16,0,0,0.38,0,0,0.58,0,0,0.78,0,0,0.68,0,0,0.48,0.75
+turn clockwise,AnymalB,0,0,0.14,0,0,0.32,0,0,0.52,0,0,0.7,0,0,0.62,0,0,0.44,0.8
+turn right quickly,AnymalB,0,0,0.22,0,0,0.45,0,0,0.7,0,0,0.9,0,0,0.75,0,0,0.52,0.7
+turn right slowly,AnymalB,0,0,0.08,0,0,0.18,0,0,0.3,0,0,0.42,0,0,0.36,0,0,0.25,0.9
+keep turning right,AnymalB,0,0,0.15,0,0,0.35,0,0,0.55,0,0,0.75,0,0,0.65,0,0,0.45,0.75
+spin to the right,AnymalB,0,0,0.22,0,0,0.45,0,0,0.7,0,0,0.9,0,0,0.75,0,0,0.52,0.7
+pivot right,AnymalB,0,0,0.12,0,0,0.3,0,0,0.5,0,0,0.68,0,0,0.58,0,0,0.4,0.8
+rotate clockwise quickly,AnymalB,0,0,0.22,0,0,0.45,0,0,0.7,0,0,0.88,0,0,0.74,0,0,0.5,0.7
+make a right turn,AnymalB,0,0,0.14,0,0,0.32,0,0,0.52,0,0,0.7,0,0,0.62,0,0,0.44,0.8
+turn left,AnymalB,0,0,-0.15,0,0,-0.35,0,0,-0.55,0,0,-0.75,0,0,-0.65,0,0,-0.45,0.75
+rotate left,AnymalB,0,0,-0.16,0,0,-0.38,0,0,-0.58,0,0,-0.78,0,0,-0.68,0,0,-0.48,0.75
+turn counterclockwise,AnymalB,0,0,-0.14,0,0,-0.32,0,0,-0.52,0,0,-0.7,0,0,-0.62,0,0,-0.44,0.8
+turn left quickly,AnymalB,0,0,-0.22,0,0,-0.45,0,0,-0.7,0,0,-0.9,0,0,-0.75,0,0,-0.52,0.7
+turn left slowly,AnymalB,0,0,-0.08,0,0,-0.18,0,0,-0.3,0,0,-0.42,0,0,-0.36,0,0,-0.25,0.9
+keep turning left,AnymalB,0,0,-0.15,0,0,-0.35,0,0,-0.55,0,0,-0.75,0,0,-0.65,0,0,-0.45,0.75
+spin to the left,AnymalB,0,0,-0.22,0,0,-0.45,0,0,-0.7,0,0,-0.9,0,0,-0.75,0,0,-0.52,0.7
+pivot left,AnymalB,0,0,-0.12,0,0,-0.3,0,0,-0.5,0,0,-0.68,0,0,-0.58,0,0,-0.4,0.8
+rotate counterclockwise quickly,AnymalB,0,0,-0.22,0,0,-0.45,0,0,-0.7,0,0,-0.88,0,0,-0.74,0,0,-0.5,0.7
+make a left turn,AnymalB,0,0,-0.14,0,0,-0.32,0,0,-0.52,0,0,-0.7,0,0,-0.62,0,0,-0.44,0.8
+move forward then backward,AnymalB,0.12,0,0,0.28,0,0,0.42,0,0,0.2,0,0,-0.1,0,0,-0.22,0,0,1
+walk ahead then reverse,AnymalB,0.1,0,0,0.25,0,0,0.38,0,0,0.18,0,0,-0.08,0,0,-0.2,0,0,1.05
+move backward then forward,AnymalB,-0.08,0,0,-0.18,0,0,-0.28,0,0,-0.12,0,0,0.18,0,0,0.35,0,0,1
+reverse then move ahead,AnymalB,-0.07,0,0,-0.16,0,0,-0.25,0,0,-0.1,0,0,0.16,0,0,0.32,0,0,1.05
+move forward and turn right,AnymalB,0.1,0,0.08,0.22,0,0.18,0.35,0,0.28,0.48,0,0.4,0.42,0,0.34,0.3,0,0.24,0.85
+move forward while turning right,AnymalB,0.1,0,0.1,0.24,0,0.2,0.38,0,0.32,0.5,0,0.45,0.44,0,0.38,0.32,0,0.26,0.85
+walk ahead and curve right,AnymalB,0.1,0,0.06,0.22,0,0.15,0.35,0,0.25,0.46,0,0.35,0.4,0,0.3,0.28,0,0.2,0.9
+move forward and turn left,AnymalB,0.1,0,-0.08,0.22,0,-0.18,0.35,0,-0.28,0.48,0,-0.4,0.42,0,-0.34,0.3,0,-0.24,0.85
+move forward while turning left,AnymalB,0.1,0,-0.1,0.24,0,-0.2,0.38,0,-0.32,0.5,0,-0.45,0.44,0,-0.38,0.32,0,-0.26,0.85
+walk ahead and curve left,AnymalB,0.1,0,-0.06,0.22,0,-0.15,0.35,0,-0.25,0.46,0,-0.35,0.4,0,-0.3,0.28,0,-0.2,0.9
+move backward while turning right,AnymalB,-0.06,0,0.08,-0.14,0,0.18,-0.22,0,0.28,-0.3,0,0.38,-0.26,0,0.32,-0.18,0,0.22,0.95
+reverse and curve right,AnymalB,-0.06,0,0.06,-0.13,0,0.15,-0.2,0,0.24,-0.28,0,0.34,-0.24,0,0.28,-0.17,0,0.2,1
+move backward while turning left,AnymalB,-0.06,0,-0.08,-0.14,0,-0.18,-0.22,0,-0.28,-0.3,0,-0.38,-0.26,0,-0.32,-0.18,0,-0.22,0.95
+reverse and curve left,AnymalB,-0.06,0,-0.06,-0.13,0,-0.15,-0.2,0,-0.24,-0.28,0,-0.34,-0.24,0,-0.28,-0.17,0,-0.2,1
+move forward turn right then move backward,AnymalB,0.12,0,0.08,0.26,0,0.18,0.36,0,0.24,0.18,0,0.14,-0.08,0,0.06,-0.2,0,0,1.05
+move forward turn left then move backward,AnymalB,0.12,0,-0.08,0.26,0,-0.18,0.36,0,-0.24,0.18,0,-0.14,-0.08,0,-0.06,-0.2,0,0,1.05
+move backward turn right then move forward,AnymalB,-0.07,0,0.08,-0.16,0,0.18,-0.25,0,0.24,-0.1,0,0.14,0.15,0,0.06,0.32,0,0,1.05
+move backward turn left then move forward,AnymalB,-0.07,0,-0.08,-0.16,0,-0.18,-0.25,0,-0.24,-0.1,0,-0.14,0.15,0,-0.06,0.32,0,0,1.05
+move forward then turn right,AnymalB,0.12,0,0,0.3,0,0,0.45,0,0,0.3,0,0.12,0.12,0,0.32,0,0,0.5,0.9
+move forward then turn left,AnymalB,0.12,0,0,0.3,0,0,0.45,0,0,0.3,0,-0.12,0.12,0,-0.32,0,0,-0.5,0.9
+move backward then turn right,AnymalB,-0.06,0,0,-0.16,0,0,-0.25,0,0,-0.16,0,0.1,-0.06,0,0.28,0,0,0.45,1
+move backward then turn left,AnymalB,-0.06,0,0,-0.16,0,0,-0.25,0,0,-0.16,0,-0.1,-0.06,0,-0.28,0,0,-0.45,1
+move right then turn right,AnymalB,0,0.1,0,0,0.25,0,0,0.38,0,0,0.25,0.1,0,0.1,0.28,0,0,0.45,0.95
+move left then turn left,AnymalB,0,-0.1,0,0,-0.25,0,0,-0.38,0,0,-0.25,-0.1,0,-0.1,-0.28,0,0,-0.45,0.95
+move right then move forward,AnymalB,0,0.1,0,0,0.25,0,0,0.35,0,0.12,0.22,0,0.32,0.15,0,0.5,0.08,0,0.9
+move left then move forward,AnymalB,0,-0.1,0,0,-0.25,0,0,-0.35,0,0.12,-0.22,0,0.32,-0.15,0,0.5,-0.08,0,0.9
+move right then move backward,AnymalB,0,0.1,0,0,0.25,0,0,0.35,0,-0.06,0.2,0,-0.16,0.12,0,-0.26,0.06,0,1
+move left then move backward,AnymalB,0,-0.1,0,0,-0.25,0,0,-0.35,0,-0.06,-0.2,0,-0.16,-0.12,0,-0.26,-0.06,0,1
+move in a forward zigzag,AnymalB,0.12,0.1,0,0.28,-0.1,0,0.45,0.14,0,0.55,-0.14,0,0.46,0.1,0,0.32,-0.1,0,0.85
+zigzag forward quickly,AnymalB,0.18,0.14,0,0.38,-0.14,0,0.58,0.2,0,0.72,-0.2,0,0.6,0.14,0,0.42,-0.14,0,0.75
+move in a backward zigzag,AnymalB,-0.06,0.08,0,-0.14,-0.08,0,-0.24,0.12,0,-0.32,-0.12,0,-0.27,0.08,0,-0.18,-0.08,0,1
+zigzag backward slowly,AnymalB,-0.04,0.06,0,-0.1,-0.06,0,-0.16,0.08,0,-0.22,-0.08,0,-0.18,0.06,0,-0.12,-0.06,0,1.1
+move in a clockwise circle,AnymalB,0.1,0,0.12,0.24,0,0.25,0.38,0,0.38,0.5,0,0.5,0.42,0,0.42,0.28,0,0.28,0.85
+move in a counterclockwise circle,AnymalB,0.1,0,-0.12,0.24,0,-0.25,0.38,0,-0.38,0.5,0,-0.5,0.42,0,-0.42,0.28,0,-0.28,0.85
+make a wide right arc,AnymalB,0.18,0,0.08,0.38,0,0.15,0.58,0,0.24,0.72,0,0.32,0.62,0,0.28,0.45,0,0.2,0.8
+make a sharp right arc,AnymalB,0.08,0,0.18,0.18,0,0.36,0.3,0,0.55,0.42,0,0.72,0.36,0,0.6,0.24,0,0.4,0.8
+make a wide left arc,AnymalB,0.18,0,-0.08,0.38,0,-0.15,0.58,0,-0.24,0.72,0,-0.32,0.62,0,-0.28,0.45,0,-0.2,0.8
+make a sharp left arc,AnymalB,0.08,0,-0.18,0.18,0,-0.36,0.3,0,-0.55,0.42,0,-0.72,0.36,0,-0.6,0.24,0,-0.4,0.8
+move diagonally forward right,AnymalB,0.1,0.08,0,0.24,0.18,0,0.4,0.3,0,0.55,0.42,0,0.48,0.36,0,0.34,0.24,0,0.85
+move diagonally forward left,AnymalB,0.1,-0.08,0,0.24,-0.18,0,0.4,-0.3,0,0.55,-0.42,0,0.48,-0.36,0,0.34,-0.24,0,0.85
+move diagonally backward right,AnymalB,-0.05,0.08,0,-0.12,0.18,0,-0.22,0.3,0,-0.3,0.4,0,-0.25,0.34,0,-0.16,0.22,0,1
+move diagonally backward left,AnymalB,-0.05,-0.08,0,-0.12,-0.18,0,-0.22,-0.3,0,-0.3,-0.4,0,-0.25,-0.34,0,-0.16,-0.22,0,1
+turn right then move forward,AnymalB,0,0,0.12,0,0,0.3,0,0,0.45,0.12,0,0.3,0.32,0,0.14,0.52,0,0,0.9
+turn left then move forward,AnymalB,0,0,-0.12,0,0,-0.3,0,0,-0.45,0.12,0,-0.3,0.32,0,-0.14,0.52,0,0,0.9
+turn right then move backward,AnymalB,0,0,0.1,0,0,0.25,0,0,0.38,-0.06,0,0.25,-0.16,0,0.12,-0.26,0,0,1
+turn left then move backward,AnymalB,0,0,-0.1,0,0,-0.25,0,0,-0.38,-0.06,0,-0.25,-0.16,0,-0.12,-0.26,0,0,1
+move forward then stop,AnymalB,0.15,0,0,0.35,0,0,0.55,0,0,0.38,0,0,0.18,0,0,0,0,0,0.8
+move backward then stop,AnymalB,-0.08,0,0,-0.18,0,0,-0.28,0,0,-0.2,0,0,-0.1,0,0,0,0,0,0.95
+move right then stop,AnymalB,0,0.12,0,0,0.28,0,0,0.42,0,0,0.28,0,0,0.12,0,0,0,0,0.9
+move left then stop,AnymalB,0,-0.12,0,0,-0.28,0,0,-0.42,0,0,-0.28,0,0,-0.12,0,0,0,0,0.9
+turn right then stop,AnymalB,0,0,0.15,0,0,0.35,0,0,0.55,0,0,0.35,0,0,0.15,0,0,0,0.85
+turn left then stop,AnymalB,0,0,-0.15,0,0,-0.35,0,0,-0.55,0,0,-0.35,0,0,-0.15,0,0,0,0.85
+move forward right then turn left,AnymalB,0.1,0.08,0,0.24,0.18,0,0.36,0.16,-0.08,0.3,0.1,-0.2,0.16,0,-0.35,0.06,0,-0.48,0.95
+move forward left then turn right,AnymalB,0.1,-0.08,0,0.24,-0.18,0,0.36,-0.16,0.08,0.3,-0.1,0.2,0.16,0,0.35,0.06,0,0.48,0.95
+turn right move forward then turn left,AnymalB,0,0,0.15,0.1,0,0.12,0.28,0,0.06,0.45,0,0,0.32,0,-0.12,0.14,0,-0.28,1
+turn left move forward then turn right,AnymalB,0,0,-0.15,0.1,0,-0.12,0.28,0,-0.06,0.45,0,0,0.32,0,0.12,0.14,0,0.28,1
+move forward strafe right then turn right,AnymalB,0.14,0,0,0.32,0,0,0.25,0.16,0,0.14,0.32,0,0,0.2,0.18,0,0,0.36,0.95
+move forward strafe left then turn left,AnymalB,0.14,0,0,0.32,0,0,0.25,-0.16,0,0.14,-0.32,0,0,-0.2,-0.18,0,0,-0.36,0.95
+move right turn left then move forward,AnymalB,0,0.12,0,0,0.28,0,0,0.22,-0.1,0.08,0.1,-0.25,0.24,0,-0.12,0.42,0,0,1
+move left turn right then move forward,AnymalB,0,-0.12,0,0,-0.28,0,0,-0.22,0.1,0.08,-0.1,0.25,0.24,0,0.12,0.42,0,0,1
+walk forward fast then slow down,AnymalB,0.28,0,0,0.55,0,0,0.82,0,0,0.65,0,0,0.38,0,0,0.18,0,0,0.7
+walk backward fast then slow down,AnymalB,-0.12,0,0,-0.26,0,0,-0.45,0,0,-0.34,0,0,-0.2,0,0,-0.08,0,0,0.9
+turn right fast then slow down,AnymalB,0,0,0.22,0,0,0.45,0,0,0.78,0,0,0.58,0,0,0.35,0,0,0.15,0.75
+turn left fast then slow down,AnymalB,0,0,-0.22,0,0,-0.45,0,0,-0.78,0,0,-0.58,0,0,-0.35,0,0,-0.15,0.75
+accelerate forward,AnymalB,0.08,0,0,0.18,0,0,0.32,0,0,0.48,0,0,0.65,0,0,0.82,0,0,0.75
+accelerate backward,AnymalB,-0.04,0,0,-0.09,0,0,-0.16,0,0,-0.24,0,0,-0.32,0,0,-0.42,0,0,0.95
+accelerate into a right turn,AnymalB,0.08,0,0.06,0.18,0,0.12,0.3,0,0.22,0.42,0,0.32,0.55,0,0.42,0.68,0,0.52,0.85
+accelerate into a left turn,AnymalB,0.08,0,-0.06,0.18,0,-0.12,0.3,0,-0.22,0.42,0,-0.32,0.55,0,-0.42,0.68,0,-0.52,0.85
+make a quick right left zigzag,AnymalB,0,0.16,0,0,-0.16,0,0,0.32,0,0,-0.32,0,0,0.22,0,0,-0.22,0,0.9
+make a quick left right zigzag,AnymalB,0,-0.16,0,0,0.16,0,0,-0.32,0,0,0.32,0,0,-0.22,0,0,0.22,0,0.9
+turn right while moving sideways right,AnymalB,0,0.08,0.08,0,0.18,0.18,0,0.3,0.3,0,0.42,0.42,0,0.35,0.35,0,0.24,0.24,0.9
+turn left while moving sideways left,AnymalB,0,-0.08,-0.08,0,-0.18,-0.18,0,-0.3,-0.3,0,-0.42,-0.42,0,-0.35,-0.35,0,-0.24,-0.24,0.9
+move sideways right then sideways left,AnymalB,0,0.1,0,0,0.25,0,0,0.38,0,0,-0.12,0,0,-0.28,0,0,-0.42,0,1
+move sideways left then sideways right,AnymalB,0,-0.1,0,0,-0.25,0,0,-0.38,0,0,0.12,0,0,0.28,0,0,0.42,0,1
+move forward turn right and stop,AnymalB,0.12,0,0.08,0.28,0,0.18,0.42,0,0.3,0.3,0,0.28,0.14,0,0.12,0,0,0,0.95
+move forward turn left and stop,AnymalB,0.12,0,-0.08,0.28,0,-0.18,0.42,0,-0.3,0.3,0,-0.28,0.14,0,-0.12,0,0,0,0.95
+move forward,RobotisOP3,0.08,0,0,0.18,0,0,0.3,0,0,0.42,0,0,0.36,0,0,0.24,0,0,0.55
+walk forward,RobotisOP3,0.1,0,0,0.22,0,0,0.34,0,0,0.46,0,0,0.38,0,0,0.26,0,0,0.55
+go straight ahead,RobotisOP3,0.08,0,0,0.18,0,0,0.28,0,0,0.4,0,0,0.34,0,0,0.22,0,0,0.6
+move ahead quickly,RobotisOP3,0.14,0,0,0.28,0,0,0.42,0,0,0.56,0,0,0.46,0,0,0.3,0,0,0.5
+walk ahead steadily,RobotisOP3,0.06,0,0,0.15,0,0,0.25,0,0,0.34,0,0,0.3,0,0,0.2,0,0,0.65
+advance forward,RobotisOP3,0.08,0,0,0.2,0,0,0.32,0,0,0.44,0,0,0.36,0,0,0.24,0,0,0.55
+move forward slowly,RobotisOP3,0.04,0,0,0.1,0,0,0.18,0,0,0.25,0,0,0.22,0,0,0.15,0,0,0.7
+walk forward fast,RobotisOP3,0.14,0,0,0.3,0,0,0.45,0,0,0.58,0,0,0.48,0,0,0.32,0,0,0.5
+continue moving forward,RobotisOP3,0.08,0,0,0.18,0,0,0.3,0,0,0.42,0,0,0.36,0,0,0.24,0,0,0.6
+head straight forward,RobotisOP3,0.08,0,0,0.18,0,0,0.28,0,0,0.4,0,0,0.34,0,0,0.22,0,0,0.6
+move backward,RobotisOP3,-0.07,0,0,-0.16,0,0,-0.26,0,0,-0.36,0,0,-0.3,0,0,-0.2,0,0,0.6
+walk backward,RobotisOP3,-0.08,0,0,-0.18,0,0,-0.28,0,0,-0.38,0,0,-0.32,0,0,-0.22,0,0,0.6
+go straight back,RobotisOP3,-0.07,0,0,-0.15,0,0,-0.25,0,0,-0.34,0,0,-0.29,0,0,-0.19,0,0,0.65
+move backward quickly,RobotisOP3,-0.12,0,0,-0.25,0,0,-0.38,0,0,-0.5,0,0,-0.42,0,0,-0.28,0,0,0.55
+walk backward steadily,RobotisOP3,-0.06,0,0,-0.14,0,0,-0.23,0,0,-0.32,0,0,-0.28,0,0,-0.18,0,0,0.7
+reverse,RobotisOP3,-0.08,0,0,-0.18,0,0,-0.28,0,0,-0.38,0,0,-0.32,0,0,-0.22,0,0,0.6
+move backward slowly,RobotisOP3,-0.04,0,0,-0.1,0,0,-0.17,0,0,-0.24,0,0,-0.21,0,0,-0.14,0,0,0.7
+walk backward fast,RobotisOP3,-0.12,0,0,-0.26,0,0,-0.4,0,0,-0.52,0,0,-0.44,0,0,-0.3,0,0,0.55
+continue moving backward,RobotisOP3,-0.07,0,0,-0.16,0,0,-0.26,0,0,-0.36,0,0,-0.3,0,0,-0.2,0,0,0.65
+head straight backward,RobotisOP3,-0.07,0,0,-0.15,0,0,-0.25,0,0,-0.34,0,0,-0.29,0,0,-0.19,0,0,0.65
+move right,RobotisOP3,0,0.08,0,0,0.18,0,0,0.3,0,0,0.4,0,0,0.34,0,0,0.22,0,0.6
+strafe right,RobotisOP3,0,0.09,0,0,0.2,0,0,0.32,0,0,0.42,0,0,0.35,0,0,0.23,0,0.6
+step sideways to the right,RobotisOP3,0,0.06,0,0,0.15,0,0,0.25,0,0,0.34,0,0,0.28,0,0,0.18,0,0.65
+move quickly to the right,RobotisOP3,0,0.13,0,0,0.27,0,0,0.4,0,0,0.52,0,0,0.42,0,0,0.27,0,0.55
+shift right slowly,RobotisOP3,0,0.04,0,0,0.1,0,0,0.18,0,0,0.25,0,0,0.22,0,0,0.14,0,0.7
+continue moving right,RobotisOP3,0,0.08,0,0,0.18,0,0,0.3,0,0,0.4,0,0,0.34,0,0,0.22,0,0.6
+slide to the right,RobotisOP3,0,0.08,0,0,0.18,0,0,0.28,0,0,0.38,0,0,0.32,0,0,0.2,0,0.65
+move sideways right,RobotisOP3,0,0.09,0,0,0.2,0,0,0.32,0,0,0.42,0,0,0.35,0,0,0.23,0,0.6
+take a quick step right,RobotisOP3,0,0.12,0,0,0.25,0,0,0.38,0,0,0.5,0,0,0.4,0,0,0.26,0,0.55
+head toward the right,RobotisOP3,0,0.08,0,0,0.18,0,0,0.3,0,0,0.4,0,0,0.34,0,0,0.22,0,0.6
+move left,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.3,0,0,-0.4,0,0,-0.34,0,0,-0.22,0,0.6
+strafe left,RobotisOP3,0,-0.09,0,0,-0.2,0,0,-0.32,0,0,-0.42,0,0,-0.35,0,0,-0.23,0,0.6
+step sideways to the left,RobotisOP3,0,-0.06,0,0,-0.15,0,0,-0.25,0,0,-0.34,0,0,-0.28,0,0,-0.18,0,0.65
+move quickly to the left,RobotisOP3,0,-0.13,0,0,-0.27,0,0,-0.4,0,0,-0.52,0,0,-0.42,0,0,-0.27,0,0.55
+shift left slowly,RobotisOP3,0,-0.04,0,0,-0.1,0,0,-0.18,0,0,-0.25,0,0,-0.22,0,0,-0.14,0,0.7
+continue moving left,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.3,0,0,-0.4,0,0,-0.34,0,0,-0.22,0,0.6
+slide to the left,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.28,0,0,-0.38,0,0,-0.32,0,0,-0.2,0,0.65
+move sideways left,RobotisOP3,0,-0.09,0,0,-0.2,0,0,-0.32,0,0,-0.42,0,0,-0.35,0,0,-0.23,0,0.6
+take a quick step left,RobotisOP3,0,-0.12,0,0,-0.25,0,0,-0.38,0,0,-0.5,0,0,-0.4,0,0,-0.26,0,0.55
+head toward the left,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.3,0,0,-0.4,0,0,-0.34,0,0,-0.22,0,0.6
+turn right,RobotisOP3,0,0,0.1,0,0,0.24,0,0,0.38,0,0,0.52,0,0,0.44,0,0,0.28,0.55
+rotate right,RobotisOP3,0,0,0.12,0,0,0.26,0,0,0.42,0,0,0.56,0,0,0.46,0,0,0.3,0.55
+turn clockwise,RobotisOP3,0,0,0.1,0,0,0.22,0,0,0.36,0,0,0.5,0,0,0.42,0,0,0.26,0.6
+turn right quickly,RobotisOP3,0,0,0.18,0,0,0.36,0,0,0.55,0,0,0.72,0,0,0.58,0,0,0.36,0.5
+turn right slowly,RobotisOP3,0,0,0.05,0,0,0.12,0,0,0.2,0,0,0.3,0,0,0.25,0,0,0.16,0.7
+keep turning right,RobotisOP3,0,0,0.11,0,0,0.25,0,0,0.4,0,0,0.54,0,0,0.45,0,0,0.29,0.55
+spin to the right,RobotisOP3,0,0,0.18,0,0,0.36,0,0,0.55,0,0,0.72,0,0,0.58,0,0,0.36,0.5
+pivot right,RobotisOP3,0,0,0.09,0,0,0.22,0,0,0.36,0,0,0.5,0,0,0.42,0,0,0.26,0.6
+rotate clockwise quickly,RobotisOP3,0,0,0.18,0,0,0.36,0,0,0.55,0,0,0.7,0,0,0.56,0,0,0.35,0.5
+make a right turn,RobotisOP3,0,0,0.1,0,0,0.24,0,0,0.38,0,0,0.52,0,0,0.44,0,0,0.28,0.55
+turn left,RobotisOP3,0,0,-0.1,0,0,-0.24,0,0,-0.38,0,0,-0.52,0,0,-0.44,0,0,-0.28,0.55
+rotate left,RobotisOP3,0,0,-0.12,0,0,-0.26,0,0,-0.42,0,0,-0.56,0,0,-0.46,0,0,-0.3,0.55
+turn counterclockwise,RobotisOP3,0,0,-0.1,0,0,-0.22,0,0,-0.36,0,0,-0.5,0,0,-0.42,0,0,-0.26,0.6
+turn left quickly,RobotisOP3,0,0,-0.18,0,0,-0.36,0,0,-0.55,0,0,-0.72,0,0,-0.58,0,0,-0.36,0.5
+turn left slowly,RobotisOP3,0,0,-0.05,0,0,-0.12,0,0,-0.2,0,0,-0.3,0,0,-0.25,0,0,-0.16,0.7
+keep turning left,RobotisOP3,0,0,-0.11,0,0,-0.25,0,0,-0.4,0,0,-0.54,0,0,-0.45,0,0,-0.29,0.55
+spin to the left,RobotisOP3,0,0,-0.18,0,0,-0.36,0,0,-0.55,0,0,-0.72,0,0,-0.58,0,0,-0.36,0.5
+pivot left,RobotisOP3,0,0,-0.09,0,0,-0.22,0,0,-0.36,0,0,-0.5,0,0,-0.42,0,0,-0.26,0.6
+rotate counterclockwise quickly,RobotisOP3,0,0,-0.18,0,0,-0.36,0,0,-0.55,0,0,-0.7,0,0,-0.56,0,0,-0.35,0.5
+make a left turn,RobotisOP3,0,0,-0.1,0,0,-0.24,0,0,-0.38,0,0,-0.52,0,0,-0.44,0,0,-0.28,0.55
+move forward then backward,RobotisOP3,0.08,0,0,0.18,0,0,0.28,0,0,0.12,0,0,-0.08,0,0,-0.18,0,0,0.75
+walk ahead then reverse,RobotisOP3,0.07,0,0,0.16,0,0,0.25,0,0,0.1,0,0,-0.07,0,0,-0.16,0,0,0.8
+move backward then forward,RobotisOP3,-0.07,0,0,-0.16,0,0,-0.25,0,0,-0.1,0,0,0.1,0,0,0.24,0,0,0.8
+reverse then move ahead,RobotisOP3,-0.06,0,0,-0.14,0,0,-0.22,0,0,-0.09,0,0,0.09,0,0,0.22,0,0,0.8
+move forward and turn right,RobotisOP3,0.06,0,0.05,0.14,0,0.12,0.22,0,0.2,0.3,0,0.28,0.26,0,0.23,0.18,0,0.15,0.65
+move forward while turning right,RobotisOP3,0.06,0,0.06,0.15,0,0.14,0.24,0,0.22,0.32,0,0.3,0.27,0,0.25,0.18,0,0.16,0.65
+walk ahead and curve right,RobotisOP3,0.06,0,0.04,0.14,0,0.1,0.22,0,0.18,0.3,0,0.25,0.25,0,0.2,0.17,0,0.13,0.7
+move forward and turn left,RobotisOP3,0.06,0,-0.05,0.14,0,-0.12,0.22,0,-0.2,0.3,0,-0.28,0.26,0,-0.23,0.18,0,-0.15,0.65
+move forward while turning left,RobotisOP3,0.06,0,-0.06,0.15,0,-0.14,0.24,0,-0.22,0.32,0,-0.3,0.27,0,-0.25,0.18,0,-0.16,0.65
+walk ahead and curve left,RobotisOP3,0.06,0,-0.04,0.14,0,-0.1,0.22,0,-0.18,0.3,0,-0.25,0.25,0,-0.2,0.17,0,-0.13,0.7
+move backward while turning right,RobotisOP3,-0.05,0,0.05,-0.12,0,0.12,-0.2,0,0.2,-0.28,0,0.28,-0.23,0,0.23,-0.15,0,0.15,0.7
+reverse and curve right,RobotisOP3,-0.05,0,0.04,-0.11,0,0.1,-0.18,0,0.18,-0.25,0,0.25,-0.21,0,0.2,-0.14,0,0.13,0.75
+move backward while turning left,RobotisOP3,-0.05,0,-0.05,-0.12,0,-0.12,-0.2,0,-0.2,-0.28,0,-0.28,-0.23,0,-0.23,-0.15,0,-0.15,0.7
+reverse and curve left,RobotisOP3,-0.05,0,-0.04,-0.11,0,-0.1,-0.18,0,-0.18,-0.25,0,-0.25,-0.21,0,-0.2,-0.14,0,-0.13,0.75
+move forward turn right then move backward,RobotisOP3,0.07,0,0.05,0.16,0,0.12,0.24,0,0.16,0.12,0,0.1,-0.06,0,0.04,-0.16,0,0,0.85
+move forward turn left then move backward,RobotisOP3,0.07,0,-0.05,0.16,0,-0.12,0.24,0,-0.16,0.12,0,-0.1,-0.06,0,-0.04,-0.16,0,0,0.85
+move backward turn right then move forward,RobotisOP3,-0.06,0,0.05,-0.14,0,0.12,-0.22,0,0.16,-0.1,0,0.1,0.08,0,0.04,0.2,0,0,0.85
+move backward turn left then move forward,RobotisOP3,-0.06,0,-0.05,-0.14,0,-0.12,-0.22,0,-0.16,-0.1,0,-0.1,0.08,0,-0.04,0.2,0,0,0.85
+move forward then turn right,RobotisOP3,0.08,0,0,0.18,0,0,0.28,0,0,0.18,0,0.08,0.08,0,0.2,0,0,0.32,0.75
+move forward then turn left,RobotisOP3,0.08,0,0,0.18,0,0,0.28,0,0,0.18,0,-0.08,0.08,0,-0.2,0,0,-0.32,0.75
+move backward then turn right,RobotisOP3,-0.07,0,0,-0.16,0,0,-0.24,0,0,-0.14,0,0.08,-0.06,0,0.2,0,0,0.32,0.8
+move backward then turn left,RobotisOP3,-0.07,0,0,-0.16,0,0,-0.24,0,0,-0.14,0,-0.08,-0.06,0,-0.2,0,0,-0.32,0.8
+move right then turn right,RobotisOP3,0,0.08,0,0,0.18,0,0,0.26,0,0,0.16,0.06,0,0.07,0.16,0,0,0.26,0.8
+move left then turn left,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.26,0,0,-0.16,-0.06,0,-0.07,-0.16,0,0,-0.26,0.8
+move right then move forward,RobotisOP3,0,0.08,0,0,0.18,0,0,0.26,0,0.08,0.16,0,0.18,0.08,0,0.3,0.03,0,0.8
+move left then move forward,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.26,0,0.08,-0.16,0,0.18,-0.08,0,0.3,-0.03,0,0.8
+move right then move backward,RobotisOP3,0,0.08,0,0,0.18,0,0,0.26,0,-0.07,0.16,0,-0.16,0.08,0,-0.26,0.03,0,0.85
+move left then move backward,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.26,0,-0.07,-0.16,0,-0.16,-0.08,0,-0.26,-0.03,0,0.85
+move in a forward zigzag,RobotisOP3,0.08,0.06,0,0.18,-0.06,0,0.3,0.09,0,0.4,-0.09,0,0.32,0.06,0,0.22,-0.06,0,0.7
+zigzag forward quickly,RobotisOP3,0.12,0.09,0,0.25,-0.09,0,0.4,0.13,0,0.52,-0.13,0,0.42,0.09,0,0.28,-0.09,0,0.6
+move in a backward zigzag,RobotisOP3,-0.07,0.05,0,-0.16,-0.05,0,-0.26,0.08,0,-0.34,-0.08,0,-0.28,0.05,0,-0.18,-0.05,0,0.8
+zigzag backward slowly,RobotisOP3,-0.04,0.04,0,-0.1,-0.04,0,-0.18,0.06,0,-0.25,-0.06,0,-0.2,0.04,0,-0.13,-0.04,0,0.9
+move in a clockwise circle,RobotisOP3,0.06,0,0.08,0.15,0,0.18,0.25,0,0.3,0.34,0,0.42,0.28,0,0.34,0.18,0,0.22,0.7
+move in a counterclockwise circle,RobotisOP3,0.06,0,-0.08,0.15,0,-0.18,0.25,0,-0.3,0.34,0,-0.42,0.28,0,-0.34,0.18,0,-0.22,0.7
+make a wide right arc,RobotisOP3,0.1,0,0.05,0.22,0,0.1,0.34,0,0.16,0.45,0,0.22,0.38,0,0.18,0.26,0,0.12,0.7
+make a sharp right arc,RobotisOP3,0.05,0,0.12,0.12,0,0.26,0.2,0,0.42,0.28,0,0.56,0.23,0,0.45,0.15,0,0.28,0.65
+make a wide left arc,RobotisOP3,0.1,0,-0.05,0.22,0,-0.1,0.34,0,-0.16,0.45,0,-0.22,0.38,0,-0.18,0.26,0,-0.12,0.7
+make a sharp left arc,RobotisOP3,0.05,0,-0.12,0.12,0,-0.26,0.2,0,-0.42,0.28,0,-0.56,0.23,0,-0.45,0.15,0,-0.28,0.65
+move diagonally forward right,RobotisOP3,0.06,0.05,0,0.14,0.12,0,0.24,0.2,0,0.34,0.28,0,0.28,0.22,0,0.18,0.14,0,0.75
+move diagonally forward left,RobotisOP3,0.06,-0.05,0,0.14,-0.12,0,0.24,-0.2,0,0.34,-0.28,0,0.28,-0.22,0,0.18,-0.14,0,0.75
+move diagonally backward right,RobotisOP3,-0.05,0.05,0,-0.12,0.12,0,-0.2,0.2,0,-0.28,0.28,0,-0.22,0.22,0,-0.14,0.14,0,0.8
+move diagonally backward left,RobotisOP3,-0.05,-0.05,0,-0.12,-0.12,0,-0.2,-0.2,0,-0.28,-0.28,0,-0.22,-0.22,0,-0.14,-0.14,0,0.8
+turn right then move forward,RobotisOP3,0,0,0.08,0,0,0.2,0,0,0.32,0.08,0,0.2,0.2,0,0.08,0.32,0,0,0.8
+turn left then move forward,RobotisOP3,0,0,-0.08,0,0,-0.2,0,0,-0.32,0.08,0,-0.2,0.2,0,-0.08,0.32,0,0,0.8
+turn right then move backward,RobotisOP3,0,0,0.08,0,0,0.2,0,0,0.32,-0.07,0,0.2,-0.18,0,0.08,-0.28,0,0,0.85
+turn left then move backward,RobotisOP3,0,0,-0.08,0,0,-0.2,0,0,-0.32,-0.07,0,-0.2,-0.18,0,-0.08,-0.28,0,0,0.85
+move forward then stop,RobotisOP3,0.08,0,0,0.18,0,0,0.3,0,0,0.2,0,0,0.09,0,0,0,0,0,0.7
+move backward then stop,RobotisOP3,-0.07,0,0,-0.16,0,0,-0.26,0,0,-0.18,0,0,-0.08,0,0,0,0,0,0.75
+move right then stop,RobotisOP3,0,0.08,0,0,0.18,0,0,0.28,0,0,0.18,0,0,0.08,0,0,0,0,0.75
+move left then stop,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.28,0,0,-0.18,0,0,-0.08,0,0,0,0,0.75
+turn right then stop,RobotisOP3,0,0,0.1,0,0,0.24,0,0,0.38,0,0,0.25,0,0,0.1,0,0,0,0.7
+turn left then stop,RobotisOP3,0,0,-0.1,0,0,-0.24,0,0,-0.38,0,0,-0.25,0,0,-0.1,0,0,0,0.7
+move forward right then turn left,RobotisOP3,0.06,0.05,0,0.14,0.12,0,0.22,0.1,-0.05,0.18,0.06,-0.14,0.08,0,-0.25,0.03,0,-0.36,0.85
+move forward left then turn right,RobotisOP3,0.06,-0.05,0,0.14,-0.12,0,0.22,-0.1,0.05,0.18,-0.06,0.14,0.08,0,0.25,0.03,0,0.36,0.85
+turn right move forward then turn left,RobotisOP3,0,0,0.1,0.06,0,0.08,0.16,0,0.04,0.28,0,0,0.18,0,-0.08,0.06,0,-0.2,0.85
+turn left move forward then turn right,RobotisOP3,0,0,-0.1,0.06,0,-0.08,0.16,0,-0.04,0.28,0,0,0.18,0,0.08,0.06,0,0.2,0.85
+move forward strafe right then turn right,RobotisOP3,0.08,0,0,0.18,0,0,0.14,0.08,0,0.08,0.18,0,0,0.1,0.08,0,0,0.22,0.9
+move forward strafe left then turn left,RobotisOP3,0.08,0,0,0.18,0,0,0.14,-0.08,0,0.08,-0.18,0,0,-0.1,-0.08,0,0,-0.22,0.9
+move right turn left then move forward,RobotisOP3,0,0.08,0,0,0.18,0,0,0.13,-0.06,0.06,0.05,-0.16,0.18,0,-0.08,0.3,0,0,0.9
+move left turn right then move forward,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.13,0.06,0.06,-0.05,0.16,0.18,0,0.08,0.3,0,0,0.9
+walk forward fast then slow down,RobotisOP3,0.14,0,0,0.3,0,0,0.5,0,0,0.38,0,0,0.22,0,0,0.08,0,0,0.6
+walk backward fast then slow down,RobotisOP3,-0.12,0,0,-0.26,0,0,-0.45,0,0,-0.34,0,0,-0.2,0,0,-0.08,0,0,0.65
+turn right fast then slow down,RobotisOP3,0,0,0.18,0,0,0.36,0,0,0.6,0,0,0.44,0,0,0.24,0,0,0.08,0.6
+turn left fast then slow down,RobotisOP3,0,0,-0.18,0,0,-0.36,0,0,-0.6,0,0,-0.44,0,0,-0.24,0,0,-0.08,0.6
+accelerate forward,RobotisOP3,0.04,0,0,0.1,0,0,0.18,0,0,0.28,0,0,0.4,0,0,0.52,0,0,0.6
+accelerate backward,RobotisOP3,-0.04,0,0,-0.1,0,0,-0.18,0,0,-0.27,0,0,-0.36,0,0,-0.46,0,0,0.65
+accelerate into a right turn,RobotisOP3,0.04,0,0.04,0.1,0,0.08,0.18,0,0.14,0.26,0,0.22,0.35,0,0.3,0.45,0,0.38,0.65
+accelerate into a left turn,RobotisOP3,0.04,0,-0.04,0.1,0,-0.08,0.18,0,-0.14,0.26,0,-0.22,0.35,0,-0.3,0.45,0,-0.38,0.65
+make a quick right left zigzag,RobotisOP3,0,0.1,0,0,-0.1,0,0,0.2,0,0,-0.2,0,0,0.13,0,0,-0.13,0,0.75
+make a quick left right zigzag,RobotisOP3,0,-0.1,0,0,0.1,0,0,-0.2,0,0,0.2,0,0,-0.13,0,0,0.13,0,0.75
+turn right while moving sideways right,RobotisOP3,0,0.05,0.05,0,0.12,0.12,0,0.2,0.2,0,0.28,0.28,0,0.22,0.22,0,0.14,0.14,0.75
+turn left while moving sideways left,RobotisOP3,0,-0.05,-0.05,0,-0.12,-0.12,0,-0.2,-0.2,0,-0.28,-0.28,0,-0.22,-0.22,0,-0.14,-0.14,0.75
+move sideways right then sideways left,RobotisOP3,0,0.08,0,0,0.18,0,0,0.26,0,0,-0.08,0,0,-0.18,0,0,-0.28,0,0.9
+move sideways left then sideways right,RobotisOP3,0,-0.08,0,0,-0.18,0,0,-0.26,0,0,0.08,0,0,0.18,0,0,0.28,0,0.9
+move forward turn right and stop,RobotisOP3,0.07,0,0.05,0.16,0,0.12,0.25,0,0.2,0.16,0,0.16,0.07,0,0.08,0,0,0,0.8
+move forward turn left and stop,RobotisOP3,0.07,0,-0.05,0.16,0,-0.12,0.25,0,-0.2,0.16,0,-0.16,0.07,0,-0.08,0,0,0,0.8
