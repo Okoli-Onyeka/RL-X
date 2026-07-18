@@ -152,7 +152,13 @@ class MujocoViewer:
         with open(path, "r") as f:
             text_command = f.readline().strip()
 
-        self.overlay[topcenter] = [text_command, ""]
+        self.overlay[topcenter] = ["Text Command: \n", f"{text_command}\n"]
+
+        with open("commands.txt", "r") as c:
+            commands = c.read().splitlines()
+
+        self.overlay[topcenter][0] += ["Goal Output (x, y, yaw):"]
+        self.overlay[topcenter][1] += [f"({commands[0]}, {commands[1]}, {commands[2]})"]
 
         self.overlay[bottomright] = ["Framerate:", str(int(1/self.time_per_render * self.run_speed_factor))]
         self.overlay[topleft] = ["", ""]
