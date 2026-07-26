@@ -6,7 +6,7 @@ import numpy as np
 class ProcessData():
     def __init__(self, text = "sentence-transformers/all-MiniLM-L6-v2"):
         self.path = "commands.csv"
-        self.data = pd.read_csv(self.path)
+        #self.data = pd.read_csv(self.path)
         self.model = SentenceTransformer(text)
 
     def loadXData(self):
@@ -19,7 +19,7 @@ class ProcessData():
         
     def getEmbeddings(self, text):
 
-        embeddings = self.model.encode(text)
+        embeddings = self.model.encode(text, convert_to_tensor=True)
         return embeddings
 
     def getSimilarities(self, embeddings):

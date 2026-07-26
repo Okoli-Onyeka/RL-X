@@ -1,0 +1,76 @@
+text,x,y,yaw,command_class
+keep going ahead,1,0,0,forward
+move straight towards the front,1,0,0,forward
+carry on straight,1,0,0,forward
+take a few steps ahead,1,0,0,forward
+continue along your current heading,1,0,0,forward
+take a few steps back,-1,0,0,backward
+move towards the space behind you,-1,0,0,backward
+continue rearwards,-1,0,0,backward
+send yourself straight back,-1,0,0,backward
+travel in the rearward direction,-1,0,0,backward
+shuffle sideways to the left,0,-1,0,strafe_left
+step across towards your left,0,-1,0,strafe_left
+glide laterally to the left,0,-1,0,strafe_left
+move across left while facing ahead,0,-1,0,strafe_left
+displace yourself directly leftward,0,-1,0,strafe_left
+shuffle sideways to the right,0,1,0,strafe_right
+step across towards your right,0,1,0,strafe_right
+glide laterally to the right,0,1,0,strafe_right
+move across right while facing ahead,0,1,0,strafe_right
+displace yourself directly rightward,0,1,0,strafe_right
+swing around to the left,0,0,-1,turn_left
+point your front leftward,0,0,-1,turn_left
+make a left-hand rotation,0,0,-1,turn_left
+bring your heading around to the left,0,0,-1,turn_left
+turn anticlockwise to face left,0,0,-1,turn_left
+swing around to the right,0,0,1,turn_right
+point your front rightward,0,0,1,turn_right
+make a right-hand rotation,0,0,1,turn_right
+bring your heading around to the right,0,0,1,turn_right
+turn clockwise to face right,0,0,1,turn_right
+inch straight ahead,0.4,0,0,slow_forward
+move ahead at a leisurely speed,0.4,0,0,slow_forward
+proceed forward carefully,0.4,0,0,slow_forward
+take a slow step towards the front,0.4,0,0,slow_forward
+continue ahead at reduced speed,0.4,0,0,slow_forward
+dash straight ahead,1,0,0,fast_forward
+surge towards the front,1,0,0,fast_forward
+move ahead at maximum pace,1,0,0,fast_forward
+speed forward in a straight line,1,0,0,fast_forward
+proceed rapidly in front of you,1,0,0,fast_forward
+veer a touch to the left,0,0,-0.4,slight_left_turn
+make a tiny anticlockwise turn,0,0,-0.4,slight_left_turn
+shift your heading a little leftward,0,0,-0.4,slight_left_turn
+apply a small left steering correction,0,0,-0.4,slight_left_turn
+point just slightly towards the left,0,0,-0.4,slight_left_turn
+veer a touch to the right,0,0,0.4,slight_right_turn
+make a tiny clockwise turn,0,0,0.4,slight_right_turn
+shift your heading a little rightward,0,0,0.4,slight_right_turn
+apply a small right steering correction,0,0,0.4,slight_right_turn
+point just slightly towards the right,0,0,0.4,slight_right_turn
+steer left as you advance,0.7,0,-0.5,forward_turn_left
+move ahead on a left-bending path,0.7,0,-0.5,forward_turn_left
+drive forward into a left turn,0.7,0,-0.5,forward_turn_left
+progress while arcing anticlockwise,0.7,0,-0.5,forward_turn_left
+go ahead with a leftward curve,0.7,0,-0.5,forward_turn_left
+steer right as you advance,0.7,0,0.5,forward_turn_right
+move ahead on a right-bending path,0.7,0,0.5,forward_turn_right
+drive forward into a right turn,0.7,0,0.5,forward_turn_right
+progress while arcing clockwise,0.7,0,0.5,forward_turn_right
+go ahead with a rightward curve,0.7,0,0.5,forward_turn_right
+head towards the front-left corner,0.7,-0.5,0,diagonal_forward_left
+move ahead and across to the left,0.7,-0.5,0,diagonal_forward_left
+step obliquely forward-left,0.7,-0.5,0,diagonal_forward_left
+travel on a leftward forward diagonal,0.7,-0.5,0,diagonal_forward_left
+shift to the left as you go straight ahead,0.7,-0.5,0,diagonal_forward_left
+head towards the front-right corner,0.7,0.5,0,diagonal_forward_right
+move ahead and across to the right,0.7,0.5,0,diagonal_forward_right
+step obliquely forward-right,0.7,0.5,0,diagonal_forward_right
+travel on a rightward forward diagonal,0.7,0.5,0,diagonal_forward_right
+shift to the right as you go straight ahead,0.7,0.5,0,diagonal_forward_right
+come to rest,0,0,0,stop
+remain motionless now,0,0,0,stop
+bring yourself to a standstill,0,0,0,stop
+stay fixed at your current pose,0,0,0,stop
+stop where you currently are,0,0,0,stop

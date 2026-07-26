@@ -65,29 +65,29 @@ pivot right,0,0,1,turn_right
 rotate clockwise,0,0,1,turn_right
 turn to the right,0,0,1,turn_right
 
-move forward slowly,0.4,0,0,forward_slow
-go forward slowly,0.4,0,0,forward_slow
-advance a little,0.4,0,0,forward_slow
-move gently forward,0.4,0,0,forward_slow
-creep forward,0.4,0,0,forward_slow
+move forward slowly,0.4,0,0,slow_forward
+go forward slowly,0.4,0,0,slow_forward
+advance a little,0.4,0,0,slow_forward
+move gently forward,0.4,0,0,slow_forward
+creep forward,0.4,0,0,slow_forward
 
-move forward quickly,1,0,0,forward_fast
-go forward fast,1,0,0,forward_fast
-advance quickly,1,0,0,forward_fast
-move ahead fast,1,0,0,forward_fast
-go straight quickly,1,0,0,forward_fast
+move forward quickly,1,0,0,fast_forward
+go forward fast,1,0,0,fast_forward
+advance quickly,1,0,0,fast_forward
+move ahead fast,1,0,0,fast_forward
+go straight quickly,1,0,0,fast_forward
 
-turn left slightly,0,0,-0.4,turn_left_slight
-rotate a little left,0,0,-0.4,turn_left_slight
-make a small left turn,0,0,-0.4,turn_left_slight
-adjust left,0,0,-0.4,turn_left_slight
-yaw slightly left,0,0,-0.4,turn_left_slight
+turn left slightly,0,0,-0.4,slight_left_turn
+rotate a little left,0,0,-0.4,slight_left_turn
+make a small left turn,0,0,-0.4,slight_left_turn
+adjust left,0,0,-0.4,slight_left_turn
+yaw slightly left,0,0,-0.4,slight_left_turn
 
-turn right slightly,0,0,0.4,turn_right_slight
-rotate a little right,0,0,0.4,turn_right_slight
-make a small right turn,0,0,0.4,turn_right_slight
-adjust right,0,0,0.4,turn_right_slight
-yaw slightly right,0,0,0.4,turn_right_slight
+turn right slightly,0,0,0.4,slight_right_turn
+rotate a little right,0,0,0.4,slight_right_turn
+make a small right turn,0,0,0.4,slight_right_turn
+adjust right,0,0,0.4,slight_right_turn
+yaw slightly right,0,0,0.4,slight_right_turn
 
 move forward and turn left,0.7,0,-0.5,forward_turn_left
 go forward while turning left,0.7,0,-0.5,forward_turn_left

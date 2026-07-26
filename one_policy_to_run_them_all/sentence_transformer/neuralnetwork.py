@@ -6,13 +6,14 @@ from torch.utils.data import TensorDataset, DataLoader
 # Y shape: (num_samples, output_size)
 
 class NeuralNetwork():
-    def __init__(self, inputSize, outputSize):
-        self.input_size = inputSize
-        self.output_size = outputSize
+    def __init__(self, inputSize, outputSize, useModel, model):
+        if not useModel:
+            self.input_size = inputSize
+            self.output_size = outputSize        
         self.loss_fn = nn.MSELoss()
-        self.lr=0.001
+        self.lr=0.00477
 
-        self.createModel()
+        self.createModel(model, useModel)
     
     def setTrainSet(self, X, y):
         X = X.float()
@@ -21,19 +22,23 @@ class NeuralNetwork():
         loader = DataLoader(dataset, batch_size=32, shuffle=True)
         return loader
 
-    def createModel(self):
-        model = nn.Sequential(
-            nn.Linear(self.input_size, 300),
-            nn.Sigmoid(),
-            nn.Linear(300, 200),
-            nn.Sigmoid(),
-            nn.Linear(200, 100),
-            nn.Sigmoid(),
-            nn.Linear(100, 50),
-            nn.Sigmoid(),
-            nn.Linear(50, self.output_size)
-        )
-        self.model = model
+    def createModel(self, model, useModel):
+
+        if useModel:
+            self.model = model
+        else:
+            model = nn.Sequential(
+                nn.Linear(self.input_size, 300),
+                nn.Sigmoid(),
+                nn.Linear(300, 200),
+                nn.Sigmoid(),
+                nn.Linear(200, 100),
+                nn.Sigmoid(),
+                nn.Linear(100, 50),
+                nn.Sigmoid(),
+                nn.Linear(50, self.output_size)
+            )
+            self.model = model
     
     def trainModel(self, X, y, epochs = 1000):
 
@@ -58,14 +63,22 @@ class NeuralNetwork():
                 print(f"Epoch [{epoch+1}/{epochs}], Loss: {avg_loss:.4f}")
 
 
-    def testModel(self, X_test, y_test):
+    def _predict(self, X_test):
         self.model.eval()
         with torch.no_grad():
             output = self.model(X_test)
+        return output
+    
+    def testModel(self, output, target):
+        mse = nn.MSELoss(reduction="none")
+        mae = nn.L1Loss(reduction="none")
 
-            loss = self.loss_fn(output, y_test)
+        mse_value = mse(output, target)
+        mae_value = mae(output, target)
+        loss = self.loss_fn(output, target)
 
-        print("Test Loss:", loss.item())
+        return mse_value, mae_value
+        #print("Test Loss:", loss.item())
 
     def saveModel(model, name):
         torch.save(model.model.state_dict(), name)

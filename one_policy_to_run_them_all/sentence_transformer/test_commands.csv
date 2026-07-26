@@ -1,0 +1,181 @@
+Unseen test instruction,Command class,Difficulty level,Paraphrase number
+travel forward,forward,Simple paraphrase,1
+progress ahead,forward,Simple paraphrase,2
+continue straight ahead,forward,Simple paraphrase,3
+make your way straight ahead,forward,Natural paraphrase,1
+carry on in the forward direction,forward,Natural paraphrase,2
+head directly towards the front,forward,Natural paraphrase,3
+please keep moving straight ahead,forward,Conversational,1
+can you make your way forward?,forward,Conversational,2
+go on and continue towards the front,forward,Conversational,3
+increase your distance from the area behind you,forward,Indirect,1
+your next position should be further ahead,forward,Indirect,2
+follow the direction you are currently facing,forward,Indirect,3
+travel backward,backward,Simple paraphrase,1
+step in reverse,backward,Simple paraphrase,2
+withdraw backwards,backward,Simple paraphrase,3
+make your way towards the rear,backward,Natural paraphrase,1
+continue in the opposite direction while facing forward,backward,Natural paraphrase,2
+move away from what is in front of you,backward,Natural paraphrase,3
+please move back a little,backward,Conversational,1
+can you travel towards the rear?,backward,Conversational,2
+go on and take yourself backwards,backward,Conversational,3
+increase your distance from the space ahead,backward,Indirect,1
+your next position should be behind your current one,backward,Indirect,2
+keep your orientation but travel towards your rear,backward,Indirect,3
+translate sideways to the left,strafe_left,Simple paraphrase,1
+travel laterally leftward,strafe_left,Simple paraphrase,2
+shift across to your left side,strafe_left,Simple paraphrase,3
+move sideways towards the left without changing orientation,strafe_left,Natural paraphrase,1
+carry yourself laterally in the left direction,strafe_left,Natural paraphrase,2
+cross over to the space on your left while facing forward,strafe_left,Natural paraphrase,3
+please slide over to your left without turning,strafe_left,Conversational,1
+can you move sideways to the left?,strafe_left,Conversational,2
+keep facing ahead and move across to your left,strafe_left,Conversational,3
+occupy the space beside you on the left,strafe_left,Indirect,1
+your heading should remain unchanged while your position moves leftward,strafe_left,Indirect,2
+end up to the left of where you are now without rotating,strafe_left,Indirect,3
+translate sideways to the right,strafe_right,Simple paraphrase,1
+travel laterally rightward,strafe_right,Simple paraphrase,2
+shift across to your right side,strafe_right,Simple paraphrase,3
+move sideways towards the right without changing orientation,strafe_right,Natural paraphrase,1
+carry yourself laterally in the right direction,strafe_right,Natural paraphrase,2
+cross over to the space on your right while facing forward,strafe_right,Natural paraphrase,3
+please slide over to your right without turning,strafe_right,Conversational,1
+can you move sideways to the right?,strafe_right,Conversational,2
+keep facing ahead and move across to your right,strafe_right,Conversational,3
+occupy the space beside you on the right,strafe_right,Indirect,1
+your heading should remain unchanged while your position moves rightward,strafe_right,Indirect,2
+end up to the right of where you are now without rotating,strafe_right,Indirect,3
+orient leftward,turn_left,Simple paraphrase,1
+rotate towards your left side,turn_left,Simple paraphrase,2
+change direction anticlockwise,turn_left,Simple paraphrase,3
+alter your heading so that you face the left side,turn_left,Natural paraphrase,1
+reorient yourself towards the direction on your left,turn_left,Natural paraphrase,2
+sweep your front around in an anticlockwise direction,turn_left,Natural paraphrase,3
+please turn so that you are facing left,turn_left,Conversational,1
+can you point yourself towards the left?,turn_left,Conversational,2
+go ahead and rotate to your left side,turn_left,Conversational,3
+the space currently on your left should become the space ahead of you,turn_left,Indirect,1
+finish with your front pointing ninety degrees anticlockwise,turn_left,Indirect,2
+change only your orientation towards the left-hand side,turn_left,Indirect,3
+orient rightward,turn_right,Simple paraphrase,1
+rotate towards your right side,turn_right,Simple paraphrase,2
+change direction clockwise,turn_right,Simple paraphrase,3
+alter your heading so that you face the right side,turn_right,Natural paraphrase,1
+reorient yourself towards the direction on your right,turn_right,Natural paraphrase,2
+sweep your front around in a clockwise direction,turn_right,Natural paraphrase,3
+please turn so that you are facing right,turn_right,Conversational,1
+can you point yourself towards the right?,turn_right,Conversational,2
+go ahead and rotate to your right side,turn_right,Conversational,3
+the space currently on your right should become the space ahead of you,turn_right,Indirect,1
+finish with your front pointing ninety degrees clockwise,turn_right,Indirect,2
+change only your orientation towards the right-hand side,turn_right,Indirect,3
+travel forward at low speed,slow_forward,Simple paraphrase,1
+progress ahead slowly,slow_forward,Simple paraphrase,2
+advance at a gentle pace,slow_forward,Simple paraphrase,3
+make your way straight ahead without hurrying,slow_forward,Natural paraphrase,1
+continue forward using a reduced pace,slow_forward,Natural paraphrase,2
+head towards the front with small controlled movement,slow_forward,Natural paraphrase,3
+"please move forward, but take it slowly",slow_forward,Conversational,1
+can you go ahead at a gentle speed?,slow_forward,Conversational,2
+move towards the front without rushing,slow_forward,Conversational,3
+reduce your speed while increasing your forward position,slow_forward,Indirect,1
+your next movement should be ahead and deliberately cautious,slow_forward,Indirect,2
+cover only a small forward distance over the next moment,slow_forward,Indirect,3
+travel forward rapidly,fast_forward,Simple paraphrase,1
+progress ahead at high speed,fast_forward,Simple paraphrase,2
+advance at a quick pace,fast_forward,Simple paraphrase,3
+make your way straight ahead as quickly as possible,fast_forward,Natural paraphrase,1
+continue towards the front using a high pace,fast_forward,Natural paraphrase,2
+head directly forward with rapid movement,fast_forward,Natural paraphrase,3
+please move forward quickly,fast_forward,Conversational,1
+can you hurry straight ahead?,fast_forward,Conversational,2
+go towards the front with some speed,fast_forward,Conversational,3
+increase your forward position at a high rate,fast_forward,Indirect,1
+cover a large forward distance in a short time,fast_forward,Indirect,2
+prioritise speed while travelling in the direction you face,fast_forward,Indirect,3
+angle slightly leftward,slight_left_turn,Simple paraphrase,1
+make a gentle anticlockwise adjustment,slight_left_turn,Simple paraphrase,2
+rotate left by a small amount,slight_left_turn,Simple paraphrase,3
+change your heading just a little towards the left,slight_left_turn,Natural paraphrase,1
+make a minor correction in the anticlockwise direction,slight_left_turn,Natural paraphrase,2
+reorient slightly towards your left-hand side,slight_left_turn,Natural paraphrase,3
+please turn only a little to the left,slight_left_turn,Conversational,1
+can you make a small leftward adjustment?,slight_left_turn,Conversational,2
+nudge your heading slightly towards the left,slight_left_turn,Conversational,3
+your final heading should be only a few degrees anticlockwise from the current one,slight_left_turn,Indirect,1
+make the left side slightly more visible ahead of you,slight_left_turn,Indirect,2
+correct your orientation gently towards the left without making a full turn,slight_left_turn,Indirect,3
+angle slightly rightward,slight_right_turn,Simple paraphrase,1
+make a gentle clockwise adjustment,slight_right_turn,Simple paraphrase,2
+rotate right by a small amount,slight_right_turn,Simple paraphrase,3
+change your heading just a little towards the right,slight_right_turn,Natural paraphrase,1
+make a minor correction in the clockwise direction,slight_right_turn,Natural paraphrase,2
+reorient slightly towards your right-hand side,slight_right_turn,Natural paraphrase,3
+please turn only a little to the right,slight_right_turn,Conversational,1
+can you make a small rightward adjustment?,slight_right_turn,Conversational,2
+nudge your heading slightly towards the right,slight_right_turn,Conversational,3
+your final heading should be only a few degrees clockwise from the current one,slight_right_turn,Indirect,1
+make the right side slightly more visible ahead of you,slight_right_turn,Indirect,2
+correct your orientation gently towards the right without making a full turn,slight_right_turn,Indirect,3
+advance along a leftward curve,forward_turn_left,Simple paraphrase,1
+travel forward while rotating leftward,forward_turn_left,Simple paraphrase,2
+follow a forward anticlockwise arc,forward_turn_left,Simple paraphrase,3
+move ahead while gradually changing your heading towards the left,forward_turn_left,Natural paraphrase,1
+continue forward on a path that bends to the left,forward_turn_left,Natural paraphrase,2
+travel towards the front and sweep around anticlockwise,forward_turn_left,Natural paraphrase,3
+please move ahead while curving to the left,forward_turn_left,Conversational,1
+can you go forward and turn left at the same time?,forward_turn_left,Conversational,2
+keep moving while steering towards your left,forward_turn_left,Conversational,3
+follow a path whose centre lies to your left,forward_turn_left,Indirect,1
+increase your forward position while your heading changes anticlockwise,forward_turn_left,Indirect,2
+finish ahead and left of your current pose using one curved motion,forward_turn_left,Indirect,3
+advance along a rightward curve,forward_turn_right,Simple paraphrase,1
+travel forward while rotating rightward,forward_turn_right,Simple paraphrase,2
+follow a forward clockwise arc,forward_turn_right,Simple paraphrase,3
+move ahead while gradually changing your heading towards the right,forward_turn_right,Natural paraphrase,1
+continue forward on a path that bends to the right,forward_turn_right,Natural paraphrase,2
+travel towards the front and sweep around clockwise,forward_turn_right,Natural paraphrase,3
+please move ahead while curving to the right,forward_turn_right,Conversational,1
+can you go forward and turn right at the same time?,forward_turn_right,Conversational,2
+keep moving while steering towards your right,forward_turn_right,Conversational,3
+follow a path whose centre lies to your right,forward_turn_right,Indirect,1
+increase your forward position while your heading changes clockwise,forward_turn_right,Indirect,2
+finish ahead and right of your current pose using one curved motion,forward_turn_right,Indirect,3
+travel forward-left diagonally,diagonal_forward_left,Simple paraphrase,1
+advance towards the front-left,diagonal_forward_left,Simple paraphrase,2
+shift leftward while progressing ahead,diagonal_forward_left,Simple paraphrase,3
+move in a straight diagonal towards the area ahead and to your left,diagonal_forward_left,Natural paraphrase,1
+continue forward while translating sideways to the left without turning,diagonal_forward_left,Natural paraphrase,2
+take a diagonal path combining forward and leftward motion,diagonal_forward_left,Natural paraphrase,3
+please move diagonally towards the front-left,diagonal_forward_left,Conversational,1
+can you go ahead and sideways to the left together?,diagonal_forward_left,Conversational,2
+keep facing forward and travel towards the space ahead on your left,diagonal_forward_left,Conversational,3
+finish at a point both ahead of and left of your current position,diagonal_forward_left,Indirect,1
+combine positive forward travel with leftward lateral displacement,diagonal_forward_left,Indirect,2
+move towards the corner between your front and left sides without rotating,diagonal_forward_left,Indirect,3
+travel forward-right diagonally,diagonal_forward_right,Simple paraphrase,1
+advance towards the front-right,diagonal_forward_right,Simple paraphrase,2
+shift rightward while progressing ahead,diagonal_forward_right,Simple paraphrase,3
+move in a straight diagonal towards the area ahead and to your right,diagonal_forward_right,Natural paraphrase,1
+continue forward while translating sideways to the right without turning,diagonal_forward_right,Natural paraphrase,2
+take a diagonal path combining forward and rightward motion,diagonal_forward_right,Natural paraphrase,3
+please move diagonally towards the front-right,diagonal_forward_right,Conversational,1
+can you go ahead and sideways to the right together?,diagonal_forward_right,Conversational,2
+keep facing forward and travel towards the space ahead on your right,diagonal_forward_right,Conversational,3
+finish at a point both ahead of and right of your current position,diagonal_forward_right,Indirect,1
+combine positive forward travel with rightward lateral displacement,diagonal_forward_right,Indirect,2
+move towards the corner between your front and right sides without rotating,diagonal_forward_right,Indirect,3
+cease locomotion,stop,Simple paraphrase,1
+end all movement,stop,Simple paraphrase,2
+become stationary,stop,Simple paraphrase,3
+bring your current motion to a complete end,stop,Natural paraphrase,1
+remain exactly where you are without moving,stop,Natural paraphrase,2
+cancel any translational or rotational movement,stop,Natural paraphrase,3
+please stay exactly where you are,stop,Conversational,1
+can you stop all movement now?,stop,Conversational,2
+do not go anywhere until another instruction,stop,Conversational,3
+your position and heading should no longer change,stop,Indirect,1
+the next command should produce zero motion,stop,Indirect,2
+maintain the current pose rather than travelling or rotating,stop,Indirect,3
