@@ -1,0 +1,661 @@
+Text,robot,x,y,yaw
+move forward,UnitreeH1,1,0,0
+go forward,UnitreeH1,1,0,0
+walk forward,UnitreeH1,1,0,0
+move ahead,UnitreeH1,1,0,0
+go straight,UnitreeH1,1,0,0
+continue forward,UnitreeH1,1,0,0
+advance,UnitreeH1,1,0,0
+head forward,UnitreeH1,1,0,0
+proceed ahead,UnitreeH1,1,0,0
+move onward,UnitreeH1,1,0,0
+move backward,UnitreeH1,-1,0,0
+go backward,UnitreeH1,-1,0,0
+walk back,UnitreeH1,-1,0,0
+reverse,UnitreeH1,-1,0,0
+move in reverse,UnitreeH1,-1,0,0
+step backward,UnitreeH1,-1,0,0
+go back,UnitreeH1,-1,0,0
+retreat,UnitreeH1,-1,0,0
+back up,UnitreeH1,-1,0,0
+move back,UnitreeH1,-1,0,0
+strafe left,UnitreeH1,0,-1,0
+move left,UnitreeH1,0,-1,0
+shift left,UnitreeH1,0,-1,0
+slide left,UnitreeH1,0,-1,0
+step to the left,UnitreeH1,0,-1,0
+go sideways left,UnitreeH1,0,-1,0
+move laterally left,UnitreeH1,0,-1,0
+sidestep left,UnitreeH1,0,-1,0
+go to the left without turning,UnitreeH1,0,-1,0
+translate left,UnitreeH1,0,-1,0
+strafe right,UnitreeH1,0,1,0
+move right,UnitreeH1,0,1,0
+shift right,UnitreeH1,0,1,0
+slide right,UnitreeH1,0,1,0
+step to the right,UnitreeH1,0,1,0
+go sideways right,UnitreeH1,0,1,0
+move laterally right,UnitreeH1,0,1,0
+sidestep right,UnitreeH1,0,1,0
+go to the right without turning,UnitreeH1,0,1,0
+translate right,UnitreeH1,0,1,0
+turn left,UnitreeH1,0,0,-1
+rotate left,UnitreeH1,0,0,-1
+face left,UnitreeH1,0,0,-1
+spin left,UnitreeH1,0,0,-1
+yaw left,UnitreeH1,0,0,-1
+change heading left,UnitreeH1,0,0,-1
+look left,UnitreeH1,0,0,-1
+pivot left,UnitreeH1,0,0,-1
+rotate anticlockwise,UnitreeH1,0,0,-1
+turn to the left,UnitreeH1,0,0,-1
+turn right,UnitreeH1,0,0,1
+rotate right,UnitreeH1,0,0,1
+face right,UnitreeH1,0,0,1
+spin right,UnitreeH1,0,0,1
+yaw right,UnitreeH1,0,0,1
+change heading right,UnitreeH1,0,0,1
+look right,UnitreeH1,0,0,1
+pivot right,UnitreeH1,0,0,1
+rotate clockwise,UnitreeH1,0,0,1
+turn to the right,UnitreeH1,0,0,1
+move forward slowly,UnitreeH1,0.4,0,0
+go forward slowly,UnitreeH1,0.4,0,0
+advance a little,UnitreeH1,0.4,0,0
+move gently forward,UnitreeH1,0.4,0,0
+creep forward,UnitreeH1,0.4,0,0
+move forward quickly,UnitreeH1,1,0,0
+go forward fast,UnitreeH1,1,0,0
+advance quickly,UnitreeH1,1,0,0
+move ahead fast,UnitreeH1,1,0,0
+go straight quickly,UnitreeH1,1,0,0
+turn left slightly,UnitreeH1,0,0,-0.4
+rotate a little left,UnitreeH1,0,0,-0.4
+make a small left turn,UnitreeH1,0,0,-0.4
+adjust left,UnitreeH1,0,0,-0.4
+yaw slightly left,UnitreeH1,0,0,-0.4
+turn right slightly,UnitreeH1,0,0,0.4
+rotate a little right,UnitreeH1,0,0,0.4
+make a small right turn,UnitreeH1,0,0,0.4
+adjust right,UnitreeH1,0,0,0.4
+yaw slightly right,UnitreeH1,0,0,0.4
+move forward and turn left,UnitreeH1,0.7,0,-0.5
+go forward while turning left,UnitreeH1,0.7,0,-0.5
+curve left while moving forward,UnitreeH1,0.7,0,-0.5
+walk ahead and rotate left,UnitreeH1,0.7,0,-0.5
+move in a left arc,UnitreeH1,0.7,0,-0.5
+move forward and turn right,UnitreeH1,0.7,0,0.5
+go forward while turning right,UnitreeH1,0.7,0,0.5
+curve right while moving forward,UnitreeH1,0.7,0,0.5
+walk ahead and rotate right,UnitreeH1,0.7,0,0.5
+move in a right arc,UnitreeH1,0.7,0,0.5
+move diagonally forward left,UnitreeH1,0.7,-0.5,0
+go forward-left,UnitreeH1,0.7,-0.5,0
+move ahead to the left,UnitreeH1,0.7,-0.5,0
+travel diagonally left,UnitreeH1,0.7,-0.5,0
+advance while shifting left,UnitreeH1,0.7,-0.5,0
+move diagonally forward right,UnitreeH1,0.7,0.5,0
+go forward-right,UnitreeH1,0.7,0.5,0
+move ahead to the right,UnitreeH1,0.7,0.5,0
+travel diagonally right,UnitreeH1,0.7,0.5,0
+advance while shifting right,UnitreeH1,0.7,0.5,0
+stop,UnitreeH1,0,0,0
+halt,UnitreeH1,0,0,0
+stand still,UnitreeH1,0,0,0
+do not move,UnitreeH1,0,0,0
+stay in place,UnitreeH1,0,0,0
+remain still,UnitreeH1,0,0,0
+pause movement,UnitreeH1,0,0,0
+freeze,UnitreeH1,0,0,0
+hold position,UnitreeH1,0,0,0
+stop moving,UnitreeH1,0,0,0
+move forward,UnitreeGo1,1,0,0
+go forward,UnitreeGo1,1,0,0
+walk forward,UnitreeGo1,1,0,0
+move ahead,UnitreeGo1,1,0,0
+go straight,UnitreeGo1,1,0,0
+continue forward,UnitreeGo1,1,0,0
+advance,UnitreeGo1,1,0,0
+head forward,UnitreeGo1,1,0,0
+proceed ahead,UnitreeGo1,1,0,0
+move onward,UnitreeGo1,1,0,0
+move backward,UnitreeGo1,-1,0,0
+go backward,UnitreeGo1,-1,0,0
+walk back,UnitreeGo1,-1,0,0
+reverse,UnitreeGo1,-1,0,0
+move in reverse,UnitreeGo1,-1,0,0
+step backward,UnitreeGo1,-1,0,0
+go back,UnitreeGo1,-1,0,0
+retreat,UnitreeGo1,-1,0,0
+back up,UnitreeGo1,-1,0,0
+move back,UnitreeGo1,-1,0,0
+strafe left,UnitreeGo1,0,-1,0
+move left,UnitreeGo1,0,-1,0
+shift left,UnitreeGo1,0,-1,0
+slide left,UnitreeGo1,0,-1,0
+step to the left,UnitreeGo1,0,-1,0
+go sideways left,UnitreeGo1,0,-1,0
+move laterally left,UnitreeGo1,0,-1,0
+sidestep left,UnitreeGo1,0,-1,0
+go to the left without turning,UnitreeGo1,0,-1,0
+translate left,UnitreeGo1,0,-1,0
+strafe right,UnitreeGo1,0,1,0
+move right,UnitreeGo1,0,1,0
+shift right,UnitreeGo1,0,1,0
+slide right,UnitreeGo1,0,1,0
+step to the right,UnitreeGo1,0,1,0
+go sideways right,UnitreeGo1,0,1,0
+move laterally right,UnitreeGo1,0,1,0
+sidestep right,UnitreeGo1,0,1,0
+go to the right without turning,UnitreeGo1,0,1,0
+translate right,UnitreeGo1,0,1,0
+turn left,UnitreeGo1,0,0,-1
+rotate left,UnitreeGo1,0,0,-1
+face left,UnitreeGo1,0,0,-1
+spin left,UnitreeGo1,0,0,-1
+yaw left,UnitreeGo1,0,0,-1
+change heading left,UnitreeGo1,0,0,-1
+look left,UnitreeGo1,0,0,-1
+pivot left,UnitreeGo1,0,0,-1
+rotate anticlockwise,UnitreeGo1,0,0,-1
+turn to the left,UnitreeGo1,0,0,-1
+turn right,UnitreeGo1,0,0,1
+rotate right,UnitreeGo1,0,0,1
+face right,UnitreeGo1,0,0,1
+spin right,UnitreeGo1,0,0,1
+yaw right,UnitreeGo1,0,0,1
+change heading right,UnitreeGo1,0,0,1
+look right,UnitreeGo1,0,0,1
+pivot right,UnitreeGo1,0,0,1
+rotate clockwise,UnitreeGo1,0,0,1
+turn to the right,UnitreeGo1,0,0,1
+move forward slowly,UnitreeGo1,0.4,0,0
+go forward slowly,UnitreeGo1,0.4,0,0
+advance a little,UnitreeGo1,0.4,0,0
+move gently forward,UnitreeGo1,0.4,0,0
+creep forward,UnitreeGo1,0.4,0,0
+move forward quickly,UnitreeGo1,1,0,0
+go forward fast,UnitreeGo1,1,0,0
+advance quickly,UnitreeGo1,1,0,0
+move ahead fast,UnitreeGo1,1,0,0
+go straight quickly,UnitreeGo1,1,0,0
+turn left slightly,UnitreeGo1,0,0,-0.4
+rotate a little left,UnitreeGo1,0,0,-0.4
+make a small left turn,UnitreeGo1,0,0,-0.4
+adjust left,UnitreeGo1,0,0,-0.4
+yaw slightly left,UnitreeGo1,0,0,-0.4
+turn right slightly,UnitreeGo1,0,0,0.4
+rotate a little right,UnitreeGo1,0,0,0.4
+make a small right turn,UnitreeGo1,0,0,0.4
+adjust right,UnitreeGo1,0,0,0.4
+yaw slightly right,UnitreeGo1,0,0,0.4
+move forward and turn left,UnitreeGo1,0.7,0,-0.5
+go forward while turning left,UnitreeGo1,0.7,0,-0.5
+curve left while moving forward,UnitreeGo1,0.7,0,-0.5
+walk ahead and rotate left,UnitreeGo1,0.7,0,-0.5
+move in a left arc,UnitreeGo1,0.7,0,-0.5
+move forward and turn right,UnitreeGo1,0.7,0,0.5
+go forward while turning right,UnitreeGo1,0.7,0,0.5
+curve right while moving forward,UnitreeGo1,0.7,0,0.5
+walk ahead and rotate right,UnitreeGo1,0.7,0,0.5
+move in a right arc,UnitreeGo1,0.7,0,0.5
+move diagonally forward left,UnitreeGo1,0.7,-0.5,0
+go forward-left,UnitreeGo1,0.7,-0.5,0
+move ahead to the left,UnitreeGo1,0.7,-0.5,0
+travel diagonally left,UnitreeGo1,0.7,-0.5,0
+advance while shifting left,UnitreeGo1,0.7,-0.5,0
+move diagonally forward right,UnitreeGo1,0.7,0.5,0
+go forward-right,UnitreeGo1,0.7,0.5,0
+move ahead to the right,UnitreeGo1,0.7,0.5,0
+travel diagonally right,UnitreeGo1,0.7,0.5,0
+advance while shifting right,UnitreeGo1,0.7,0.5,0
+stop,UnitreeGo1,0,0,0
+halt,UnitreeGo1,0,0,0
+stand still,UnitreeGo1,0,0,0
+do not move,UnitreeGo1,0,0,0
+stay in place,UnitreeGo1,0,0,0
+remain still,UnitreeGo1,0,0,0
+pause movement,UnitreeGo1,0,0,0
+freeze,UnitreeGo1,0,0,0
+hold position,UnitreeGo1,0,0,0
+stop moving,UnitreeGo1,0,0,0
+move forward,UnitreeGo2,1,0,0
+go forward,UnitreeGo2,1,0,0
+walk forward,UnitreeGo2,1,0,0
+move ahead,UnitreeGo2,1,0,0
+go straight,UnitreeGo2,1,0,0
+continue forward,UnitreeGo2,1,0,0
+advance,UnitreeGo2,1,0,0
+head forward,UnitreeGo2,1,0,0
+proceed ahead,UnitreeGo2,1,0,0
+move onward,UnitreeGo2,1,0,0
+move backward,UnitreeGo2,-1,0,0
+go backward,UnitreeGo2,-1,0,0
+walk back,UnitreeGo2,-1,0,0
+reverse,UnitreeGo2,-1,0,0
+move in reverse,UnitreeGo2,-1,0,0
+step backward,UnitreeGo2,-1,0,0
+go back,UnitreeGo2,-1,0,0
+retreat,UnitreeGo2,-1,0,0
+back up,UnitreeGo2,-1,0,0
+move back,UnitreeGo2,-1,0,0
+strafe left,UnitreeGo2,0,-1,0
+move left,UnitreeGo2,0,-1,0
+shift left,UnitreeGo2,0,-1,0
+slide left,UnitreeGo2,0,-1,0
+step to the left,UnitreeGo2,0,-1,0
+go sideways left,UnitreeGo2,0,-1,0
+move laterally left,UnitreeGo2,0,-1,0
+sidestep left,UnitreeGo2,0,-1,0
+go to the left without turning,UnitreeGo2,0,-1,0
+translate left,UnitreeGo2,0,-1,0
+strafe right,UnitreeGo2,0,1,0
+move right,UnitreeGo2,0,1,0
+shift right,UnitreeGo2,0,1,0
+slide right,UnitreeGo2,0,1,0
+step to the right,UnitreeGo2,0,1,0
+go sideways right,UnitreeGo2,0,1,0
+move laterally right,UnitreeGo2,0,1,0
+sidestep right,UnitreeGo2,0,1,0
+go to the right without turning,UnitreeGo2,0,1,0
+translate right,UnitreeGo2,0,1,0
+turn left,UnitreeGo2,0,0,-1
+rotate left,UnitreeGo2,0,0,-1
+face left,UnitreeGo2,0,0,-1
+spin left,UnitreeGo2,0,0,-1
+yaw left,UnitreeGo2,0,0,-1
+change heading left,UnitreeGo2,0,0,-1
+look left,UnitreeGo2,0,0,-1
+pivot left,UnitreeGo2,0,0,-1
+rotate anticlockwise,UnitreeGo2,0,0,-1
+turn to the left,UnitreeGo2,0,0,-1
+turn right,UnitreeGo2,0,0,1
+rotate right,UnitreeGo2,0,0,1
+face right,UnitreeGo2,0,0,1
+spin right,UnitreeGo2,0,0,1
+yaw right,UnitreeGo2,0,0,1
+change heading right,UnitreeGo2,0,0,1
+look right,UnitreeGo2,0,0,1
+pivot right,UnitreeGo2,0,0,1
+rotate clockwise,UnitreeGo2,0,0,1
+turn to the right,UnitreeGo2,0,0,1
+move forward slowly,UnitreeGo2,0.4,0,0
+go forward slowly,UnitreeGo2,0.4,0,0
+advance a little,UnitreeGo2,0.4,0,0
+move gently forward,UnitreeGo2,0.4,0,0
+creep forward,UnitreeGo2,0.4,0,0
+move forward quickly,UnitreeGo2,1,0,0
+go forward fast,UnitreeGo2,1,0,0
+advance quickly,UnitreeGo2,1,0,0
+move ahead fast,UnitreeGo2,1,0,0
+go straight quickly,UnitreeGo2,1,0,0
+turn left slightly,UnitreeGo2,0,0,-0.4
+rotate a little left,UnitreeGo2,0,0,-0.4
+make a small left turn,UnitreeGo2,0,0,-0.4
+adjust left,UnitreeGo2,0,0,-0.4
+yaw slightly left,UnitreeGo2,0,0,-0.4
+turn right slightly,UnitreeGo2,0,0,0.4
+rotate a little right,UnitreeGo2,0,0,0.4
+make a small right turn,UnitreeGo2,0,0,0.4
+adjust right,UnitreeGo2,0,0,0.4
+yaw slightly right,UnitreeGo2,0,0,0.4
+move forward and turn left,UnitreeGo2,0.7,0,-0.5
+go forward while turning left,UnitreeGo2,0.7,0,-0.5
+curve left while moving forward,UnitreeGo2,0.7,0,-0.5
+walk ahead and rotate left,UnitreeGo2,0.7,0,-0.5
+move in a left arc,UnitreeGo2,0.7,0,-0.5
+move forward and turn right,UnitreeGo2,0.7,0,0.5
+go forward while turning right,UnitreeGo2,0.7,0,0.5
+curve right while moving forward,UnitreeGo2,0.7,0,0.5
+walk ahead and rotate right,UnitreeGo2,0.7,0,0.5
+move in a right arc,UnitreeGo2,0.7,0,0.5
+move diagonally forward left,UnitreeGo2,0.7,-0.5,0
+go forward-left,UnitreeGo2,0.7,-0.5,0
+move ahead to the left,UnitreeGo2,0.7,-0.5,0
+travel diagonally left,UnitreeGo2,0.7,-0.5,0
+advance while shifting left,UnitreeGo2,0.7,-0.5,0
+move diagonally forward right,UnitreeGo2,0.7,0.5,0
+go forward-right,UnitreeGo2,0.7,0.5,0
+move ahead to the right,UnitreeGo2,0.7,0.5,0
+travel diagonally right,UnitreeGo2,0.7,0.5,0
+advance while shifting right,UnitreeGo2,0.7,0.5,0
+stop,UnitreeGo2,0,0,0
+halt,UnitreeGo2,0,0,0
+stand still,UnitreeGo2,0,0,0
+do not move,UnitreeGo2,0,0,0
+stay in place,UnitreeGo2,0,0,0
+remain still,UnitreeGo2,0,0,0
+pause movement,UnitreeGo2,0,0,0
+freeze,UnitreeGo2,0,0,0
+hold position,UnitreeGo2,0,0,0
+stop moving,UnitreeGo2,0,0,0
+move forward,Cassie,1,0,0
+go forward,Cassie,1,0,0
+walk forward,Cassie,1,0,0
+move ahead,Cassie,1,0,0
+go straight,Cassie,1,0,0
+continue forward,Cassie,1,0,0
+advance,Cassie,1,0,0
+head forward,Cassie,1,0,0
+proceed ahead,Cassie,1,0,0
+move onward,Cassie,1,0,0
+move backward,Cassie,-1,0,0
+go backward,Cassie,-1,0,0
+walk back,Cassie,-1,0,0
+reverse,Cassie,-1,0,0
+move in reverse,Cassie,-1,0,0
+step backward,Cassie,-1,0,0
+go back,Cassie,-1,0,0
+retreat,Cassie,-1,0,0
+back up,Cassie,-1,0,0
+move back,Cassie,-1,0,0
+strafe left,Cassie,0,-1,0
+move left,Cassie,0,-1,0
+shift left,Cassie,0,-1,0
+slide left,Cassie,0,-1,0
+step to the left,Cassie,0,-1,0
+go sideways left,Cassie,0,-1,0
+move laterally left,Cassie,0,-1,0
+sidestep left,Cassie,0,-1,0
+go to the left without turning,Cassie,0,-1,0
+translate left,Cassie,0,-1,0
+strafe right,Cassie,0,1,0
+move right,Cassie,0,1,0
+shift right,Cassie,0,1,0
+slide right,Cassie,0,1,0
+step to the right,Cassie,0,1,0
+go sideways right,Cassie,0,1,0
+move laterally right,Cassie,0,1,0
+sidestep right,Cassie,0,1,0
+go to the right without turning,Cassie,0,1,0
+translate right,Cassie,0,1,0
+turn left,Cassie,0,0,-1
+rotate left,Cassie,0,0,-1
+face left,Cassie,0,0,-1
+spin left,Cassie,0,0,-1
+yaw left,Cassie,0,0,-1
+change heading left,Cassie,0,0,-1
+look left,Cassie,0,0,-1
+pivot left,Cassie,0,0,-1
+rotate anticlockwise,Cassie,0,0,-1
+turn to the left,Cassie,0,0,-1
+turn right,Cassie,0,0,1
+rotate right,Cassie,0,0,1
+face right,Cassie,0,0,1
+spin right,Cassie,0,0,1
+yaw right,Cassie,0,0,1
+change heading right,Cassie,0,0,1
+look right,Cassie,0,0,1
+pivot right,Cassie,0,0,1
+rotate clockwise,Cassie,0,0,1
+turn to the right,Cassie,0,0,1
+move forward slowly,Cassie,0.4,0,0
+go forward slowly,Cassie,0.4,0,0
+advance a little,Cassie,0.4,0,0
+move gently forward,Cassie,0.4,0,0
+creep forward,Cassie,0.4,0,0
+move forward quickly,Cassie,1,0,0
+go forward fast,Cassie,1,0,0
+advance quickly,Cassie,1,0,0
+move ahead fast,Cassie,1,0,0
+go straight quickly,Cassie,1,0,0
+turn left slightly,Cassie,0,0,-0.4
+rotate a little left,Cassie,0,0,-0.4
+make a small left turn,Cassie,0,0,-0.4
+adjust left,Cassie,0,0,-0.4
+yaw slightly left,Cassie,0,0,-0.4
+turn right slightly,Cassie,0,0,0.4
+rotate a little right,Cassie,0,0,0.4
+make a small right turn,Cassie,0,0,0.4
+adjust right,Cassie,0,0,0.4
+yaw slightly right,Cassie,0,0,0.4
+move forward and turn left,Cassie,0.7,0,-0.5
+go forward while turning left,Cassie,0.7,0,-0.5
+curve left while moving forward,Cassie,0.7,0,-0.5
+walk ahead and rotate left,Cassie,0.7,0,-0.5
+move in a left arc,Cassie,0.7,0,-0.5
+move forward and turn right,Cassie,0.7,0,0.5
+go forward while turning right,Cassie,0.7,0,0.5
+curve right while moving forward,Cassie,0.7,0,0.5
+walk ahead and rotate right,Cassie,0.7,0,0.5
+move in a right arc,Cassie,0.7,0,0.5
+move diagonally forward left,Cassie,0.7,-0.5,0
+go forward-left,Cassie,0.7,-0.5,0
+move ahead to the left,Cassie,0.7,-0.5,0
+travel diagonally left,Cassie,0.7,-0.5,0
+advance while shifting left,Cassie,0.7,-0.5,0
+move diagonally forward right,Cassie,0.7,0.5,0
+go forward-right,Cassie,0.7,0.5,0
+move ahead to the right,Cassie,0.7,0.5,0
+travel diagonally right,Cassie,0.7,0.5,0
+advance while shifting right,Cassie,0.7,0.5,0
+stop,Cassie,0,0,0
+halt,Cassie,0,0,0
+stand still,Cassie,0,0,0
+do not move,Cassie,0,0,0
+stay in place,Cassie,0,0,0
+remain still,Cassie,0,0,0
+pause movement,Cassie,0,0,0
+freeze,Cassie,0,0,0
+hold position,Cassie,0,0,0
+stop moving,Cassie,0,0,0
+move forward,AnymalB,1,0,0
+go forward,AnymalB,1,0,0
+walk forward,AnymalB,1,0,0
+move ahead,AnymalB,1,0,0
+go straight,AnymalB,1,0,0
+continue forward,AnymalB,1,0,0
+advance,AnymalB,1,0,0
+head forward,AnymalB,1,0,0
+proceed ahead,AnymalB,1,0,0
+move onward,AnymalB,1,0,0
+move backward,AnymalB,-1,0,0
+go backward,AnymalB,-1,0,0
+walk back,AnymalB,-1,0,0
+reverse,AnymalB,-1,0,0
+move in reverse,AnymalB,-1,0,0
+step backward,AnymalB,-1,0,0
+go back,AnymalB,-1,0,0
+retreat,AnymalB,-1,0,0
+back up,AnymalB,-1,0,0
+move back,AnymalB,-1,0,0
+strafe left,AnymalB,0,-1,0
+move left,AnymalB,0,-1,0
+shift left,AnymalB,0,-1,0
+slide left,AnymalB,0,-1,0
+step to the left,AnymalB,0,-1,0
+go sideways left,AnymalB,0,-1,0
+move laterally left,AnymalB,0,-1,0
+sidestep left,AnymalB,0,-1,0
+go to the left without turning,AnymalB,0,-1,0
+translate left,AnymalB,0,-1,0
+strafe right,AnymalB,0,1,0
+move right,AnymalB,0,1,0
+shift right,AnymalB,0,1,0
+slide right,AnymalB,0,1,0
+step to the right,AnymalB,0,1,0
+go sideways right,AnymalB,0,1,0
+move laterally right,AnymalB,0,1,0
+sidestep right,AnymalB,0,1,0
+go to the right without turning,AnymalB,0,1,0
+translate right,AnymalB,0,1,0
+turn left,AnymalB,0,0,-1
+rotate left,AnymalB,0,0,-1
+face left,AnymalB,0,0,-1
+spin left,AnymalB,0,0,-1
+yaw left,AnymalB,0,0,-1
+change heading left,AnymalB,0,0,-1
+look left,AnymalB,0,0,-1
+pivot left,AnymalB,0,0,-1
+rotate anticlockwise,AnymalB,0,0,-1
+turn to the left,AnymalB,0,0,-1
+turn right,AnymalB,0,0,1
+rotate right,AnymalB,0,0,1
+face right,AnymalB,0,0,1
+spin right,AnymalB,0,0,1
+yaw right,AnymalB,0,0,1
+change heading right,AnymalB,0,0,1
+look right,AnymalB,0,0,1
+pivot right,AnymalB,0,0,1
+rotate clockwise,AnymalB,0,0,1
+turn to the right,AnymalB,0,0,1
+move forward slowly,AnymalB,0.4,0,0
+go forward slowly,AnymalB,0.4,0,0
+advance a little,AnymalB,0.4,0,0
+move gently forward,AnymalB,0.4,0,0
+creep forward,AnymalB,0.4,0,0
+move forward quickly,AnymalB,1,0,0
+go forward fast,AnymalB,1,0,0
+advance quickly,AnymalB,1,0,0
+move ahead fast,AnymalB,1,0,0
+go straight quickly,AnymalB,1,0,0
+turn left slightly,AnymalB,0,0,-0.4
+rotate a little left,AnymalB,0,0,-0.4
+make a small left turn,AnymalB,0,0,-0.4
+adjust left,AnymalB,0,0,-0.4
+yaw slightly left,AnymalB,0,0,-0.4
+turn right slightly,AnymalB,0,0,0.4
+rotate a little right,AnymalB,0,0,0.4
+make a small right turn,AnymalB,0,0,0.4
+adjust right,AnymalB,0,0,0.4
+yaw slightly right,AnymalB,0,0,0.4
+move forward and turn left,AnymalB,0.7,0,-0.5
+go forward while turning left,AnymalB,0.7,0,-0.5
+curve left while moving forward,AnymalB,0.7,0,-0.5
+walk ahead and rotate left,AnymalB,0.7,0,-0.5
+move in a left arc,AnymalB,0.7,0,-0.5
+move forward and turn right,AnymalB,0.7,0,0.5
+go forward while turning right,AnymalB,0.7,0,0.5
+curve right while moving forward,AnymalB,0.7,0,0.5
+walk ahead and rotate right,AnymalB,0.7,0,0.5
+move in a right arc,AnymalB,0.7,0,0.5
+move diagonally forward left,AnymalB,0.7,-0.5,0
+go forward-left,AnymalB,0.7,-0.5,0
+move ahead to the left,AnymalB,0.7,-0.5,0
+travel diagonally left,AnymalB,0.7,-0.5,0
+advance while shifting left,AnymalB,0.7,-0.5,0
+move diagonally forward right,AnymalB,0.7,0.5,0
+go forward-right,AnymalB,0.7,0.5,0
+move ahead to the right,AnymalB,0.7,0.5,0
+travel diagonally right,AnymalB,0.7,0.5,0
+advance while shifting right,AnymalB,0.7,0.5,0
+stop,AnymalB,0,0,0
+halt,AnymalB,0,0,0
+stand still,AnymalB,0,0,0
+do not move,AnymalB,0,0,0
+stay in place,AnymalB,0,0,0
+remain still,AnymalB,0,0,0
+pause movement,AnymalB,0,0,0
+freeze,AnymalB,0,0,0
+hold position,AnymalB,0,0,0
+stop moving,AnymalB,0,0,0
+move forward,RobotisOP3,1,0,0
+go forward,RobotisOP3,1,0,0
+walk forward,RobotisOP3,1,0,0
+move ahead,RobotisOP3,1,0,0
+go straight,RobotisOP3,1,0,0
+continue forward,RobotisOP3,1,0,0
+advance,RobotisOP3,1,0,0
+head forward,RobotisOP3,1,0,0
+proceed ahead,RobotisOP3,1,0,0
+move onward,RobotisOP3,1,0,0
+move backward,RobotisOP3,-1,0,0
+go backward,RobotisOP3,-1,0,0
+walk back,RobotisOP3,-1,0,0
+reverse,RobotisOP3,-1,0,0
+move in reverse,RobotisOP3,-1,0,0
+step backward,RobotisOP3,-1,0,0
+go back,RobotisOP3,-1,0,0
+retreat,RobotisOP3,-1,0,0
+back up,RobotisOP3,-1,0,0
+move back,RobotisOP3,-1,0,0
+strafe left,RobotisOP3,0,-1,0
+move left,RobotisOP3,0,-1,0
+shift left,RobotisOP3,0,-1,0
+slide left,RobotisOP3,0,-1,0
+step to the left,RobotisOP3,0,-1,0
+go sideways left,RobotisOP3,0,-1,0
+move laterally left,RobotisOP3,0,-1,0
+sidestep left,RobotisOP3,0,-1,0
+go to the left without turning,RobotisOP3,0,-1,0
+translate left,RobotisOP3,0,-1,0
+strafe right,RobotisOP3,0,1,0
+move right,RobotisOP3,0,1,0
+shift right,RobotisOP3,0,1,0
+slide right,RobotisOP3,0,1,0
+step to the right,RobotisOP3,0,1,0
+go sideways right,RobotisOP3,0,1,0
+move laterally right,RobotisOP3,0,1,0
+sidestep right,RobotisOP3,0,1,0
+go to the right without turning,RobotisOP3,0,1,0
+translate right,RobotisOP3,0,1,0
+turn left,RobotisOP3,0,0,-1
+rotate left,RobotisOP3,0,0,-1
+face left,RobotisOP3,0,0,-1
+spin left,RobotisOP3,0,0,-1
+yaw left,RobotisOP3,0,0,-1
+change heading left,RobotisOP3,0,0,-1
+look left,RobotisOP3,0,0,-1
+pivot left,RobotisOP3,0,0,-1
+rotate anticlockwise,RobotisOP3,0,0,-1
+turn to the left,RobotisOP3,0,0,-1
+turn right,RobotisOP3,0,0,1
+rotate right,RobotisOP3,0,0,1
+face right,RobotisOP3,0,0,1
+spin right,RobotisOP3,0,0,1
+yaw right,RobotisOP3,0,0,1
+change heading right,RobotisOP3,0,0,1
+look right,RobotisOP3,0,0,1
+pivot right,RobotisOP3,0,0,1
+rotate clockwise,RobotisOP3,0,0,1
+turn to the right,RobotisOP3,0,0,1
+move forward slowly,RobotisOP3,0.4,0,0
+go forward slowly,RobotisOP3,0.4,0,0
+advance a little,RobotisOP3,0.4,0,0
+move gently forward,RobotisOP3,0.4,0,0
+creep forward,RobotisOP3,0.4,0,0
+move forward quickly,RobotisOP3,1,0,0
+go forward fast,RobotisOP3,1,0,0
+advance quickly,RobotisOP3,1,0,0
+move ahead fast,RobotisOP3,1,0,0
+go straight quickly,RobotisOP3,1,0,0
+turn left slightly,RobotisOP3,0,0,-0.4
+rotate a little left,RobotisOP3,0,0,-0.4
+make a small left turn,RobotisOP3,0,0,-0.4
+adjust left,RobotisOP3,0,0,-0.4
+yaw slightly left,RobotisOP3,0,0,-0.4
+turn right slightly,RobotisOP3,0,0,0.4
+rotate a little right,RobotisOP3,0,0,0.4
+make a small right turn,RobotisOP3,0,0,0.4
+adjust right,RobotisOP3,0,0,0.4
+yaw slightly right,RobotisOP3,0,0,0.4
+move forward and turn left,RobotisOP3,0.7,0,-0.5
+go forward while turning left,RobotisOP3,0.7,0,-0.5
+curve left while moving forward,RobotisOP3,0.7,0,-0.5
+walk ahead and rotate left,RobotisOP3,0.7,0,-0.5
+move in a left arc,RobotisOP3,0.7,0,-0.5
+move forward and turn right,RobotisOP3,0.7,0,0.5
+go forward while turning right,RobotisOP3,0.7,0,0.5
+curve right while moving forward,RobotisOP3,0.7,0,0.5
+walk ahead and rotate right,RobotisOP3,0.7,0,0.5
+move in a right arc,RobotisOP3,0.7,0,0.5
+move diagonally forward left,RobotisOP3,0.7,-0.5,0
+go forward-left,RobotisOP3,0.7,-0.5,0
+move ahead to the left,RobotisOP3,0.7,-0.5,0
+travel diagonally left,RobotisOP3,0.7,-0.5,0
+advance while shifting left,RobotisOP3,0.7,-0.5,0
+move diagonally forward right,RobotisOP3,0.7,0.5,0
+go forward-right,RobotisOP3,0.7,0.5,0
+move ahead to the right,RobotisOP3,0.7,0.5,0
+travel diagonally right,RobotisOP3,0.7,0.5,0
+advance while shifting right,RobotisOP3,0.7,0.5,0
+stop,RobotisOP3,0,0,0
+halt,RobotisOP3,0,0,0
+stand still,RobotisOP3,0,0,0
+do not move,RobotisOP3,0,0,0
+stay in place,RobotisOP3,0,0,0
+remain still,RobotisOP3,0,0,0
+pause movement,RobotisOP3,0,0,0
+freeze,RobotisOP3,0,0,0
+hold position,RobotisOP3,0,0,0
+stop moving,RobotisOP3,0,0,0

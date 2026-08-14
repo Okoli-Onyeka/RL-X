@@ -6,6 +6,10 @@ from scipy.spatial.transform import Rotation as R
 import gymnasium as gym
 from dm_control import mjcf
 import pygame
+import csv
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 
 from one_policy_to_run_them_all.environments.badger.viewer import MujocoViewer
 from one_policy_to_run_them_all.environments.badger.control_functions.handler import get_control_function
@@ -22,6 +26,8 @@ from one_policy_to_run_them_all.environments.badger.domain_randomization.perturb
 from one_policy_to_run_them_all.environments.badger.observation_noise_functions.handler import get_observation_noise_function
 from one_policy_to_run_them_all.environments.badger.observation_dropout_functions.handler import get_observation_dropout_function
 from one_policy_to_run_them_all.environments.badger.terrain_functions.handler import get_terrain_function
+
+from one_policy_to_run_them_all.environments.badger.velocity_pid import VelocityPID
 
 
 class Badger(gym.Env):
@@ -194,6 +200,20 @@ class Badger(gym.Env):
         self.observation_noise_function.init()
         self.observation_dropout_function.init()
 
+        self.velocity_pid = VelocityPID(
+            kp=np.array([0.5, 0.5, 0.5]),
+            ki=np.array([0.0, 0.0, 0.0]),
+            kd=np.array([0.0, 0.0, 0.0]),
+            dt=self.dt,
+        )
+
+        # PID test evaluation. Everything is handled inside the environment so
+        # test.sh does not need an additional evaluation script.
+        self.pid_eval_episode = 0
+        self.pid_results_dir = Path("pid_test_results") / self.SHORT_NAME
+        self.pid_results_dir.mkdir(parents=True, exist_ok=True)
+        self._reset_pid_evaluation()
+
         if self.mode == "test":
             pygame.init()
             pygame.joystick.init()
@@ -223,6 +243,9 @@ class Badger(gym.Env):
 
         self.update_orientation_attributes()
 
+        # Start a fresh PID evaluation buffer for this episode.
+        self._reset_pid_evaluation()
+
         if self.viewer:
             self.viewer.render(self.data)
 
@@ -234,19 +257,52 @@ class Badger(gym.Env):
         if self.mode == "test":
             if self.joystick_present:
                 pygame.event.pump()
-                self.goal_x_velocity = -self.joystick.get_axis(1)
-                self.goal_y_velocity = -self.joystick.get_axis(0)
-                self.goal_yaw_velocity = -self.joystick.get_axis(3)
+
+                desired_command = np.array([
+                    -self.joystick.get_axis(1),
+                    -self.joystick.get_axis(0),
+                    -self.joystick.get_axis(3),
+                ], dtype=np.float32)
+                
+                explicit_commands = True
+
             elif Path("commands.txt").is_file():
                 with open("commands.txt", "r") as f:
                     commands = f.readlines()
                 if len(commands) == 3:
-                    self.goal_x_velocity = float(commands[0])
-                    self.goal_y_velocity = float(commands[1])
-                    self.goal_yaw_velocity = float(commands[2])
-                    explicit_commands = True
 
-        if not explicit_commands:
+                    desired_command = np.array([
+                        float(commands[0]),
+                        float(commands[1]),
+                        float(commands[2]),
+                    ], dtype=np.float32)
+    
+                    explicit_commands = True
+        
+        if explicit_commands:
+
+            linear_velocity = self.orientation_quat_inv.apply(
+                self.data.qvel[:3]
+            )
+
+            actual_velocity = np.array([
+                linear_velocity[0],
+                linear_velocity[1],
+                self.data.qvel[5],
+            ], dtype=np.float32)
+
+            correction = self.velocity_pid.update(
+                desired_command,
+                actual_velocity,
+            )
+
+            urma_command = desired_command + correction
+
+            self.goal_x_velocity = float(urma_command[0])
+            self.goal_y_velocity = float(urma_command[1])
+            self.goal_yaw_velocity = float(urma_command[2])
+
+        else:
             should_sample_commands = self.command_sampling_function.step()
             if should_sample_commands or self.total_timesteps == 0:
                 self.goal_x_velocity, self.goal_y_velocity, self.goal_yaw_velocity = self.command_function.get_next_command()
@@ -261,6 +317,12 @@ class Badger(gym.Env):
             self.data.qvel[6:] = np.clip(self.data.qvel[6:], -self.max_joint_velocities, self.max_joint_velocities)
 
         self.update_orientation_attributes()
+
+        # Measure tracking AFTER the physics step. We deliberately compare the
+        # actual trunk velocity with desired_command (the command requested by
+        # the user), not with the PID-corrected URMA command.
+        if explicit_commands:
+            self._record_pid_evaluation_step(desired_command)
 
         if self.add_goal_arrow:
             trunk_rotation = self.orientation_euler[2]
@@ -298,8 +360,240 @@ class Badger(gym.Env):
         if not self.eval:
             self.total_timesteps += 1
 
+        if done and self.pid_eval_time:
+            self._finalize_pid_evaluation(terminated=terminated, truncated=truncated)
+
         return next_observation, reward, terminated, truncated, info
     
+
+    def _reset_pid_evaluation(self):
+        """Clear all per-episode PID tracking data."""
+        self.pid_eval_time = []
+        self.pid_eval_desired_velocity = []
+        self.pid_eval_actual_velocity = []
+        self.pid_eval_urma_command = []
+        self.pid_eval_position_error = []
+
+        # Integrated position/yaw trajectories. Integrating velocities keeps
+        # x/y in the same body-frame convention as the commands.
+        self.pid_eval_desired_position = np.zeros(3, dtype=np.float64)
+        self.pid_eval_actual_position = np.zeros(3, dtype=np.float64)
+
+
+    def _record_pid_evaluation_step(self, desired_command):
+        """Record one post-physics-step sample for PID evaluation."""
+        linear_velocity = self.orientation_quat_inv.apply(self.data.qvel[:3])
+        actual_velocity = np.array([
+            linear_velocity[0],
+            linear_velocity[1],
+            self.data.qvel[5],
+        ], dtype=np.float64)
+
+        desired_velocity = np.asarray(desired_command, dtype=np.float64).copy()
+        urma_command = np.array([
+            self.goal_x_velocity,
+            self.goal_y_velocity,
+            self.goal_yaw_velocity,
+        ], dtype=np.float64)
+
+        # Integrate desired and actual velocities to obtain cumulative
+        # displacement/yaw tracking in [m, m, rad].
+        self.pid_eval_desired_position += desired_velocity * self.dt
+        self.pid_eval_actual_position += actual_velocity * self.dt
+        position_error = self.pid_eval_desired_position - self.pid_eval_actual_position
+
+        self.pid_eval_time.append((len(self.pid_eval_time) + 1) * self.dt)
+        self.pid_eval_desired_velocity.append(desired_velocity)
+        self.pid_eval_actual_velocity.append(actual_velocity)
+        self.pid_eval_urma_command.append(urma_command)
+        self.pid_eval_position_error.append(position_error.copy())
+
+
+    @staticmethod
+    def _pid_axis_metrics(desired, actual):
+        """Return useful tracking-error statistics for one signal."""
+        error = desired - actual
+        return {
+            "mae": float(np.mean(np.abs(error))),
+            "mse": float(np.mean(error ** 2)),
+            "rmse": float(np.sqrt(np.mean(error ** 2))),
+            "bias": float(np.mean(error)),
+            "max_abs_error": float(np.max(np.abs(error))),
+        }
+
+
+    def _print_pid_evaluation(self, desired, actual, position_error):
+        """Print velocity and cumulative-position tracking metrics."""
+        axis_names = ("x", "y", "yaw")
+        velocity_units = ("m/s", "m/s", "rad/s")
+        position_units = ("m", "m", "rad")
+
+        print("\n" + "=" * 68)
+        print(f"PID TRACKING RESULTS | {self.LONG_NAME} | episode {self.pid_eval_episode}")
+        print("=" * 68)
+
+        all_error = desired - actual
+        print(
+            f"Overall velocity: MAE={np.mean(np.abs(all_error)):.6f}, "
+            f"MSE={np.mean(all_error ** 2):.6f}, "
+            f"RMSE={np.sqrt(np.mean(all_error ** 2)):.6f}"
+        )
+
+        for i, axis in enumerate(axis_names):
+            metrics = self._pid_axis_metrics(desired[:, i], actual[:, i])
+            print(
+                f"{axis:>3} velocity [{velocity_units[i]}]: "
+                f"MAE={metrics['mae']:.6f} | "
+                f"MSE={metrics['mse']:.6f} | "
+                f"RMSE={metrics['rmse']:.6f} | "
+                f"bias={metrics['bias']:+.6f} | "
+                f"max|e|={metrics['max_abs_error']:.6f}"
+            )
+
+        final_error = position_error[-1]
+        max_position_error = np.max(np.abs(position_error), axis=0)
+        print("Final cumulative tracking error:")
+        for i, axis in enumerate(axis_names):
+            print(
+                f"{axis:>3} [{position_units[i]}]: "
+                f"final={final_error[i]:+.6f} | "
+                f"max|e|={max_position_error[i]:.6f}"
+            )
+        print("=" * 68 + "\n")
+
+
+    def _save_pid_evaluation_csv(self, episode_dir, time, desired, actual,
+                                 urma_command, position_error):
+        """Save raw tracking data so it can be reused in the dissertation."""
+        csv_path = episode_dir / "tracking.csv"
+        header = [
+            "time_s",
+            "desired_vx", "actual_vx", "vx_error",
+            "desired_vy", "actual_vy", "vy_error",
+            "desired_yaw_rate", "actual_yaw_rate", "yaw_rate_error",
+            "urma_command_x", "urma_command_y", "urma_command_yaw",
+            "x_position_error_m", "y_position_error_m", "yaw_error_rad",
+        ]
+
+        with csv_path.open("w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(header)
+            for i in range(len(time)):
+                velocity_error = desired[i] - actual[i]
+                writer.writerow([
+                    time[i],
+                    desired[i, 0], actual[i, 0], velocity_error[0],
+                    desired[i, 1], actual[i, 1], velocity_error[1],
+                    desired[i, 2], actual[i, 2], velocity_error[2],
+                    urma_command[i, 0], urma_command[i, 1], urma_command[i, 2],
+                    position_error[i, 0], position_error[i, 1], position_error[i, 2],
+                ])
+
+
+    def _save_pid_velocity_plot(self, episode_dir, time, desired, actual):
+        """Save desired-vs-actual trunk velocity tracking."""
+        labels = (
+            ("x velocity", "m/s"),
+            ("y velocity", "m/s"),
+            ("yaw velocity", "rad/s"),
+        )
+
+        fig, axes = plt.subplots(3, 1, figsize=(10, 9), sharex=True)
+        for i, (name, unit) in enumerate(labels):
+            axes[i].plot(time, desired[:, i], label="Desired", linewidth=2)
+            axes[i].plot(time, actual[:, i], label="Actual", linewidth=1.5)
+            axes[i].set_ylabel(f"{name}\\n[{unit}]")
+            axes[i].grid(True, alpha=0.3)
+            axes[i].legend()
+
+        axes[-1].set_xlabel("Time [s]")
+        fig.suptitle(f"{self.LONG_NAME}: Desired vs Actual Trunk Velocity")
+        fig.tight_layout()
+        fig.savefig(episode_dir / "velocity_tracking.png", dpi=200)
+        plt.close(fig)
+
+
+    def _save_pid_position_error_plot(self, episode_dir, time, position_error):
+        """Save cumulative x/y/yaw tracking-position error."""
+        labels = (
+            ("x displacement error", "m"),
+            ("y displacement error", "m"),
+            ("yaw tracking error", "rad"),
+        )
+
+        fig, axes = plt.subplots(3, 1, figsize=(10, 9), sharex=True)
+        for i, (name, unit) in enumerate(labels):
+            axes[i].plot(time, position_error[:, i], linewidth=1.7)
+            axes[i].axhline(0.0, linewidth=1.0)
+            axes[i].set_ylabel(f"{name}\\n[{unit}]")
+            axes[i].grid(True, alpha=0.3)
+
+        axes[-1].set_xlabel("Time [s]")
+        fig.suptitle(f"{self.LONG_NAME}: Cumulative Tracking Error")
+        fig.tight_layout()
+        fig.savefig(episode_dir / "position_tracking_error.png", dpi=200)
+        plt.close(fig)
+
+
+    def _save_pid_metrics_txt(self, episode_dir, desired, actual,
+                              position_error, terminated, truncated):
+        """Save a compact text summary next to the plots."""
+        axis_names = ("x", "y", "yaw")
+        lines = [
+            f"robot={self.LONG_NAME}",
+            f"episode={self.pid_eval_episode}",
+            f"terminated={bool(terminated)}",
+            f"truncated={bool(truncated)}",
+            f"samples={len(desired)}",
+            f"duration_s={len(desired) * self.dt:.6f}",
+        ]
+
+        error = desired - actual
+        lines.extend([
+            f"overall_velocity_mae={np.mean(np.abs(error)):.9f}",
+            f"overall_velocity_mse={np.mean(error ** 2):.9f}",
+            f"overall_velocity_rmse={np.sqrt(np.mean(error ** 2)):.9f}",
+        ])
+
+        for i, axis in enumerate(axis_names):
+            metrics = self._pid_axis_metrics(desired[:, i], actual[:, i])
+            for metric_name, value in metrics.items():
+                lines.append(f"{axis}_velocity_{metric_name}={value:.9f}")
+            lines.append(f"{axis}_final_position_error={position_error[-1, i]:.9f}")
+            lines.append(
+                f"{axis}_max_abs_position_error="
+                f"{np.max(np.abs(position_error[:, i])):.9f}"
+            )
+
+        (episode_dir / "metrics.txt").write_text("\n".join(lines) + "\n")
+
+
+    def _finalize_pid_evaluation(self, terminated, truncated):
+        """Print metrics and automatically save plots/CSV at episode end."""
+        if not self.pid_eval_time:
+            return
+
+        self.pid_eval_episode += 1
+        episode_dir = self.pid_results_dir / f"episode_{self.pid_eval_episode:03d}"
+        episode_dir.mkdir(parents=True, exist_ok=True)
+
+        time = np.asarray(self.pid_eval_time, dtype=np.float64)
+        desired = np.asarray(self.pid_eval_desired_velocity, dtype=np.float64)
+        actual = np.asarray(self.pid_eval_actual_velocity, dtype=np.float64)
+        urma_command = np.asarray(self.pid_eval_urma_command, dtype=np.float64)
+        position_error = np.asarray(self.pid_eval_position_error, dtype=np.float64)
+
+        self._print_pid_evaluation(desired, actual, position_error)
+        self._save_pid_evaluation_csv(
+            episode_dir, time, desired, actual, urma_command, position_error
+        )
+        self._save_pid_velocity_plot(episode_dir, time, desired, actual)
+        self._save_pid_position_error_plot(episode_dir, time, position_error)
+        self._save_pid_metrics_txt(
+            episode_dir, desired, actual, position_error, terminated, truncated
+        )
+
+        print(f"PID results saved to: {episode_dir.resolve()}")
 
     def update_orientation_attributes(self):
         self.orientation_quat = R.from_quat([self.data.qpos[4], self.data.qpos[5], self.data.qpos[6], self.data.qpos[3]])

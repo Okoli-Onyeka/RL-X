@@ -23,13 +23,9 @@ class HierarchicalEmbodimentAgnosticNetwork():
         self.main_net = nn.Sequential(
             nn.Linear(407, 500),
             nn.Sigmoid(),
-            nn.Linear(500, 500),
-            nn.Sigmoid(),
-            nn.Linear(500, 500),
-            nn.Sigmoid(),
             nn.Linear(500, 100),
             nn.Sigmoid(),
-            nn.Linear(100, 19)
+            nn.Linear(100, 3)
         )
     
     def load_networks(self, filenames = ["score_nn.pth","value_nn.pth","main_nn.pth"]):
