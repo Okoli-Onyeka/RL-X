@@ -1,7 +1,7 @@
 import numpy as np
 
 class ResidualTrackingReward:
-    def __init__(self, env, tracking_temperature = 0.01, residual_action_coeff=0.001, residual_rate_coeff=0.001):
+    def __init__(self, env, tracking_temperature = 0.005, residual_action_coeff=0.001, residual_rate_coeff=0.001):
         self.env = env
         self.tracking_temperature = tracking_temperature
         self.residual_action_coeff = residual_action_coeff

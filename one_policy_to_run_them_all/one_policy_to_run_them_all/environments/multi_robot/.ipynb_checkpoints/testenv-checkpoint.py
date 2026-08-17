@@ -67,11 +67,14 @@ checkpoint_dir.mkdir(parents=True, exist_ok=True)
 # Training settings
 # ---------------------------------------------------------------------
 
+MOVING_AVERAGE_WINDOW = 100
+BEST_MODEL_MIN_EPISODES = 100
+
 ROLLOUT_STEPS = 2048
 
 PPO_EPOCHS = 3
-MINIBATCH_SIZE = 32
-CLIP_COEFFICIENT = 0.2
+MINIBATCH_SIZE = 128
+CLIP_COEFFICIENT = 0.15
 VALUE_COEFFICIENT = 0.5
 ENTROPY_COEFFICIENT = 0.0
 MAX_GRAD_NORM = 0.5
@@ -79,7 +82,7 @@ MAX_GRAD_NORM = 0.5
 GAMMA = 0.99
 GAE_LAMBDA = 0.95
 
-NUMBER_OF_UPDATES = 1500
+NUMBER_OF_UPDATES = 1000
 LEARNING_RATE = 1e-4
 
 
@@ -441,6 +444,18 @@ def run_ppo_update(
 # Logging / checkpoint helpers
 # ---------------------------------------------------------------------
 
+def moving_average(values, window):
+    values = np.asarray(values, dtype=np.float64)
+
+    if len(values) < window:
+        return np.array([])
+
+    return np.convolve(
+        values,
+        np.ones(window) / window,
+        mode="valid",
+    )
+
 def print_update_metrics(
     update,
     residual_policy,
@@ -522,6 +537,51 @@ def save_periodic_checkpoint(
         action_size=action_size,
     )
 
+
+def save_best_checkpoint(
+    episode_tracking_errors,
+    best_tracking_error,
+    update,
+    residual_policy,
+    optimizer,
+    observation_size,
+    action_size,
+):
+    if len(episode_tracking_errors) < BEST_MODEL_MIN_EPISODES:
+        return best_tracking_error
+
+    recent_errors = episode_tracking_errors[
+        -MOVING_AVERAGE_WINDOW:
+    ]
+
+    mean_error = float(np.mean(recent_errors))
+
+    if mean_error < best_tracking_error:
+
+        best_tracking_error = mean_error
+
+        save_checkpoint(
+            checkpoint_path=(
+                CHECKPOINT_DIR
+                / "residual_policy_best.pt"
+            ),
+            update=update + 1,
+            residual_policy=residual_policy,
+            optimizer=optimizer,
+            observation_size=observation_size,
+            action_size=action_size,
+        )
+
+        print(
+            f"NEW BEST MODEL | "
+            f"update: {update + 1} | "
+            f"{MOVING_AVERAGE_WINDOW}-episode "
+            f"tracking error: "
+            f"{mean_error:.6f}"
+        )
+
+    return best_tracking_error
+
 def extract_tracking_error(info):
     key = "residual/tracking_error"
 
@@ -538,31 +598,128 @@ def extract_tracking_error(info):
 
     return np.nan
 
-def save_training_plots(episode_numbers, episode_returns, episode_tracking_errors):
+def save_training_plots(
+    episode_numbers,
+    episode_returns,
+    episode_tracking_errors,
+):
     if len(episode_numbers) == 0:
         return
 
+    episode_numbers = np.asarray(episode_numbers)
+    episode_returns = np.asarray(episode_returns)
+    episode_tracking_errors = np.asarray(episode_tracking_errors)
+
+    window = MOVING_AVERAGE_WINDOW
+
+    # --------------------------------------------------
     # Episode return
+    # --------------------------------------------------
+
     plt.figure(figsize=(8, 5))
-    plt.plot(episode_numbers, episode_returns)
+
+    plt.plot(
+        episode_numbers,
+        episode_returns,
+        alpha=0.25,
+        label="Episode return",
+    )
+
+    return_ma = moving_average(
+        episode_returns,
+        window,
+    )
+
+    if len(return_ma) > 0:
+        ma_episodes = episode_numbers[window - 1:]
+
+        plt.plot(
+            ma_episodes,
+            return_ma,
+            linewidth=2,
+            label=f"{window}-episode moving average",
+        )
+
     plt.xlabel("Episode")
     plt.ylabel("Episode Return")
     plt.title("Residual PPO Training: Episode Return")
+    plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(CHECKPOINT_DIR / "episode_return.png", dpi=300)
+
+    plt.savefig(
+        CHECKPOINT_DIR / "episode_return.png",
+        dpi=300,
+    )
+
     plt.close()
 
+    # --------------------------------------------------
     # Tracking error
+    # --------------------------------------------------
+
     plt.figure(figsize=(8, 5))
-    plt.plot(episode_numbers, episode_tracking_errors)
+
+    plt.plot(
+        episode_numbers,
+        episode_tracking_errors,
+        alpha=0.25,
+        label="Tracking error",
+    )
+
+    tracking_ma = moving_average(
+        episode_tracking_errors,
+        window,
+    )
+
+    if len(tracking_ma) > 0:
+        ma_episodes = episode_numbers[window - 1:]
+
+        plt.plot(
+            ma_episodes,
+            tracking_ma,
+            linewidth=2,
+            label=f"{window}-episode moving average",
+        )
+
     plt.xlabel("Episode")
     plt.ylabel("Mean Tracking Error")
     plt.title("Residual PPO Training: Tracking Error")
+    plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(CHECKPOINT_DIR / "episode_tracking_error.png", dpi=300)
+
+    plt.savefig(
+        CHECKPOINT_DIR / "episode_tracking_error.png",
+        dpi=300,
+    )
+
     plt.close()
+
+
+def save_training_history(
+    episode_numbers,
+    episode_returns,
+    episode_tracking_errors,
+):
+    output_path = CHECKPOINT_DIR / "training_history.csv"
+
+    with open(output_path, "w", newline="") as file:
+        writer = csv.writer(file)
+
+        writer.writerow([
+            "episode",
+            "return",
+            "tracking_error",
+        ])
+
+        writer.writerows(
+            zip(
+                episode_numbers,
+                episode_returns,
+                episode_tracking_errors,
+            )
+        )
 
 
 # ---------------------------------------------------------------------
@@ -686,6 +843,8 @@ def train(
     episode_returns = []
     episode_tracking_errors = []
 
+    best_tracking_error = float("inf")
+
     for update in range(start_update, NUMBER_OF_UPDATES+start_update):
         (
             rollout_buffer,
@@ -771,6 +930,22 @@ def train(
             episode_tracking_errors,
         )
 
+        save_training_history(
+            episode_numbers,
+            episode_returns,
+            episode_tracking_errors,
+        )
+
+        best_tracking_error = save_best_checkpoint(
+            episode_tracking_errors=episode_tracking_errors,
+            best_tracking_error=best_tracking_error,
+            update=update,
+            residual_policy=residual_policy,
+            optimizer=optimizer,
+            observation_size=observation_size,
+            action_size=action_size,
+        )
+
     save_checkpoint(
         checkpoint_path=CHECKPOINT_DIR / "residual_policy_final.pt",
         update=NUMBER_OF_UPDATES+start_update,
@@ -780,6 +955,7 @@ def train(
         action_size=action_size,
     )
 
+    
 
 # ---------------------------------------------------------------------
 # Entry point
@@ -815,8 +991,8 @@ def main(argv):
         observation_size,
         action_size,
         start_update
-    ) = create_residual_policy(
-        robot_env=robot_env,
+    ) = load_residual_policy(
+        True,
         device=device,
     )
 

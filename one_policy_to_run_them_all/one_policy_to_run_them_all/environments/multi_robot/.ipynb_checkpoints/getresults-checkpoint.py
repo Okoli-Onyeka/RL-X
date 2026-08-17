@@ -123,46 +123,63 @@ class TestModel():
         
 
     def compare_models(self, urma, residual_policy):
-        urma_results = self.run_test_episode(False)
+        magnitudes = [0.3, 0.6, 0.9]
 
-        residual_results = self.run_test_episode(True)
+        commands = []
+        
+        # Excite each axis independently
+        for axis in range(3):
+            for mag in magnitudes:
+                for sign in [1, -1]:
+                    command = [0.0, 0.0, 0.0]
+                    command[axis] = sign * mag
+                    commands.append(command)
+        
+        # Zero command
+        commands.append([0.0, 0.0, 0.0])
+        
+        # Combined commands
+        commands += [
+            [0.6,  0.6,  0.0],  # forward + left/right strafe
+            [0.6, -0.6,  0.0],
+            [0.6,  0.0,  0.6],  # forward + yaw
+            [0.6,  0.0, -0.6],
+        ]
 
-        self.save_trajectory(
-            urma_results,
-            "/workspace/urma_only_tracking.csv",
-        )
+        for command in commands:
+        
+            urma_results = self.run_test_episode(False, command[0], command[1], command[2])
+    
+            residual_results = self.run_test_episode(True, command[0], command[1], command[2])
+    
+            self.save_trajectory(
+                urma_results,
+                f"/workspace/urma_only_tracking_{command[0]}_{command[1]}_{command[2]}.csv",
+            )
+    
+            self.save_trajectory(
+                residual_results,
+                f"/workspace/residual_tracking_{command[0]}_{command[1]}_{command[2]}.csv",
+            )
+    
+            for axis in ["x", "y", "yaw"]:
+                self.plot_tracking_comparison(urma_results, residual_results, axis, command)
+    
+            self.print_pid_style_results(
+                urma_results,
+                label=f"URMA ONLY TRACKING RESULTS {command[0]}_{command[1]}_{command[2]}",
+            )
+    
+            self.print_pid_style_results(
+                residual_results,
+                label=f"RESIDUAL RL TRACKING RESULTS {command[0]}_{command[1]}_{command[2]}",
+            )
 
-        self.save_trajectory(
-            residual_results,
-            "/workspace/residual_tracking.csv",
-        )
-
-        for axis in ["x", "y", "yaw"]:
-            self.plot_tracking_comparison(urma_results, residual_results, axis)
-
-            urma_only_metrics = self.calculate_metrics(urma_results, axis)
-
-            residual_metrics = self.calculate_metrics(residual_results, axis)
-
-            print(f"\n{axis.upper()} tracking")
-            print("URMA only:", urma_only_metrics)
-            print("Residual:", residual_metrics)
-
-            if urma_only_metrics["MAE"] > 0:
-                improvement = (
-                    urma_only_metrics["MAE"]
-                    - residual_metrics["MAE"]
-                ) / urma_only_metrics["MAE"] * 100
-
-                print(
-                    f"MAE improvement: {improvement:.2f}%"
-                )
-
-    def run_test_episode(self, use_residual:bool):
+    def run_test_episode(self, use_residual:bool, x, y, z):
         
         observation, info = self.vectorenv.reset()
 
-        observation = self.set_goal_velocity()
+        observation = self.set_goal_velocity(x, y, z)
 
         done = False
 
@@ -210,6 +227,36 @@ class TestModel():
 
                 tracking = self.robot_env.get_displacement_tracking(episode_step)
 
+                linear_velocity = self.robot_env.orientation_quat_inv.apply(
+                    self.robot_env.data.qvel[:3]
+                )
+
+                desired_velocity = np.array([
+                    self.robot_env.goal_x_velocity,
+                    self.robot_env.goal_y_velocity,
+                    self.robot_env.goal_yaw_velocity,
+                ], dtype=float)
+
+                actual_velocity = np.array([
+                    linear_velocity[0],
+                    linear_velocity[1],
+                    self.robot_env.data.qvel[5],
+                ], dtype=float)
+
+                velocity_error = desired_velocity - actual_velocity
+
+                tracking.update({
+                    "desired_x_velocity": float(desired_velocity[0]),
+                    "actual_x_velocity": float(actual_velocity[0]),
+                    "x_velocity_error": float(velocity_error[0]),
+                    "desired_y_velocity": float(desired_velocity[1]),
+                    "actual_y_velocity": float(actual_velocity[1]),
+                    "y_velocity_error": float(velocity_error[1]),
+                    "desired_yaw_velocity": float(desired_velocity[2]),
+                    "actual_yaw_velocity": float(actual_velocity[2]),
+                    "yaw_velocity_error": float(velocity_error[2]),
+                })
+
                 trajectory.append(tracking)
         finally:
             self.robot_env.close()
@@ -235,6 +282,16 @@ class TestModel():
             "actual_yaw_displacement",
             "yaw_displacement_error",
             "absolute_yaw_displacement_error",
+
+            "desired_x_velocity",
+            "actual_x_velocity",
+            "x_velocity_error",
+            "desired_y_velocity",
+            "actual_y_velocity",
+            "y_velocity_error",
+            "desired_yaw_velocity",
+            "actual_yaw_velocity",
+            "yaw_velocity_error",
         ]
 
         with open(filename, "w", newline="") as file:
@@ -251,6 +308,7 @@ class TestModel():
         urma_only_results,
         residual_results,
         axis,
+        command,
     ):
         error_key = f"absolute_{axis}_displacement_error"
 
@@ -304,7 +362,7 @@ class TestModel():
         plt.ylabel(ylabel)
 
         plt.title(
-            "URMA versus residual-policy "
+            f"URMA versus residual-policy_({command[0]}_{command[1]}_{command[2]})"
             f"{title_axis} tracking"
         )
 
@@ -313,36 +371,104 @@ class TestModel():
         plt.tight_layout()
 
         plt.savefig(
-            f"/workspace/{axis}_displacement_comparison.png",
+            f"/workspace/residual_images/{axis}_displacement_comparison_({command[0]}_{command[1]}_{command[2]}).png",
             dpi=300,
         )
 
         plt.close()
 
-    def calculate_metrics(self, results, axis,):
+    def calculate_velocity_metrics(self, results, axis):
+        errors = np.asarray(
+            [row[f"{axis}_velocity_error"] for row in results],
+            dtype=float,
+        )
 
-        error_key = (f"{axis}_displacement_error")
-        errors = np.asarray([row[error_key] for row in results], dtype=float,)
-
-        absolute_errors = np.abs(errors)
+        mse = float(np.mean(errors ** 2))
 
         return {
-            "MAE": float(np.mean(absolute_errors)),
-            "RMSE": float(
-                np.sqrt(np.mean(errors ** 2))
-            ),
-            "final_absolute_error": float(
-                absolute_errors[-1]
-            ),
-            "maximum_absolute_error": float(
-                np.max(absolute_errors)
-            ),
+            "MAE": float(np.mean(np.abs(errors))),
+            "MSE": mse,
+            "RMSE": float(np.sqrt(mse)),
+            "bias": float(np.mean(errors)),
+            "max_absolute_error": float(np.max(np.abs(errors))),
         }
-    
-    def set_goal_velocity(self):
-        self.robot_env.goal_x_velocity = 1.0
-        self.robot_env.goal_y_velocity = 0.5
-        self.robot_env.goal_yaw_velocity = 0.5
+
+    def calculate_displacement_metrics(self, results, axis):
+        errors = np.asarray(
+            [row[f"{axis}_displacement_error"] for row in results],
+            dtype=float,
+        )
+
+        return {
+            "final_error": float(errors[-1]),
+            "maximum_absolute_error": float(np.max(np.abs(errors))),
+        }
+
+    def print_pid_style_results(self, results, label):
+        if not results:
+            print(f"\n{label}: no tracking samples recorded.")
+            return
+
+        velocity_metrics = {
+            axis: self.calculate_velocity_metrics(results, axis)
+            for axis in ["x", "y", "yaw"]
+        }
+        displacement_metrics = {
+            axis: self.calculate_displacement_metrics(results, axis)
+            for axis in ["x", "y", "yaw"]
+        }
+
+        all_errors = np.concatenate([
+            np.asarray([row[f"{axis}_velocity_error"] for row in results], dtype=float)
+            for axis in ["x", "y", "yaw"]
+        ])
+        overall_mse = float(np.mean(all_errors ** 2))
+        overall_mae = float(np.mean(np.abs(all_errors)))
+        overall_rmse = float(np.sqrt(overall_mse))
+
+        print("\n" + "=" * 68)
+        print(label)
+        print("=" * 68)
+        print(
+            f"Overall velocity: MAE={overall_mae:.6f}, "
+            f"MSE={overall_mse:.6f}, RMSE={overall_rmse:.6f}"
+        )
+
+        for axis, unit, prefix in [
+            ("x", "m/s", "  x velocity"),
+            ("y", "m/s", "  y velocity"),
+            ("yaw", "rad/s", "yaw velocity"),
+        ]:
+            m = velocity_metrics[axis]
+            print(
+                f"{prefix} [{unit}]: "
+                f"MAE={m['MAE']:.6f} | "
+                f"MSE={m['MSE']:.6f} | "
+                f"RMSE={m['RMSE']:.6f} | "
+                f"bias={m['bias']:+.6f} | "
+                f"max|e|={m['max_absolute_error']:.6f}"
+            )
+
+        print("Final cumulative tracking error:")
+        print(
+            f"  x [m]: final={displacement_metrics['x']['final_error']:+.6f} | "
+            f"max|e|={displacement_metrics['x']['maximum_absolute_error']:.6f}"
+        )
+        print(
+            f"  y [m]: final={displacement_metrics['y']['final_error']:+.6f} | "
+            f"max|e|={displacement_metrics['y']['maximum_absolute_error']:.6f}"
+        )
+        print(
+            f"yaw [rad]: final={displacement_metrics['yaw']['final_error']:+.6f} | "
+            f"max|e|={displacement_metrics['yaw']['maximum_absolute_error']:.6f}"
+        )
+        print("=" * 68)
+
+    def set_goal_velocity(self, x, y, z):
+        self.robot_env.goal_x_velocity = x
+        self.robot_env.goal_y_velocity = y
+        self.robot_env.goal_yaw_velocity = z
+
 
         observation = self.robot_env.get_observation()
 

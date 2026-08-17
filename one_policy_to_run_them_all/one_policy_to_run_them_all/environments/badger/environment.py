@@ -189,7 +189,7 @@ class Badger(gym.Env):
             self.model.nu,
             dtype=np.float32
         )
-        self.residual_scale = 0.05
+        self.residual_scale = 0.4
 
         self.initial_trunk_x = float(self.data.body("trunk").xpos[0])
         self.initial_trunk_y = float(self.data.body("trunk").xpos[1])
