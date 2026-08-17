@@ -207,11 +207,17 @@ class Badger(gym.Env):
             dt=self.dt,
         )
 
-        # PID test evaluation. Everything is handled inside the environment so
-        # test.sh does not need an additional evaluation script.
+        # Command supplied externally by the PID benchmark runner.
+        # When None, normal joystick / commands.txt / sampling behaviour is used.
+        self.external_desired_command = None
+
+        # PID test evaluation
         self.pid_eval_episode = 0
-        self.pid_results_dir = Path("pid_test_results") / self.SHORT_NAME
+        
+        # Save all benchmark results here
+        self.pid_results_dir = Path("/workspace/pid_results")
         self.pid_results_dir.mkdir(parents=True, exist_ok=True)
+        
         self._reset_pid_evaluation()
 
         if self.mode == "test":
@@ -243,7 +249,8 @@ class Badger(gym.Env):
 
         self.update_orientation_attributes()
 
-        # Start a fresh PID evaluation buffer for this episode.
+        # Every command is an independent experiment.
+        self._reset_velocity_pid()
         self._reset_pid_evaluation()
 
         if self.viewer:
@@ -254,23 +261,38 @@ class Badger(gym.Env):
 
     def step(self, action):
         explicit_commands = False
+
         if self.mode == "test":
+    
+            # ----------------------------------------------------------
+            # 1. Joystick has highest priority
+            # ----------------------------------------------------------
             if self.joystick_present:
                 pygame.event.pump()
-
+    
                 desired_command = np.array([
                     -self.joystick.get_axis(1),
                     -self.joystick.get_axis(0),
                     -self.joystick.get_axis(3),
                 ], dtype=np.float32)
-                
+    
                 explicit_commands = True
-
+    
+            # ----------------------------------------------------------
+            # 2. Command supplied by PID benchmark script
+            # ----------------------------------------------------------
+            elif self.external_desired_command is not None:
+                desired_command = self.external_desired_command.copy()
+                explicit_commands = True
+    
+            # ----------------------------------------------------------
+            # 3. Existing commands.txt method
+            # ----------------------------------------------------------
             elif Path("commands.txt").is_file():
                 with open("commands.txt", "r") as f:
                     commands = f.readlines()
+    
                 if len(commands) == 3:
-
                     desired_command = np.array([
                         float(commands[0]),
                         float(commands[1]),
@@ -278,34 +300,39 @@ class Badger(gym.Env):
                     ], dtype=np.float32)
     
                     explicit_commands = True
-        
+    
         if explicit_commands:
-
+    
             linear_velocity = self.orientation_quat_inv.apply(
                 self.data.qvel[:3]
             )
-
+    
             actual_velocity = np.array([
                 linear_velocity[0],
                 linear_velocity[1],
                 self.data.qvel[5],
             ], dtype=np.float32)
-
+    
             correction = self.velocity_pid.update(
                 desired_command,
                 actual_velocity,
             )
-
+    
             urma_command = desired_command + correction
-
+    
             self.goal_x_velocity = float(urma_command[0])
             self.goal_y_velocity = float(urma_command[1])
             self.goal_yaw_velocity = float(urma_command[2])
-
+    
         else:
             should_sample_commands = self.command_sampling_function.step()
+    
             if should_sample_commands or self.total_timesteps == 0:
-                self.goal_x_velocity, self.goal_y_velocity, self.goal_yaw_velocity = self.command_function.get_next_command()
+                (
+                    self.goal_x_velocity,
+                    self.goal_y_velocity,
+                    self.goal_yaw_velocity,
+                ) = self.command_function.get_next_command()
 
         action = self.domain_randomization_action_delay_function.delay_action(action[:self.model.nu])
 
@@ -379,6 +406,40 @@ class Badger(gym.Env):
         self.pid_eval_desired_position = np.zeros(3, dtype=np.float64)
         self.pid_eval_actual_position = np.zeros(3, dtype=np.float64)
 
+    def set_desired_command(self, command):
+        """
+        Set a fixed [vx, vy, yaw_rate] command for the current test episode.
+    
+        Passing None restores the normal joystick / commands.txt /
+        command-sampling behaviour.
+        """
+        if command is None:
+            self.external_desired_command = None
+            return
+    
+        command = np.asarray(command, dtype=np.float32)
+    
+        if command.shape != (3,):
+            raise ValueError(
+                f"Expected command shape (3,), got {command.shape}"
+            )
+    
+        self.external_desired_command = command.copy()
+    
+    
+    def _reset_velocity_pid(self):
+        """
+        Reset PID state between experimental episodes.
+    
+        Recreating it guarantees that the integral/error history from one
+        command cannot leak into the next command.
+        """
+        self.velocity_pid = VelocityPID(
+            kp=np.array([0.5, 0.5, 0.5]),
+            ki=np.array([0.1, 0.1, 0.1]),
+            kd=np.array([0.0, 0.0, 0.0]),
+            dt=self.dt,
+        )
 
     def _record_pid_evaluation_step(self, desired_command):
         """Record one post-physics-step sample for PID evaluation."""
@@ -574,7 +635,19 @@ class Badger(gym.Env):
             return
 
         self.pid_eval_episode += 1
-        episode_dir = self.pid_results_dir / f"episode_{self.pid_eval_episode:03d}"
+
+        # All desired commands are fixed during an episode,
+        # so the first recorded command identifies the experiment.
+        command = np.asarray(
+            self.pid_eval_desired_velocity[0],
+            dtype=np.float64,
+        )
+        
+        command_name = "_".join(
+            f"{value:.1f}" for value in command
+        )
+        
+        episode_dir = self.pid_results_dir / command_name
         episode_dir.mkdir(parents=True, exist_ok=True)
 
         time = np.asarray(self.pid_eval_time, dtype=np.float64)
